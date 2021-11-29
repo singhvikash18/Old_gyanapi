@@ -2,7 +2,7 @@ const { Timestamp } = require('bson')
 const mongoose = require('mongoose')
 
 const demoSchema = new mongoose.Schema({
-    emoClass_named:{
+    demoClass_named:{
         type:String,
         required:true
     },
