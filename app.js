@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 // const nodemailer = require("nodemailer");
 
 const mongoose = require('mongoose')
-const url = 'mongodb://localhost/gyandb'
+const url = ' mongodb+srv://gyanias619:gyanias619@gyanias.ee8zw.mongodb.net/test'
 
 
 
