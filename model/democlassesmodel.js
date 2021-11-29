@@ -22,11 +22,11 @@ const demoSchema = new mongoose.Schema({
         type:String,
         required:true
     },
-    //  demoClass_created_at:{
-    //      type: currentTime ,
-    //      required:true
-    //  }
-    
+     demoClass_created_at:{
+         type: Date ,
+         required:true
+     }
+
 
 })
 module.exports = mongoose.model('Democlasses' , demoSchema)
