@@ -2,7 +2,7 @@ const { Timestamp } = require('bson')
 const mongoose = require('mongoose')
 
 const demoSchema = new mongoose.Schema({
-    demoClass_name:{
+    emoClass_named:{
         type:String,
         required:true
     },
@@ -22,9 +22,10 @@ const demoSchema = new mongoose.Schema({
         type:String,
         required:true
     },
-    demoClass_created_at:{
-        type:Timestamp,
-        required:true
-    }
+    //  demoClass_created_at:{
+    //      type: currentTime ,
+    //      required:true
+    //  }
 
 })
+module.exports = mongoose.model('Democlasses' , demoSchema)

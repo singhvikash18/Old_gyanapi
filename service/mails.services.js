@@ -18,7 +18,7 @@ const transporter = nodemailer.createTransport({
       });
 
     const servicemail = (req) =>{
-      console.log('recieved');
+      //console.log('recieved');
       // res.send("sdfasdfasdf")
         const {firstname, email, message}=req.body;
   
@@ -34,7 +34,7 @@ const transporter = nodemailer.createTransport({
           
         };
 
-        transporter.sendMail(mailData, function (err, info) {
+        const mailers = transporter.sendMail(mailData, function (err, info) {
             if(err){
               return console.log(err)
              } 
@@ -43,7 +43,7 @@ const transporter = nodemailer.createTransport({
             // res.status(200).send({ message : "Mail send" , message_id:info.messageId} );
              
             });
-  return "hello";
+  return req.body;
         }
 
         const servicemails = async (view)=>{

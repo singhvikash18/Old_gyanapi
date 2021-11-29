@@ -1,7 +1,10 @@
 const router = require('express').Router();
 
-const getmails = require('../service/mail');
+const getmails = require('../controller/mail.controller');
 
-router.post('/email_send',getmails.servicemail);
+
+
+router.post('/email_send',getmails.controlmail);
+
 
 module.exports =router;

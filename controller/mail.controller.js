@@ -1,11 +1,11 @@
-const mailservicecontroller = require('../service/mail');
+const mailservicecontroller = require('../service/mails.services');
 const   mailroutecontroller = require('../routes/index');
 const httpStatus = require("http-status")
 const { response } = require('express');
 
-const controlmail = async (req,res)=>{
-    const user = await mailservicecontroller.servicemail(req.body.html);
-    console.log("sdsds");
+const controlmail = (req,res)=>{
+    const user = mailservicecontroller.servicemail(req);
+    console.log(user);
     const response = {user:user};
     const data ={
         itemcount : 2,
