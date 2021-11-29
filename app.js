@@ -26,8 +26,7 @@ const port = process.env.PORT || 5000;
 const allroutes = require('./routes/index')
 app.use('/api', allroutes);
 // app.use('/send', mailsent);
-const demoroute = require('./routes/democlass')
-app.use('/demo' , demoroute)
+
 
 app.listen(port, () => {
     console.log(`Server listening on port ${port}`);
