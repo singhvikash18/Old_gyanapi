@@ -2,7 +2,7 @@ const { Timestamp } = require('bson')
 const mongoose = require('mongoose')
 
 const demoSchema = new mongoose.Schema({
-    demoClass_named:{
+    demoClass_name:{
         type:String,
         required:true
     },
