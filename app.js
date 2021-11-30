@@ -1,10 +1,12 @@
 const express = require("express");
 const bodyParser = require('body-parser');
 const cors =require('cors')
-// const nodemailer = require("nodemailer");
+const dotenv = require('dotenv');
+
+dotenv.config({path:'./config/config.env'})
 
 const mongoose = require('mongoose')
-const url = ' mongodb+srv://gyanias619:gyanias619@gyanias.ee8zw.mongodb.net/test'
+const url = process.env.URL
 
 
 
@@ -23,7 +25,7 @@ app.options("*", cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
-const port = process.env.PORT || 5000;
+const port = process.env.PORT ;
 
 
 const allroutes = require('./routes/index')

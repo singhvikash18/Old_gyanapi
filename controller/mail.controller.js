@@ -4,7 +4,7 @@ const httpStatus = require("http-status")
 const { response } = require('express');
 
 const controlmail = (req,res)=>{
-    const user = mailservicecontroller.servicemail(req);
+    const user = mailservicecontroller.sendEmailToAdmin(req, req);
     console.log(user);
     const response = {user:user};
     const data ={
