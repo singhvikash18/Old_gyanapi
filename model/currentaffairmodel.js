@@ -7,7 +7,7 @@ const currentaffairSchema = new mongoose.Schema({
         type:String ,
         required:true
     },
-    currentaffair_name:{
+    currentaffair_title:{
         type:String,
         required:true
     },
@@ -24,6 +24,11 @@ const currentaffairSchema = new mongoose.Schema({
         required:true
     },
     currentaffair_slug:{
+        type:String,
+        required:true,
+        unique:true
+    },
+    currentaffair_summary:{
         type:String,
         required:true
     }

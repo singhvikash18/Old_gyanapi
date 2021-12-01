@@ -1,8 +1,8 @@
 const router = require('express').Router();
 
 const getmails = require('../controller/mail.controller');
-const demoroute = require('../routes/democlass');
-const caffairs = require('../routes/currentaffair');
+const demoroute = require('../service/democlass.services');
+const caffairs = require('../service/currentaffair.services');
 
 
 router.post('/email_send',getmails.controlmail);
