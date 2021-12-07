@@ -6,7 +6,7 @@ const { response } = require('express');
 const controlmail = (req,res)=>{
     const user = mailservicecontroller.sendEmailToAdmin(req, req);
     console.log(user);
-    const response = {user:user};
+    const response = user;
     const data ={
         itemcount : 2,
         status_code : httpStatus.OK,

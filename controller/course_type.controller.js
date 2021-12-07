@@ -4,7 +4,7 @@ const httpStatus = require('http-status');
 
 const coursetypeController = async(req,res)=>{
     const typ = await typeControl.typeService();
-    const response = {typ:typ};
+    const response = typ;
     const data ={
         itemcount : 2,
         status_code : httpStatus.OK,

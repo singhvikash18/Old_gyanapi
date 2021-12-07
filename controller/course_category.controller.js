@@ -4,7 +4,7 @@ const httpStatus = require('http-status');
 
 const courseCategoryControl = async(req,res)=>{
     const cat = await categorycontroller.course_Category();
-    const response = {cat:cat};
+    const response = cat;
     const data ={
         itemcount : 2,
         status_code : httpStatus.OK,

@@ -11,6 +11,10 @@ const categorySchema = new mongoose.Schema({
         type : String,
         required : true
     },
+    course_category_image:{
+        type:String,
+        required:true
+    },
 
     course_created_at : {
         type : Date,

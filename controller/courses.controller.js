@@ -5,7 +5,7 @@ const httpStatus = require('http-status');
 const controlCourse = async(req,res)=>{
     const test =  await courseController.courseService();
    // console.log(test);
-    const response = {test:test};
+    const response = test;
     const data ={
         itemcount : 2,
         status_code : httpStatus.OK,
