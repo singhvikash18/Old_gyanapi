@@ -2,23 +2,26 @@ const router = require('express').Router()
 
 const Current = require('../model/currentaffairmodel')
 
-router.get('/all', async(req,res)=>{
-    try{
+
+const caservices = async()=>{
+   // try{
     
         const ca = await Current.find()
-        res.json(ca)
-    }catch(err){
-        res.send('Error'+ err)
-    }
-})
+        // console.log(ca);
+        return ca;
+       // res.send(ca);
+    //     res.json(ca)
+    // }catch(err){
+    //     res.send('Error'+ err)
+    // }
+}
 
-router.get('/:slug', async (req,res)=>{
+const caslug =  async (slug)=>{
    
     //console.log(req.params.id);
-     const ca = await Current.findOne({currentaffair_slug:req.params.slug})
-        res.json(ca);
- })
+        console.log(slug);
+        const cas = await Current.findOne({"currentaffair_slug":slug})
+        return cas;
+ }
 
- 
-
-module.exports = router;
+module.exports ={ caservices, caslug} ;

@@ -5,7 +5,8 @@ const mongoose = require('mongoose')
 const currentaffairSchema = new mongoose.Schema({
     currentaffair_id:{
         type:String ,
-        required:true
+        required:true,
+        unique:true
     },
     currentaffair_title:{
         type:String,
