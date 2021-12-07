@@ -1,7 +1,9 @@
 const mongoose = require('mongoose')
 
-const categorySchema = new mongoose.Schema({
-    course_category_id : {
+const categorySchema = new mongoose.Schema(
+{
+   
+        course_category_id : {
         type:String,
         required:true
 
@@ -20,6 +22,13 @@ const categorySchema = new mongoose.Schema({
         type : Date,
         required : true
     }
-})
+},
+{
+    timestamps:true
+}
+
+);
+
+    
 
 module.exports = mongoose.model( 'coursecategory' , categorySchema );

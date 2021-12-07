@@ -18,8 +18,11 @@ router.get('/currentaffair/:currentaffair_slug' , caffairsroute.controlcurrent_a
 
 router.get('/courses', courseroute.controlCourse)
 
+router.get('/course/:courseId',courseroute.controlCourseId)
+
 router.get('/courseCategory' ,courseCategoryroute.courseCategoryControl)
 
 router.get('/courseType',courseTyperoute.coursetypeController)
 router.get('/demo',demoroute.demoController)
+
 module.exports =router;

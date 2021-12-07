@@ -22,6 +22,10 @@ const demoSchema = new mongoose.Schema({
         type:Date,
         required:true
     }
-})
+},
+{
+    timestamps:true
+}
+);
 
 module.exports =mongoose.model('democlasses',demoSchema);

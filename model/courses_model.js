@@ -71,7 +71,7 @@ const coursesSchema = new mongoose.Schema({
          type: String,
          required: true
      },
-     course_category :{
+     category_id :{
          type: String,
          required : true
      },
@@ -95,9 +95,18 @@ const coursesSchema = new mongoose.Schema({
     updated_at :{
         type: String,
         required: true
+    },
+    course_slug :{
+        type:String,
+        required:true
     }
 
 
 
-})
+},
+{
+    timestamps:true
+}
+
+);
 module.exports = mongoose.model('Courses', coursesSchema );
