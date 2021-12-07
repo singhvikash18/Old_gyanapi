@@ -1,3 +1,4 @@
+const router = require('express').Router()
 const Type = require('../model/course_type_model')
 
 const typeService = async ()=>{

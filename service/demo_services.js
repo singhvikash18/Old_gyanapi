@@ -1,3 +1,4 @@
+const router = require('express').Router()
 const democlass = require('../model/democlass_model');
 
 const demoservice = async()=>{

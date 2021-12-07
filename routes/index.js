@@ -21,5 +21,5 @@ router.get('/courses', courseroute.controlCourse)
 router.get('/courseCategory' ,courseCategoryroute.courseCategoryControl)
 
 router.get('/courseType',courseTyperoute.coursetypeController)
- router.get('/demo',demoroute.demoController)
+router.get('/demo',demoroute.demoController)
 module.exports =router;

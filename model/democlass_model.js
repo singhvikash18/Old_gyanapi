@@ -24,4 +24,4 @@ const demoSchema = new mongoose.Schema({
     }
 })
 
-module.exports =mongoose.model('demo',demoSchema);
+module.exports =mongoose.model('democlasses',demoSchema);
