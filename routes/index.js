@@ -20,6 +20,8 @@ router.get('/courses', courseroute.controlCourse)
 
 router.get('/course/:category_id',courseroute.controlCategoryId)
 
+router.get('/coursedetails/:course_slug', courseroute.controlcoursedetails)
+
 router.get('/courseCategory' ,courseCategoryroute.courseCategoryControl)
 
 router.get('/courseType',courseTyperoute.coursetypeController)

@@ -31,8 +31,23 @@ const data ={
 res.status(httpStatus.OK).send(data)
 };
 
+const controlcoursedetails = async (req,res)=>{
+    //console.log(req.params);
+const details =  await courseController.coursedetailsService(req.params.course_slug);
+// console.log(test1);
+const response = details;
+const data ={
+    itemcount : 2,
+    status_code : httpStatus.OK,
+    message: "successfully sent",
+    data: response,
+
+};
+res.status(httpStatus.OK).send(data)
+};
+
 const course_read ={
-    controlCourse,controlCategoryId,
+    controlCourse,controlCategoryId,controlcoursedetails,
 }
 
 module.exports = course_read

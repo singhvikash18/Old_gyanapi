@@ -1,3 +1,4 @@
+
 const Courses = require('../model/courses_model')
 
 
@@ -11,8 +12,15 @@ const categoryIdService = async (categoryId)=>{
     //console.log(req.params.id);
          //   console.log(courseId);
         const cas1 = await Courses.find({category_id:categoryId});
-        console.log(cas1);
+       // console.log(cas1);
         return cas1;
  }
 
-module.exports ={ courseService,categoryIdService };
+const coursedetailsService = async (course_slug) =>{
+    
+    const cds = await Courses.find({course_slug:course_slug});
+    console.log(cds)
+    return cds;
+} 
+
+module.exports ={ courseService , categoryIdService, coursedetailsService };
