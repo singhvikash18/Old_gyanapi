@@ -4,8 +4,8 @@ const mongoose = require('mongoose')
 const coursesSchema = new mongoose.Schema({
     course_id : {
        type : String,
-       required : true
-
+       required : true,
+       unique: true
     },
     course_name : {
         type: String,
@@ -22,7 +22,6 @@ const coursesSchema = new mongoose.Schema({
     course_description: {
         type : String,
         required : true
- 
      },
      course_aditional_description: {
          type: String,
@@ -92,16 +91,14 @@ const coursesSchema = new mongoose.Schema({
         type: Date,
         required : true
     },
-    updated_at :{
+    updated_at: {
         type: String,
         required: true
     },
-    course_slug :{
+    course_slug: {
         type:String,
         required:true
     }
-
-
 
 },
 {
@@ -109,4 +106,4 @@ const coursesSchema = new mongoose.Schema({
 }
 
 );
-module.exports = mongoose.model('Courses', coursesSchema );
+module.exports = mongoose.model('courses', coursesSchema );

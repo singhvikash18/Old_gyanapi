@@ -1,5 +1,3 @@
-const router = require('express').Router()
-
 const Courses = require('../model/courses_model')
 
 
@@ -7,4 +5,14 @@ const courseService = async() =>{
     const cservice = await Courses.find()
     return cservice;
 }
-module.exports ={ courseService,};
+
+const categoryIdService = async (categoryId)=>{
+   
+    //console.log(req.params.id);
+         //   console.log(courseId);
+        const cas1 = await Courses.find({category_id:categoryId});
+        console.log(cas1);
+        return cas1;
+ }
+
+module.exports ={ courseService,categoryIdService };

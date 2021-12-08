@@ -18,7 +18,7 @@ router.get('/currentaffair/:currentaffair_slug' , caffairsroute.controlcurrent_a
 
 router.get('/courses', courseroute.controlCourse)
 
-router.get('/course/:courseId',courseroute.controlCourseId)
+router.get('/course/:category_id',courseroute.controlCategoryId)
 
 router.get('/courseCategory' ,courseCategoryroute.courseCategoryControl)
 

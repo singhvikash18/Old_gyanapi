@@ -20,7 +20,7 @@ const caslug =  async (slug)=>{
    
     //console.log(req.params.id);
         console.log(slug);
-        const cas = await Current.findOne({"currentaffair_slug":slug})
+        const cas = await Current.findOne({currentaffair_slug:slug})
         return cas;
  }
 
