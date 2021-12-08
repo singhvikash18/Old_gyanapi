@@ -16,10 +16,10 @@ const categoryIdService = async (categoryId)=>{
         return cas1;
  }
 
-const coursedetailsService = async (course_slug) =>{
+const coursedetailsService = async (courseslug) =>{
     
-    const cds = await Courses.find({course_slug:course_slug});
-    console.log(cds)
+    const cds = await Courses.findOne({course_slug : courseslug});
+    //console.log(cds)
     return cds;
 } 
 
