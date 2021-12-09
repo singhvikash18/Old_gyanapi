@@ -20,7 +20,7 @@ router.use('/course',croute);
 
 router.use('/courseCategory',categoryroute);
 
-router.use('/demo',droute);
+router.use('/demodetails',droute);
 
 router.use('/coursetype',ctype);
 router.use('/coursevideo',vroute);
