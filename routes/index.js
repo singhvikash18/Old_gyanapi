@@ -17,6 +17,7 @@ router.use('/email',mailroute);
 router.use('/currentaffair', currentaffairsroute);
 
 router.use('/course',croute);
+//router.use('/coursedetails',croute);
 
 router.use('/courseCategory',categoryroute);
 

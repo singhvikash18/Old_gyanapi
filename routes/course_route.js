@@ -7,6 +7,6 @@ router.get('/all', courseroute.controlCourse)
 
 router.get('/:category_id',courseroute.controlCategoryId)
 
-router.get('/:course_slug', courseroute.controlcoursedetails)
+router.get('/coursedetails/:course_slug', courseroute.controlcoursedetails)
 
 module.exports = router;
