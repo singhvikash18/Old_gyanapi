@@ -7,7 +7,7 @@ const demoservice = async()=>{
 }
 
 const demodetailId = async(demoIdDetails)=>{
-    const ddi = await democlass.find({demoId:demoIdDetails})
+    const ddi = await democlass.find({_id:demoIdDetails})
     return ddi;
 }
 
