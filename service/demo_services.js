@@ -6,4 +6,9 @@ const demoservice = async()=>{
     return ms;
 }
 
-module.exports={demoservice,};
+const demodetailId = async(demoIdDetails)=>{
+    const ddi = await democlass.find({demoId:demoIdDetails})
+    return ddi;
+}
+
+module.exports={demoservice,demodetailId};

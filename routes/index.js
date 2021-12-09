@@ -1,30 +1,29 @@
 const router = require('express').Router();
 //const currentvalid = require('../validation/currentaffair.validation');
-const getmails = require('../controller/mail.controller');
-
-const demoroute =require('../controller/demo.controller');
-const caffairsroute = require('../controller/currentaffair.controller');
-const courseroute = require('../controller/courses.controller');
-const courseCategoryroute =require('../controller/course_category.controller');
-const courseTyperoute = require('../controller/course_type.controller');
-
-
-router.post('/email_send',getmails.controlmail);
+// const getmails = require('../controller/mail.controller');
+const categoryroute = require('./courseCategory_route');
+const droute =require('./demo_route');
+const currentaffairsroute = require('./currentaffair_route');
+const croute = require('./course_route');
+const mailroute=require('./email_route');
+const ctype = require('./type_route');
+const vroute =require('./video_route');
 
 
-router.get('/currentaffair/all' , caffairsroute.controlcurrent_affairs)
-// router.use('/currentaffair', caffairs.controlcurrent_affairs);
-router.get('/currentaffair/:currentaffair_slug' , caffairsroute.controlcurrent_affairs_slug)
+// router.post('/email_send',getmails.controlmail);
 
-router.get('/courses', courseroute.controlCourse)
+ 
+router.use('/email',mailroute);
+router.use('/currentaffair', currentaffairsroute);
 
-router.get('/course/:category_id',courseroute.controlCategoryId)
+router.use('/course',croute);
 
-router.get('/coursedetails/:course_slug', courseroute.controlcoursedetails)
+router.use('/courseCategory',categoryroute);
 
-router.get('/courseCategory' ,courseCategoryroute.courseCategoryControl)
+router.use('/demo',droute);
 
-router.get('/courseType',courseTyperoute.coursetypeController)
-router.get('/demo',demoroute.demoController)
+router.use('/coursetype',ctype);
+router.use('/coursevideo',vroute);
+
 
 module.exports =router;

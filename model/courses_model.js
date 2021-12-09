@@ -95,7 +95,13 @@ const coursesSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    course_slug: {
+    course_slug:
+    {
+        type:String,
+        required:true
+    },
+    enroll:
+    {
         type:String,
         required:true
     }
