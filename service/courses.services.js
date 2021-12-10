@@ -1,4 +1,4 @@
-
+const moment = require('moment')
 const Courses = require('../model/courses_model')
 
 
@@ -23,4 +23,24 @@ const coursedetailsService = async (courseslug) =>{
     return cds;
 } 
 
-module.exports ={ courseService , categoryIdService, coursedetailsService };
+const coursecomingSoonService = async () =>{
+    //console.log('hello')
+    const todaydate =moment().valueOf();
+    //const todaydate =moment().format('MMMM Do YYYY, h:mm:ss a');
+    
+    console.log(todaydate);
+    const enddate =moment().add(1, 'years').valueOf();
+    const yodate = moment(("2022-03-10 "+" " + "18:00")).valueOf();
+
+    console.log(yodate)
+    
+    const soon = await Courses.find({
+        course_live_session_schedule: {
+            $gte:todaydate,
+            $lt:enddate
+        }
+    }).sort({course_live_session_schedule:-1});
+    console.log(soon)
+    return soon;
+} 
+module.exports ={ courseService , categoryIdService, coursedetailsService, coursecomingSoonService, };

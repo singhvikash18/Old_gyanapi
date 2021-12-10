@@ -3,10 +3,9 @@ const mongoose = require('mongoose')
 const categorySchema = new mongoose.Schema(
 {
    
-        course_category_id : {
-        type:String,
-        required:true
-
+    course_category_id : {
+    type:String,
+    required:true
     },
 
     course_category_name : {

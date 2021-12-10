@@ -7,7 +7,7 @@ const controlCourse = async(req,res)=>{
    // console.log(test);
     const response = test;
     const data ={
-        itemcount : 2,
+        itemcount : 1,
         status_code : httpStatus.OK,
         message: "successfully sent",
         data: response,
@@ -22,7 +22,7 @@ const test1 =  await courseController.categoryIdService(req.params.category_id);
 // console.log(test1);
 const response = test1;
 const data ={
-    itemcount : 2,
+    itemcount : 4,
     status_code : httpStatus.OK,
     message: "successfully sent",
     data: response,
@@ -46,8 +46,23 @@ const data ={
 res.status(httpStatus.OK).send(data)
 };
 
+const Coursescommingsoon = async (req,res)=>{
+    //console.log(req.params);
+const soonclass =  await courseController.coursecomingSoonService();
+// console.log(test1);
+const response = soonclass;
+const datas ={
+    itemcount : 5,
+    status_code : httpStatus.OK,
+    message: "successfully sent",
+    data: response,
+
+};
+res.status(httpStatus.OK).send(datas)
+};
+
 const course_read ={
-    controlCourse,controlCategoryId,controlcoursedetails,
+    controlCourse, Coursescommingsoon, controlCategoryId, controlcoursedetails, 
 }
 
 module.exports = course_read
