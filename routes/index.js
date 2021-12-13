@@ -8,6 +8,7 @@ const croute = require('./course_route');
 const mailroute=require('./email_route');
 const ctype = require('./type_route');
 const vroute =require('./video_route');
+const rroute = require('./review_route');
 
 
 // router.post('/email_send',getmails.controlmail);
@@ -25,6 +26,8 @@ router.use('/demodetails',droute);
 
 router.use('/coursetype',ctype);
 router.use('/coursevideo',vroute);
+
+router.use('/reviewtype',rroute);
 
 
 module.exports =router;

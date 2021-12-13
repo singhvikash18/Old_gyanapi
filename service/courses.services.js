@@ -28,19 +28,18 @@ const coursecomingSoonService = async () =>{
     const todaydate =moment().valueOf();
     //const todaydate =moment().format('MMMM Do YYYY, h:mm:ss a');
     
-    console.log(todaydate);
+   // console.log(todaydate);
     const enddate =moment().add(1, 'years').valueOf();
-    const yodate = moment(("2022-03-10 "+" " + "18:00")).valueOf();
-
-    console.log(yodate)
+   // const yodate = moment(("2022-02-12 "+" " + "19:00")).valueOf();
+  //  console.log(yodate)
     
     const soon = await Courses.find({
         course_live_session_schedule: {
             $gte:todaydate,
             $lt:enddate
         }
-    }).sort({course_live_session_schedule:-1});
-    console.log(soon)
+    }).sort({course_live_session_schedule:1});
+   // console.log(soon)
     return soon;
 } 
 module.exports ={ courseService , categoryIdService, coursedetailsService, coursecomingSoonService, };

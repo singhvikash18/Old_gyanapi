@@ -19,6 +19,11 @@ const videoSchema = new mongoose.Schema({
         type: String,
         required:true
     },
+    videoName :
+    {
+        type : String,
+        required : true
+    },
     videoDuration :
     {
         type: String,
@@ -38,7 +43,13 @@ const videoSchema = new mongoose.Schema({
     { 
         type: String,
         required:true
+    },
+    videoDate :
+    {
+        type : String,
+        required:true
     }
+    
 },
 {
     timestamps:true
