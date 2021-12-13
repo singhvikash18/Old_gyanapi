@@ -7,4 +7,9 @@ const videoservice = async()=>{
     return vs;
 }
 
-module.exports={videoservice,}
+const videoserviceId = async(videoById)=>{
+    const vsi = await videomodel.findOne({video_id:videoById})
+    return vsi;
+}
+
+module.exports={videoservice,videoserviceId,}
