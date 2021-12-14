@@ -9,10 +9,11 @@ const mailroute=require('./email_route');
 const ctype = require('./type_route');
 const vroute =require('./video_route');
 const rroute = require('./review_route');
+const authroute = require('./user_route');
 
 
 // router.post('/email_send',getmails.controlmail);
-
+router.use('/auth',authroute);
  
 router.use('/email',mailroute);
 router.use('/currentaffair', currentaffairsroute);

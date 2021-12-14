@@ -10,7 +10,8 @@ const videoSchema = new mongoose.Schema({
         type:String,
         required:true
     },
-    videoCourse_id :{
+    
+    course_id :{
         type:String,
         required:true
     },

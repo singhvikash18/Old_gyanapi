@@ -1,0 +1,61 @@
+const mongoose = require('mongoose')
+
+const teacherSchema = new mongoose.Schema ({
+    Teacher_id:
+    {
+        type:String,
+        required:true,
+        unique:true
+    },
+    Teacher_name:
+    {
+        type:String,
+        required:true
+    },
+    Teacher_address:
+    {
+        type:String,
+        required:true
+    },
+    teacher_education:
+    {
+        type:String,
+        required:true
+    },
+    teacher_bio:
+    {
+        type:String,
+        required:true
+    },
+    teacher_achievment:
+    {
+        type:String,
+        required:true
+    },
+    teacher_watch_time:
+    {
+        type:String,
+        required:true
+    },
+    teacher_watch_time_month:
+    {
+        type:String,
+        required:true
+    },
+    teacher_experience:
+    {
+        type:String,
+        required:true
+    },
+    teacher_rates:
+    {
+        type:String,
+        required:true
+    },
+    Teacher_created_at:
+    {
+        type:String,
+        required:true
+    }	  
+})
+module.exports = mongoose.model('teacher',teacherSchema);
