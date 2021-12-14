@@ -3,14 +3,14 @@ const catchAsync = require('./../utils/catch_async');
 const jwt =require('jsonwebtoken');
 const AppError = require('./../utils/app_error');
 
-exports.singup = catchAsync(async (req,res,next)=>{
+exports.singup = catchAsync(async (req,res)=>{
     const newUser = await User.create(req.body);
 
-    const token = jwt.sign({id :newUser._id}, process.env.JWT_SECRET,{
-        expiresIn : process.env.JWT_EXPIRES_IN  
-    });
+    // const token = jwt.sign({id :newUser._id}, process.env.JWT_SECRET,{
+    //     expiresIn : process.env.JWT_EXPIRES_IN  
+    // });
 
-    res.status(201).json({
+    res.status(200).json({
         status: 'success',
         
         data :{
