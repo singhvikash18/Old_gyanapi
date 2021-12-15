@@ -5,41 +5,40 @@ const bcrypt = require('bcryptjs');
 const userSchema = new mongoose.Schema({
     roles:{
         type:String,
-        required:[true,'please provide your role!']
+        required:true
     },
     username: {
         type:String,
-        required:[true,'please provide your name!'],
+        required:true,
         unique:true,
         trim:true
     },
     firstname:{
         type:String,
-        required:[true,'please provide your firstname!']
+        required:true
     },
     lastname:{
         type:String,
-        required:[true,'please provide your lastname!']
+        required:true
     },
     phone:{
         type:String,
-        required:[true,'please provide your phone no.!']
+        required:true
     },
     email: {
         type:String,
-        required:[true, 'please provide your email!'],
+        required:true,
         unique:true,
         lowercase:true,
-        validate: [validator.isEmail,'please tell your email']
+        validate: validator.isEmail
     },
     password: {
         type:String,
-        required:[true,'please provide your password!'],
-        minlength:8
+        required:true
     },
     confirmpassword: {
         type:String,
-        required: [true,'please confirm your password!']
+        required: true
     }
 });
 
@@ -53,6 +52,6 @@ userSchema.pre('save',async function(next){
     next();
 })
 
-const User = mongoose.model('User',userSchema);
+const User = mongoose.model('User', userSchema);
 
 module.exports = User;
