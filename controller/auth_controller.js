@@ -16,8 +16,8 @@ const userauthcontrol = async(req,res)=>{
     const response = cdd;
     const data ={
         itemcount : 2,
-        status_code : httpStatus.OK,
-        message: "successfully sent",
+        status_code : httpStatus.CREATED,
+        message: "Registration has been successfully !",
         data: response,
 
     };

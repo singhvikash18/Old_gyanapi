@@ -30,7 +30,12 @@ const userSchema = new mongoose.Schema({
         required:true,
         unique:true,
         lowercase:true,
-        validate: validator.isEmail
+        //validate:validator.isEmail,
+        validator(value) {
+            if (!validator.isEmail(value)) {
+              throw new Error("Invalid email");
+            }
+          },
     },
     password: {
         type:String,
@@ -38,9 +43,22 @@ const userSchema = new mongoose.Schema({
     },
     confirmpassword: {
         type:String,
-        required: true
+        required: true,
+        validate:{
+            validator:function(el){
+                return el === this.password;
+
+            },
+            message:'passwords are not same!'
+        }
     }
-});
+},
+{
+    timestamps:true,
+    toObject: { getters: true },
+    toJSON: { getters: true },
+}
+);
 
 userSchema.pre('save',async function(next){
     if(!this.isModified('password'))
