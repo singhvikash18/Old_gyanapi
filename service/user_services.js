@@ -3,7 +3,7 @@ const userModel = require('../model/user_models');
 const AppError = require('../utils/app_error');
 
 const checkDuplicateEmail = async(signupbodyemail, excludeUserId)=>{
-    const user = await userModel.findOne({signupbodyemail, _id: { $ne: excludeUserId }})
+    const user = await userModel.findOne({email:signupbodyemail, _id: excludeUserId })
     if(user){
         //return user;
         throw new AppError(httpStatus.BAD_REQUEST, "Email already taken");

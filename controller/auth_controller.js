@@ -6,7 +6,7 @@ const authservices =require('../service/user_services');
 
 const httpStatus = require('http-status');
 
-const userauthcontrol = async(req,res)=>{
+const userauthcontrol = catchAsync(async(req,res)=>{
     //console.log(req.body)
     const cdd = await authservices.getUser(req.body);
     //console.log(cdd);
@@ -22,7 +22,7 @@ const userauthcontrol = async(req,res)=>{
 
     };
     res.status(httpStatus.OK).send(data)
-};
+});
 
 // exports.singup = catchAsync(async (req,res,next)=>{
 //     const newUser = await User.create(req.body);

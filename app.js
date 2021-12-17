@@ -31,7 +31,16 @@ const port = process.env.PORT ;
 const allroutes = require('./routes/index')
 app.use('/api', allroutes);
 // app.use('/send', mailsent);
-
+app.use(function (err, req, res, next) {
+  
+    // render the error page
+    res.status(err.status || 500);
+    res.send({
+      status_code: 500,
+      message: err.message,
+      data: "",
+    });
+  });
 
 app.listen(port, () => {
     console.log(`Server listening on port ${port}`);
