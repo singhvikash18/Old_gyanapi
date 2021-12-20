@@ -10,8 +10,10 @@ const ctype = require('./type_route');
 const vroute =require('./video_route');
 const rroute = require('./review_route');
 const authroute = require('./user_route');
+const loginroute = require('./auth_route');
 
 
+router.use('/authlogin',loginroute);
 // router.post('/email_send',getmails.controlmail);
 router.use('/auth',authroute);
  
