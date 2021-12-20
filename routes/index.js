@@ -11,6 +11,7 @@ const vroute =require('./video_route');
 const rroute = require('./review_route');
 const authroute = require('./user_route');
 const loginroute = require('./auth_route');
+const teacherroute = require('./teacher_route');
 
 
 router.use('/authlogin',loginroute);
@@ -25,6 +26,7 @@ router.use('/course',croute);
 
 router.use('/courseCategory',categoryroute);
 
+router.use('/teacherDetails',teacherroute);
 router.use('/demodetails',droute);
 
 router.use('/coursetype',ctype);

@@ -1,18 +1,18 @@
 const mongoose = require('mongoose')
 
 const teacherSchema = new mongoose.Schema ({
-    Teacher_id:
+    teacher_id:
     {
         type:String,
         required:true,
         unique:true
     },
-    Teacher_name:
+    teacher_name:
     {
         type:String,
         required:true
     },
-    Teacher_address:
+    teacher_address:
     {
         type:String,
         required:true
@@ -52,7 +52,7 @@ const teacherSchema = new mongoose.Schema ({
         type:String,
         required:true
     },
-    Teacher_created_at:
+    teacher_created_at:
     {
         type:String,
         required:true
