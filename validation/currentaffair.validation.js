@@ -2,13 +2,13 @@ const Joi = require('joi')
 
 const cavalid = {
     body: Joi.object().keys({
-        currentaffair_id: Joi.string().required(),
-        currentaffair_description: Joi.string().required(),
-        currentaffair_image: Joi.string().required(),
-        currentaffair_created_at: Joi.date().iso().required(),
-        currentaffair_slug: Joi.string().required(),
-        currentaffair_title: Joi.string().required(),
-        currentaffair_summary: Joi.string().required()
+        currentaffair_id: Joi.string(),
+        currentaffair_description: Joi.string(),
+        currentaffair_image: Joi.string(),
+        currentaffair_created_at: Joi.string(),
+        currentaffair_slug: Joi.string(),
+        currentaffair_title: Joi.string(),
+        currentaffair_summary: Joi.string()
     }),
 };
 

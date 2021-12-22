@@ -11,9 +11,9 @@ const userauthcontrol = catchAsync(async(req,res)=>{
     //console.log(req.body)
     const cdd = await signupservices.getUser(req.body);
     //console.log(cdd);
-    const token = jwt.sign({id :newUser._id}, process.env.JWT_SECRET,{
-            expiresIn : process.env.JWT_EXPIRES_IN  
-        });
+    // const token = jwt.sign({id :newUser._id}, process.env.JWT_SECRET,{
+    //         expiresIn : process.env.JWT_EXPIRES_IN  
+    //     });
     const response = cdd;
     const data ={
         itemcount : 2,

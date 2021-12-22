@@ -1,8 +1,10 @@
 const currentaffairservices = require('../service/currentaffair.services');
+const catchAsync = require('../utils/catch_async');
 
 const httpStatus = require('http-status');
 
-const controlcurrent_affairs = async(req,res)=>{
+const controlcurrent_affairs = catchAsync(async(req,res)=>{
+   // console.log('asdfasdfasdfads')
     const test =  await currentaffairservices.caservices();
    // console.log(test);
     const response = test;
@@ -14,14 +16,14 @@ const controlcurrent_affairs = async(req,res)=>{
 
     };
     res.status(httpStatus.OK).send(data)
-};
+});
 
 
 
 const controlcurrent_affairs_slug = async(req,res)=>{
         //console.log(req.params);
     const test1 =  await currentaffairservices.caslug(req.params.currentaffair_slug);
-    console.log(test1);
+    //console.log(test1);
     const response = test1;
     const data ={
         itemcount : 2,
