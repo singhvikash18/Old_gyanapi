@@ -28,8 +28,9 @@ const userauthcontrol = catchAsync(async(req,res)=>{
 const loginController =  catchAsync( async (req, res) =>{
 
     //user login data sending
-  
-    const user = await authservices.userlogin(req.body.email, req.body.password);
+    // console.log(req)
+    const user = await authservices.userlogin(req.body.email, req.body.password,req.body.roles);
+    console.log(user);
     const tokens = await authservices.generateAuthTokens(user.id);
     const response = {user: user, tokens };
     const data ={

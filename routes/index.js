@@ -12,6 +12,11 @@ const rroute = require('./review_route');
 const authroute = require('./user_route');
 const loginroute = require('./auth_route');
 const teacherroute = require('./teacher_route');
+const studroute = require('./student_route');
+const playroute = require('./videoplay_route');
+
+
+router.use('/play',playroute);
 
 
 router.use('/authlogin',loginroute);
@@ -28,6 +33,8 @@ router.use('/courseCategory',categoryroute);
 
 router.use('/teacherDetails',teacherroute);
 router.use('/demodetails',droute);
+
+router.use('/studentdetails',studroute);
 
 router.use('/coursetype',ctype);
 router.use('/coursevideo',vroute);

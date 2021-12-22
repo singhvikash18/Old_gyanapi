@@ -6,8 +6,9 @@ const httpStatus = require("http-status");
 
 
 
-const getUserbyEmail = async(email)=>{
-    const getEmail =await User.findOne({email});
+const getUserbyEmail = async(email,roles)=>{
+    const getEmail =await User.findOne({email:email,roles:roles});
+    console.log(getEmail);
     if(!getEmail)
     {
         throw new AppError(httpStatus.NOT_FOUND,"No user found with this email");

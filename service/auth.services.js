@@ -15,16 +15,16 @@ const checkPassword =  async (password, correctPassword) => {
 
 }
 
-const userlogin = async (email, password) => {
+const userlogin = async (email, password,roles) => {
 
-    try{
-        const user = await loginservices.getUserbyEmail(email);
+    
+        const user = await loginservices.getUserbyEmail(email,roles);
+        console.log(user);
         await checkPassword(password, user.password);
-        
         return user;
-    } catch (error){
-        throw new AppError(httpStatus.UNAUTHORIZED, "Incorrect email or password");
-    }
+    // } catch (error){
+    //     throw new AppError(httpStatus.UNAUTHORIZED, "Incorrect email or password");
+    // }
 
 }
 const generateAuthTokens = async (userID)=>{
