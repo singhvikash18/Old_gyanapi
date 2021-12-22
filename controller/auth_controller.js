@@ -4,7 +4,7 @@ const jwt =require('jsonwebtoken');
 const AppError = require('./../utils/app_error');
 const signupservices =require('../service/user_services');
 const authservices =require('../service/auth.services');
-
+const { pick } = require("lodash");
 const httpStatus = require('http-status');
 
 const userauthcontrol = catchAsync(async(req,res)=>{
@@ -29,10 +29,19 @@ const loginController =  catchAsync( async (req, res) =>{
 
     //user login data sending
     // console.log(req)
-    const user = await authservices.userlogin(req.body.email, req.body.password,req.body.roles);
-    console.log(user);
-    const tokens = await authservices.generateAuthTokens(user.id);
-    const response = {user: user, tokens };
+    const userdetails = await authservices.userlogin(req.body.email, req.body.password,req.body.roles);
+    const users =  {
+        _id: userdetails.id,
+  roles: userdetails.roles,
+  username: userdetails.username,
+  firstname: userdetails.firstname,
+  lastname: userdetails.lastname,
+  phone: userdetails.phone,
+  email: userdetails.email,
+    }
+    console.log(userdetails)
+    const tokens = await authservices.generateAuthTokens(userdetails.id);
+    const response = {user: users, tokens };
     const data ={
         status_code : httpStatus.OK,
         itemCount: 2,
