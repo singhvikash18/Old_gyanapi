@@ -1,9 +1,15 @@
 const loginservices = require('../service/login.services')
 const tokenservice =require('./token.services');
+const Userservices = require('../service/user_services');
+const User = require('../model/user_models');
 const httpStatus =require('http-status');
+const Token = require('../model/token.model');
 const bcrypt = require('bcryptjs');
+ const crypto = require('crypto');
 const moment = require('moment')
 const AppError = require('../utils/app_error');
+
+const catchAsync = require('../utils/catch_async');
 
 
 
@@ -50,7 +56,33 @@ const generateAuthTokens = async (userID)=>{
         }
     }
 }
+
+const generateResetPasswordToken = async (email) => {
+    
+    let user = await User.findOne({ email:email });
+    
+    const expires = moment().add(
+      process.env.JWT_EXPIRES_IN,
+      "minutes"
+    
+    );
+    console.log(expires);
+    const resetPasswordToken = tokenservice.generateToken(user._id, expires);
+    await tokenservice.saveToken(
+      resetPasswordToken,
+      user._id,
+      expires,
+      "resetPassword"
+    );
+    
+    return resetPasswordToken;
+  };
+
+
+
 module.exports =  {
     userlogin,
-    generateAuthTokens
+    generateAuthTokens,
+    generateResetPasswordToken,
+   
 }

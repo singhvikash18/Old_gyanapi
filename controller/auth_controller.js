@@ -1,11 +1,14 @@
 const User = require('./../model/user_models');
 const catchAsync = require('./../utils/catch_async');
 const jwt =require('jsonwebtoken');
+// const crypto = require('crypto');
 const AppError = require('./../utils/app_error');
 const signupservices =require('../service/user_services');
 const authservices =require('../service/auth.services');
 const { pick } = require("lodash");
 const httpStatus = require('http-status');
+const emailService = require('../service/mails.services');
+
 
 const userauthcontrol = catchAsync(async(req,res)=>{
     //console.log(req.body)
@@ -51,41 +54,42 @@ const loginController =  catchAsync( async (req, res) =>{
     res.status(httpStatus.OK).send(data);
 
 })
-    
 
 
-// exports.singup = catchAsync(async (req,res,next)=>{
-//     const newUser = await User.create(req.body);
-
-//     // const token = jwt.sign({id :newUser._id}, process.env.JWT_SECRET,{
-//     //     expiresIn : process.env.JWT_EXPIRES_IN  
-//     // });
-
-//     res.status(200).json({
-//         status: 'success',
-        
-//         data :{
-//             user:newUser
-//         }
-//     });
-// });
 
 
-// exports.login =(req,res,next)=>{
-//     const {email,password }= req.body;
+const forgotPassword = catchAsync(async (req, res) => {
+    const resetPasswordToken = await authservices.generateResetPasswordToken(
+      req.body.email
+    );
+    await emailService.sendResetPasswordEmail(
+      req.body.email,
+      resetPasswordToken,
+      req.headers.origin
+    );
+    const data = {
+      status_code: httpStatus.OK,
+      itemCount: 0,
+      message:
+        "An email has been send to " +
+        req.body.email +
+        " with the set of instructions",
+      data: "",
+    };
+    res.status(httpStatus.OK).send(data);
+  });
 
-//     if(!email || !password){
-//         next(new AppError('please provide email and password!',400));
-//     }
+//   const sendResetPasswordEmail = async (to, token, headerOrigin) => {
+//     const subject = "Reset password";
+//     // replace this url with the link to the reset password page of your front-end app
+//     const resetPasswordUrl = `${headerOrigin}/auth/reset-password?token=${token}`;
+//     const text = `Dear user,
+//     To reset your password, click on this link: ${resetPasswordUrl}
+//     If you did not request any password resets, then ignore this email.`;
+//     await sendEmail(to, subject, text);
+//   };
+  
 
-//     const token='';
-//     res.status(200).json({
-//         status:'success',
-//         token
-//     });
-
-// };
-
-const user_read={userauthcontrol,loginController,}
+const user_read={userauthcontrol,loginController,forgotPassword}
 
 module.exports= user_read;

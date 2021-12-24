@@ -1,6 +1,9 @@
 const httpStatus = require('http-status');
+const User = require('../model/user_models');
 const userModel = require('../model/user_models');
 const AppError = require('../utils/app_error');
+const JWT = require('jsonwebtoken');
+
 
 const checkDuplicateEmail = async(signupbodyemail, excludeUserId)=>{
     const user = await userModel.findOne({email:signupbodyemail, _id: excludeUserId })
@@ -18,6 +21,21 @@ const getUser = async(signupbody)=>{
     return authuser;
 }
 
+const signup = async (data) => {
+    let user = await User.findOne({ email: data.email });
+    if (user) {
+      throw new Error("Email already exist");
+    }
+    user = new User(data);
+    const token = JWT.sign({ id: user._id }, JWTSecret);
+    await user.save();
+    return (data = {
+      userId: user._id,
+      email: user.email,
+      username: user.username,
+      token: token,
+    });
+  };
 
-module.exports ={getUser,}
 
+module.exports ={getUser,signup}
