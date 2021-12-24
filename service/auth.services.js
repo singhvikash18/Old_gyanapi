@@ -58,6 +58,12 @@ const generateAuthTokens = async (userID)=>{
 const generateResetPasswordToken = async (email) => {
     
     let user = await User.findOne({ email:email });
+    console.log(user);
+    if (!user) {
+        throw new AppError(httpStatus.BAD_REQUEST, "email do not match");
+      }
+    
+
     
     const expires = moment().add(
       process.env.JWT_EXPIRES_IN,

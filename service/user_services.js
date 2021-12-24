@@ -43,4 +43,5 @@ const fetchId = async(_id)=>{
     return fid;
 }
 
+
 module.exports ={getUser,signup,fetchId}
