@@ -4,7 +4,7 @@ const authController = require('./../controller/auth_controller');
 
 router.post('/signup',authController.userauthcontrol);
 
-router.get('/:_id',authController.fetchIdcontrol);
+router.post('/verifytoken',authController.fetchIdcontrol);
 
 router.post('/forgotpassword',authController.forgotPassword);
 

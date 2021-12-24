@@ -26,7 +26,9 @@ const saveToken = async (token, userID, expires, type ) => {
     }
 
     const verifyToken = async (token,type) => {
-        const payload = jwt.verify(token, config.jwt.secret);
+      
+        const payload = jwt.verify(token, process.env.JWT_SECRET);
+        console.log(payload)
       const tokenDoc = await Token.findOne({
         token,
         type,
@@ -39,9 +41,26 @@ const saveToken = async (token, userID, expires, type ) => {
       return tokenDoc;
     }
 
+
+    const verifyTokenuser = async (token) => {
+      
+      const payload = jwt.verify(token, process.env.JWT_SECRET);
+      //console.log(payload)
+    const tokenDoc = await Token.findOne({
+      token,
+      user: payload.sub,
+     
+    });
+    if (!tokenDoc && tokenDoc == null) {
+      throw new AppError(httpStatus.NOT_FOUND, "Token not found");
+    }
+    return tokenDoc;
+  }
+
     module.exports = {
         generateToken,
         saveToken,
         verifyToken,
+        verifyTokenuser,
     }
     

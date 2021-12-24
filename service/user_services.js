@@ -1,5 +1,6 @@
 const httpStatus = require('http-status');
 const User = require('../model/user_models');
+
 const userModel = require('../model/user_models');
 const AppError = require('../utils/app_error');
 const JWT = require('jsonwebtoken');

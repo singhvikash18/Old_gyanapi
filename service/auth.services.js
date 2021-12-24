@@ -32,6 +32,7 @@ const userlogin = async (email, password,roles) => {
 }
 const generateAuthTokens = async (userID)=>{
     const accessTokenExpires = moment().add(process.env.JWT_ACCESS_EXPIRATION_MINUTES, "minutes");
+    console.log(accessTokenExpires); console.log(process.env.JWT_ACCESS_EXPIRATION_MINUTES)
     const accessToken = tokenservice.generateToken(userID, accessTokenExpires)
     const refreshTokenExpires = moment().add(process.env.JWT_REFRESH_EXPIRATION_DAYS, "minutes");
     const refreshToken = tokenservice.generateToken(userID, refreshTokenExpires)

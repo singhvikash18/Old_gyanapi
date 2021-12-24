@@ -8,6 +8,7 @@ const authservices =require('../service/auth.services');
 const { pick } = require("lodash");
 const httpStatus = require('http-status');
 const emailService = require('../service/mails.services');
+const tokenservices = require('../service/token.services');
 
 
 const userauthcontrol = catchAsync(async(req,res)=>{
@@ -48,7 +49,7 @@ const loginController =  catchAsync( async (req, res) =>{
     const data ={
         status_code : httpStatus.OK,
         itemCount: 2,
-        message: "successfully loign in",
+        message: "successfully login",
         data: response,
     };
     res.status(httpStatus.OK).send(data);
@@ -90,9 +91,11 @@ const forgotPassword = catchAsync(async (req, res) => {
 //   };
 
 const fetchIdcontrol = async(req,res)=>{
-    const test =  await signupservices.fetchId();
-   // console.log(test);
-    const response = test;
+    const gettokens =  await tokenservices.verifyTokenuser(req.body.token);
+    //console.log(gettokens);
+    const alldetails =  await signupservices.fetchId(gettokens.user)
+    //console.log(alldetails);
+    const response = alldetails;
     const data ={
         itemcount : 1,
         status_code : httpStatus.OK,
