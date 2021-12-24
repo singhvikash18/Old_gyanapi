@@ -1,15 +1,14 @@
 const loginservices = require('../service/login.services')
 const tokenservice =require('./token.services');
-const Userservices = require('../service/user_services');
+
 const User = require('../model/user_models');
 const httpStatus =require('http-status');
-const Token = require('../model/token.model');
+
 const bcrypt = require('bcryptjs');
- const crypto = require('crypto');
+
 const moment = require('moment')
 const AppError = require('../utils/app_error');
 
-const catchAsync = require('../utils/catch_async');
 
 
 
@@ -28,9 +27,7 @@ const userlogin = async (email, password,roles) => {
         console.log(user);
         await checkPassword(password, user.password);
         return user;
-    // } catch (error){
-    //     throw new AppError(httpStatus.UNAUTHORIZED, "Incorrect email or password");
-    // }
+    
 
 }
 const generateAuthTokens = async (userID)=>{
@@ -77,6 +74,8 @@ const generateResetPasswordToken = async (email) => {
     
     return resetPasswordToken;
   };
+
+
 
 
 

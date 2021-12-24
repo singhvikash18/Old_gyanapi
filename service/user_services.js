@@ -3,6 +3,7 @@ const User = require('../model/user_models');
 const userModel = require('../model/user_models');
 const AppError = require('../utils/app_error');
 const JWT = require('jsonwebtoken');
+const { ObjectId } = require('mongodb');
 
 
 const checkDuplicateEmail = async(signupbodyemail, excludeUserId)=>{
@@ -36,6 +37,9 @@ const signup = async (data) => {
       token: token,
     });
   };
+const fetchId = async(_id)=>{
+    const fid = await User.findOne({_Id:_id});
+    return fid;
+}
 
-
-module.exports ={getUser,signup}
+module.exports ={getUser,signup,fetchId}

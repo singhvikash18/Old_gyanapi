@@ -69,7 +69,7 @@ const forgotPassword = catchAsync(async (req, res) => {
     );
     const data = {
       status_code: httpStatus.OK,
-      itemCount: 0,
+      itemCount: 1,
       message:
         "An email has been send to " +
         req.body.email +
@@ -88,8 +88,22 @@ const forgotPassword = catchAsync(async (req, res) => {
 //     If you did not request any password resets, then ignore this email.`;
 //     await sendEmail(to, subject, text);
 //   };
+
+const fetchIdcontrol = async(req,res)=>{
+    const test =  await signupservices.fetchId();
+   // console.log(test);
+    const response = test;
+    const data ={
+        itemcount : 1,
+        status_code : httpStatus.OK,
+        message: "successfully sent",
+        data: response,
+
+    };
+    res.status(httpStatus.OK).send(data)
+};
   
 
-const user_read={userauthcontrol,loginController,forgotPassword}
+const user_read={userauthcontrol,loginController,forgotPassword,fetchIdcontrol}
 
 module.exports= user_read;
