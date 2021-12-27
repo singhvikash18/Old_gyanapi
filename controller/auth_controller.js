@@ -51,13 +51,13 @@ const loginController =  catchAsync( async (req, res) =>{
 
    res.cookie("token", CryptoJS.AES.encrypt(JSON.stringify(tokens.access.token), '619619').toString(), {
     secure:true, //process.env.NODE_ENV !== "development",
-    httpOnly: true,
+    httpOnly: true, sameSite: 'strict',
     expires: new Date(tokens.access.expires),
    });
 
    res.cookie("user", CryptoJS.AES.encrypt(JSON.stringify(users), '619619').toString(), {
     secure: true ,//process.env.NODE_ENV !== "development",
-    
+    sameSite: 'strict',
     httpOnly: true,
     expires: new Date(tokens.access.expires),
    });
