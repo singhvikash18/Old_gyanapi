@@ -50,17 +50,19 @@ const loginController =  catchAsync( async (req, res) =>{
     // ,{expires: new Date(res.data.tokens.access.expires)})
 
    res.cookie("token", CryptoJS.AES.encrypt(JSON.stringify(tokens.access.token), '619619').toString(), {
-    secure: process.env.NODE_ENV !== "development",
+    secure:true, //process.env.NODE_ENV !== "development",
     httpOnly: true,
     expires: new Date(tokens.access.expires),
    });
 
    res.cookie("user", CryptoJS.AES.encrypt(JSON.stringify(users), '619619').toString(), {
-    secure: process.env.NODE_ENV !== "development",
+    secure: true ,//process.env.NODE_ENV !== "development",
+    
     httpOnly: true,
     expires: new Date(tokens.access.expires),
    });
 
+   console.log(process.env.NODE_ENV );
      const response = {user: users };
     const data ={
         status_code : httpStatus.OK,
