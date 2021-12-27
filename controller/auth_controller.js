@@ -61,12 +61,12 @@ const loginController =  catchAsync( async (req, res) =>{
     expires: new Date(tokens.access.expires),
    });
 
-    // const response = {user: users, tokens };
+     const response = {user: users };
     const data ={
         status_code : httpStatus.OK,
         itemCount: 2,
         message: "successfully login",
-        // data: response,
+         data: response,
     };
     res.status(httpStatus.OK).send(data);
 
