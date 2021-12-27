@@ -1,5 +1,6 @@
 const express = require("express");
 const bodyParser = require('body-parser');
+const cookieParser = require('cookie-parser');
 const cors =require('cors')
 const dotenv = require('dotenv');
 
@@ -18,6 +19,7 @@ con.on('open' , ()=>{
     console.log('connected...')
 })
 
+app.use(cookieParser())
 
 app.use(cors());
 app.options("*", cors());

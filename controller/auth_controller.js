@@ -9,6 +9,7 @@ const { pick } = require("lodash");
 const httpStatus = require('http-status');
 const emailService = require('../service/mails.services');
 const tokenservices = require('../service/token.services');
+var CryptoJS = require("crypto-js");
 
 
 const userauthcontrol = catchAsync(async(req,res)=>{
@@ -45,12 +46,27 @@ const loginController =  catchAsync( async (req, res) =>{
     }
     console.log(userdetails)
     const tokens = await authservices.generateAuthTokens(userdetails.id);
-    const response = {user: users, tokens };
+    // cookie.set('token',CryptoJS.AES.encrypt(JSON.stringify(res.data.tokens.access.token), '619619').toString()
+    // ,{expires: new Date(res.data.tokens.access.expires)})
+
+   res.cookie("token", CryptoJS.AES.encrypt(JSON.stringify(tokens.access.token), '619619').toString(), {
+    secure: process.env.NODE_ENV !== "development",
+    httpOnly: true,
+    expires: new Date(tokens.access.expires),
+   });
+
+   res.cookie("user", CryptoJS.AES.encrypt(JSON.stringify(users), '619619').toString(), {
+    secure: process.env.NODE_ENV !== "development",
+    httpOnly: true,
+    expires: new Date(tokens.access.expires),
+   });
+
+    // const response = {user: users, tokens };
     const data ={
         status_code : httpStatus.OK,
         itemCount: 2,
         message: "successfully login",
-        data: response,
+        // data: response,
     };
     res.status(httpStatus.OK).send(data);
 
