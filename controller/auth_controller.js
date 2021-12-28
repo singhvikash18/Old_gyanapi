@@ -10,7 +10,7 @@ const httpStatus = require('http-status');
 const emailService = require('../service/mails.services');
 const tokenservices = require('../service/token.services');
 var CryptoJS = require("crypto-js");
-
+const cookie = require('cookie');
 
 const userauthcontrol = catchAsync(async(req,res)=>{
     //console.log(req.body)
@@ -46,15 +46,7 @@ const loginController =  catchAsync( async (req, res) =>{
     }
     console.log(userdetails)
     const tokens = await authservices.generateAuthTokens(userdetails.id);
-    res.setHeader(
-        "Set-Cookie",
-        cookie.serialize("token", CryptoJS.AES.encrypt(JSON.stringify(res.data.tokens.access.token), '619619').toString(), {
-          httpOnly: true,
-          maxAge: 60 * 60 * 24,
-          sameSite: "strict",
-          path: "/",
-        })
-      );
+
     // cookie.set('token',CryptoJS.AES.encrypt(JSON.stringify(res.data.tokens.access.token), '619619').toString()
     // ,{expires: new Date(res.data.tokens.access.expires)})
 
@@ -72,6 +64,17 @@ const loginController =  catchAsync( async (req, res) =>{
 //    });
 
 //    res.cookie("test", "test");
+
+res.setHeader(
+    "Set-Cookie",
+    cookie.serialize("token", CryptoJS.AES.encrypt(JSON.stringify(tokens.access.token), '619619').toString(), {
+      httpOnly: true,
+      maxAge: 60 * 60 * 24,
+      sameSite: "strict",
+      path: "/",
+    })
+  );
+
 
    console.log(process.env.NODE_ENV );
     const response = {user: users, tokens: tokens };
