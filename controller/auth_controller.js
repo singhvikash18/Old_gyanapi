@@ -46,23 +46,32 @@ const loginController =  catchAsync( async (req, res) =>{
     }
     console.log(userdetails)
     const tokens = await authservices.generateAuthTokens(userdetails.id);
+    res.setHeader(
+        "Set-Cookie",
+        cookie.serialize("token", CryptoJS.AES.encrypt(JSON.stringify(res.data.tokens.access.token), '619619').toString(), {
+          httpOnly: true,
+          maxAge: 60 * 60 * 24,
+          sameSite: "strict",
+          path: "/",
+        })
+      );
     // cookie.set('token',CryptoJS.AES.encrypt(JSON.stringify(res.data.tokens.access.token), '619619').toString()
     // ,{expires: new Date(res.data.tokens.access.expires)})
 
-   res.cookie("token", CryptoJS.AES.encrypt(JSON.stringify(tokens.access.token), '619619').toString(), {
-    secure:true, //process.env.NODE_ENV !== "development",
-    httpOnly: true, sameSite: 'strict',
-    expires: new Date(tokens.access.expires),
-   });
+//    res.cookie("token", CryptoJS.AES.encrypt(JSON.stringify(tokens.access.token), '619619').toString(), {
+//     secure:true, //process.env.NODE_ENV !== "development",
+//     httpOnly: true, sameSite: 'strict',
+//     expires: new Date(tokens.access.expires),
+//    });
 
-   res.cookie("user", CryptoJS.AES.encrypt(JSON.stringify(users), '619619').toString(), {
-   secure: true ,//process.env.NODE_ENV !== "development",
-    sameSite: 'strict',
-    httpOnly: true,
-    expires: new Date(tokens.access.expires),
-   });
+//    res.cookie("user", CryptoJS.AES.encrypt(JSON.stringify(users), '619619').toString(), {
+//    secure: true ,//process.env.NODE_ENV !== "development",
+//     sameSite: 'strict',
+//     httpOnly: true,
+//     expires: new Date(tokens.access.expires),
+//    });
 
-   res.cookie("test", "test");
+//    res.cookie("test", "test");
 
    console.log(process.env.NODE_ENV );
     const response = {user: users, tokens: tokens };
