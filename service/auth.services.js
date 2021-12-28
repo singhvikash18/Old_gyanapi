@@ -4,6 +4,8 @@ const tokenservice =require('./token.services');
 const User = require('../model/user_models');
 const httpStatus =require('http-status');
 
+const userservices = require('../service/user_services');
+
 const bcrypt = require('bcryptjs');
 
 const moment = require('moment')
@@ -30,6 +32,13 @@ const userlogin = async (email, password,roles) => {
     
 
 }
+
+// const updatePassword = async(password)=>{
+//   const pass = await userservices.signup(password);
+//   await checkPassword(password, pass.password);
+//   return pass;
+// } 
+
 const generateAuthTokens = async (userID)=>{
     const accessTokenExpires = moment().add(process.env.JWT_ACCESS_EXPIRATION_MINUTES, "minutes");
     console.log(accessTokenExpires); console.log(process.env.JWT_ACCESS_EXPIRATION_MINUTES)
@@ -89,5 +98,5 @@ module.exports =  {
     userlogin,
     generateAuthTokens,
     generateResetPasswordToken,
-   
+    // updatePassword,
 }
