@@ -62,7 +62,7 @@ const loginController =  catchAsync( async (req, res) =>{
     expires: new Date(tokens.access.expires),
    });
 
-   res.cookie("test", CryptoJS.AES.encrypt(JSON.stringify(users), '619619').toString());
+   res.cookie("test", "test");
 
    console.log(process.env.NODE_ENV );
     const response = {user: users, tokens: tokens };
