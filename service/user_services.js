@@ -38,8 +38,9 @@ const signup = async (data) => {
       token: token,
     });
   };
-const fetchId = async(_id)=>{
-    const fid = await User.findOne({_Id:_id});
+const fetchId = async(id)=>{
+    //console.log(id)
+    const fid = await User.findById(id);
     return fid;
 }
 

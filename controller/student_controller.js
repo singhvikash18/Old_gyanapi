@@ -15,6 +15,20 @@ const studentController = async(req,res)=>{
     res.status(httpStatus.OK).send(data)
 };
 
-const student_read ={studentController,}
+const studentControllerId = async(req,res)=>{
+    const dmo = await studentcontrol.studentId(req.params.student_id);
+    const response = dmo;
+    const data ={
+        itemcount : 2,
+        status_code : httpStatus.OK,
+        message: "successfully sent",
+        data: response,
+
+    };
+    res.status(httpStatus.OK).send(data)
+};
+
+
+const student_read ={studentController,studentControllerId}
 
 module.exports=student_read;

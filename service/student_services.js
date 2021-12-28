@@ -7,4 +7,9 @@ const studentservice = async()=>{
     return ss;
 }
 
-module.exports={studentservice,}
+const studentId = async(student_id)=>{
+    const si = await studentmodel.findOne({student_ids: student_id})
+    return si;
+}
+
+module.exports={studentservice, studentId ,}
