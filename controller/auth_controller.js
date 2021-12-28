@@ -44,7 +44,7 @@ const loginController =  catchAsync( async (req, res) =>{
   phone: userdetails.phone,
   email: userdetails.email,
     }
-    console.log(userdetails)
+   // console.log(userdetails)
     const tokens = await authservices.generateAuthTokens(userdetails.id);
 
     // cookie.set('token',CryptoJS.AES.encrypt(JSON.stringify(res.data.tokens.access.token), '619619').toString()
@@ -65,15 +65,15 @@ const loginController =  catchAsync( async (req, res) =>{
 
 //    res.cookie("test", "test");
 
-res.setHeader(
-    "Set-Cookie",
-    cookie.serialize("token", CryptoJS.AES.encrypt(JSON.stringify(tokens.access.token), '619619').toString(), {
-      httpOnly: true,
-      maxAge: 60 * 60 * 24,
-      sameSite: "strict",
-      path: "/",
-    })
-  );
+// res.setHeader(
+//     "Set-Cookie",
+//     cookie.serialize("token", CryptoJS.AES.encrypt(JSON.stringify(tokens.access.token), '619619').toString(), {
+//       httpOnly: true,
+//       maxAge: 60 * 60 * 24,
+//       sameSite: "strict",
+//       path: "/",
+//     })
+//   );
 
 
    console.log(process.env.NODE_ENV );
