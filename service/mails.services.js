@@ -111,7 +111,7 @@ const transporter = nodemailer.createTransport({
   const sendResetPasswordEmail = async (to, token, headerOrigin) => {
     const subject = "Reset password";
     // replace this url with the link to the reset password page of your front-end app
-    const resetPasswordUrl = `${headerOrigin}/auth/resetpassword?token=${token}`;
+    const resetPasswordUrl = `${headerOrigin}/resetpassword?token=${token}`;
     const text = `Dear user,
     To reset your password, click on this link: ${resetPasswordUrl}
     If you did not request any password resets, then ignore this email.`;

@@ -94,7 +94,8 @@ const loginController =  catchAsync( async (req, res) =>{
 const forgotPassword = catchAsync(async (req, res) => {
     const resetPasswordToken = await authservices.generateResetPasswordToken(
       req.body.email
-    );
+
+    );console.log(resetPasswordToken)
     await emailService.sendResetPasswordEmail(
       req.body.email,
       resetPasswordToken,

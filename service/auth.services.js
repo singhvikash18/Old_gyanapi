@@ -68,7 +68,6 @@ const generateResetPasswordToken = async (email) => {
     const expires = moment().add(
       process.env.JWT_EXPIRES_IN,
       "minutes"
-    
     );
     console.log(expires);
     const resetPasswordToken = tokenservice.generateToken(user._id, expires);
