@@ -138,8 +138,23 @@ const fetchIdcontrol = catchAsync(async(req,res)=>{
     };
     res.status(httpStatus.OK).send(data)
 });
+
+const updatepassword = catchAsync(async(req,res)=>{
+  //  console.log(req);
+    const getpass = await authservices.updatePassword(req.body);
+    const response = getpass;
+    const data = {
+        itemcount : 2,
+        status_code : httpStatus.CREATED,
+        message: "password updated  !",
+        data: response,
+
+    };
+    res.status(httpStatus.OK).send(data)
+});
+
   
 
-const user_read={userauthcontrol,loginController,forgotPassword,fetchIdcontrol}
+const user_read={userauthcontrol,loginController,forgotPassword,fetchIdcontrol,updatepassword,}
 
 module.exports= user_read;

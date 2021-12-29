@@ -15,7 +15,10 @@ const AppError = require('../utils/app_error');
 
 
 const checkPassword =  async (password, correctPassword) => {
-    const isPasswordMatch = await bcrypt.compare(password, correctPassword);
+  //console.log(password, correctPassword)
+   const isPasswordMatch = await bcrypt.compare(password, correctPassword);
+    
+    console.log(isPasswordMatch)
     if (!isPasswordMatch) {
         throw new AppError(httpStatus.BAD_REQUEST, "Passwords do not match");
       }
@@ -33,11 +36,28 @@ const userlogin = async (email, password,roles) => {
 
 }
 
-// const updatePassword = async(password)=>{
-//   const pass = await userservices.signup(password);
-//   await checkPassword(password, pass.password);
-//   return pass;
-// } 
+const updatePassword = async(req)=>{
+  //1
+//   const pass =await User.findById(req.user.id).select('+password');
+//   if(! (await pass.correctPassword(req.body.passwordCurrent,pass.password))){
+//     return (new AppError('your current password is wrong  .',401));
+
+//   }
+//   pass.password = req.body.password;
+//   pass.correctPassword = req.body.correctPassword;
+//   await pass.save(); 
+const passs =  await bcrypt.hash(req.confirmpassword, 12)
+await checkPassword(req.password, passs);
+// console.log(req.confirmpassword, reqpasswo.rd);
+const passsord = await bcrypt.hash(req.password, 12)
+var query = {email: req.email};
+var changepasssword = {password:passsord, confirmpassword:passs};
+
+const pass = await User.updateMany(query, changepasssword);
+
+
+
+ } 
 
 const generateAuthTokens = async (userID)=>{
     const accessTokenExpires = moment().add(process.env.JWT_ACCESS_EXPIRATION_MINUTES, "minutes");
@@ -98,5 +118,5 @@ module.exports =  {
     userlogin,
     generateAuthTokens,
     generateResetPasswordToken,
-    // updatePassword,
+     updatePassword,
 }

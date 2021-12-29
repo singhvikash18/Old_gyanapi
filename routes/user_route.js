@@ -8,6 +8,8 @@ router.post('/verifytoken',authController.fetchIdcontrol);
 
 router.post('/forgotpassword',authController.forgotPassword);
 
+router.post('/updatepassword',authController.updatepassword);
+
 //router.post('/forgotpassword',authController.generateResetPasswordToken)
 
 //router.post('/login',authController.login);

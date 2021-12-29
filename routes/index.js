@@ -16,6 +16,7 @@ const studroute = require('./student_route');
 const playroute = require('./videoplay_route');
 
 
+
 router.use('/play',playroute);
 
 
