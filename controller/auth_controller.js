@@ -20,7 +20,7 @@ const userauthcontrol = catchAsync(async(req,res)=>{
     //         expiresIn : process.env.JWT_EXPIRES_IN  
     //     });
     const response = cdd;
-    const data ={
+    const data = {
         itemcount : 2,
         status_code : httpStatus.CREATED,
         message: "Registration has been successfully !",
@@ -44,7 +44,7 @@ const loginController =  catchAsync( async (req, res) =>{
   phone: userdetails.phone,
   email: userdetails.email,
     }
-   // console.log(userdetails)
+  
     const tokens = await authservices.generateAuthTokens(userdetails.id);
 
     // cookie.set('token',CryptoJS.AES.encrypt(JSON.stringify(res.data.tokens.access.token), '619619').toString()
