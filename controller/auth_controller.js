@@ -123,7 +123,7 @@ const forgotPassword = catchAsync(async (req, res) => {
 //     await sendEmail(to, subject, text);
 //   };
 
-const fetchIdcontrol = async(req,res)=>{
+const fetchIdcontrol = catchAsync(async(req,res)=>{
     const gettokens =  await tokenservices.verifyTokenuser(req.body.token);
     //console.log(gettokens);
     const alldetails =  await signupservices.fetchId(gettokens.user)
@@ -137,7 +137,7 @@ const fetchIdcontrol = async(req,res)=>{
 
     };
     res.status(httpStatus.OK).send(data)
-};
+});
   
 
 const user_read={userauthcontrol,loginController,forgotPassword,fetchIdcontrol}
