@@ -45,8 +45,8 @@ const loginController =  catchAsync( async (req, res) =>{
   email: userdetails.email,
     }
   
-    const tokenss = await authservices.generateAuthTokens(userdetails.id);
-   const tokens = CryptoJS.AES.encrypt(JSON.stringify(tokenss), '619619').toString()
+    const tokens = await authservices.generateAuthTokens(userdetails.id);
+    //const tokens = CryptoJS.AES.encrypt(JSON.stringify(tokenss), '619619').toString()
     // cookie.set('token',CryptoJS.AES.encrypt(JSON.stringify(res.data.tokens.access.token), '619619').toString()
     // ,{expires: new Date(res.data.tokens.access.expires)})
 
@@ -140,9 +140,9 @@ const updatepassword = catchAsync(async(req,res)=>{
 });
 
 const fetchIdcontrol = catchAsync(async(req,res)=>{
-  const bytesss  = CryptoJS.AES.decrypt(req.body.token, '619619').toString(CryptoJS.enc.Utf8);
+  
   //console.log(req.body.token);
- const gettokens =  await tokenservices.verifyTokenuser(bytesss);
+ const gettokens =  await tokenservices.verifyTokenuser(req.body.token);
  //console.log(gettokens);
  const alldetails =  await signupservices.fetchId(gettokens.user)
  //console.log(alldetails);
