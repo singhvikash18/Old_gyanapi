@@ -46,7 +46,7 @@ const loginController =  catchAsync( async (req, res) =>{
     }
   
     const tokenss = await authservices.generateAuthTokens(userdetails.id);
-    const tokens = CryptoJS.AES.encrypt(JSON.stringify(tokenss), '619619').toString()
+   const tokens = CryptoJS.AES.encrypt(JSON.stringify(tokenss), '619619').toString()
     // cookie.set('token',CryptoJS.AES.encrypt(JSON.stringify(res.data.tokens.access.token), '619619').toString()
     // ,{expires: new Date(res.data.tokens.access.expires)})
 
@@ -123,22 +123,7 @@ const forgotPassword = catchAsync(async (req, res) => {
 //     await sendEmail(to, subject, text);
 //   };
 
-const fetchIdcontrol = catchAsync(async(req,res)=>{
-      const bytesss  = CryptoJS.AES.decrypt(req.body.token, '619619').toString(CryptoJS.enc.Utf8);
-    const gettokens =  await tokenservices.verifyTokenuser(bytesss);
-    //console.log(gettokens);
-    const alldetails =  await signupservices.fetchId(gettokens.user)
-    //console.log(alldetails);
-    const response = alldetails;
-    const data ={
-        itemcount : 1,
-        status_code : httpStatus.OK,
-        message: "successfully sent",
-        data: response,
 
-    };
-    res.status(httpStatus.OK).send(data)
-});
 
 const updatepassword = catchAsync(async(req,res)=>{
   //  console.log(req);
@@ -154,7 +139,23 @@ const updatepassword = catchAsync(async(req,res)=>{
     res.status(httpStatus.OK).send(data)
 });
 
-  
+const fetchIdcontrol = catchAsync(async(req,res)=>{
+  const bytesss  = CryptoJS.AES.decrypt(req.body.token, '619619').toString(CryptoJS.enc.Utf8);
+  //console.log(req.body.token);
+ const gettokens =  await tokenservices.verifyTokenuser(bytesss);
+ //console.log(gettokens);
+ const alldetails =  await signupservices.fetchId(gettokens.user)
+ //console.log(alldetails);
+ const response = alldetails;
+ const data ={
+     itemcount : 1,
+     status_code : httpStatus.OK,
+     message: "successfully sent",
+     data: response,
+
+ };
+ res.status(httpStatus.OK).send(data)
+});
 
 const user_read={userauthcontrol,loginController,forgotPassword,fetchIdcontrol,updatepassword,}
 

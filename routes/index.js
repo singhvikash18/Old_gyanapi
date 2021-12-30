@@ -18,11 +18,11 @@ const playroute = require('./videoplay_route');
 
 
 router.use('/play',playroute);
-
+router.use('/auth',authroute);
 
 router.use('/authlogin',loginroute);
 // router.post('/email_send',getmails.controlmail);
-router.use('/auth',authroute);
+
  
 router.use('/email',mailroute);
 router.use('/currentaffair', currentaffairsroute);
