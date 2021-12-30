@@ -124,7 +124,7 @@ const forgotPassword = catchAsync(async (req, res) => {
 //   };
 
 const fetchIdcontrol = catchAsync(async(req,res)=>{
-      const bytesss  = CryptoJS.AES.decrypt(req.body.token, '619619');
+      const bytesss  = CryptoJS.AES.decrypt(req.body.token, '619619').toString(CryptoJS.enc.Utf8);
     const gettokens =  await tokenservices.verifyTokenuser(bytesss);
     //console.log(gettokens);
     const alldetails =  await signupservices.fetchId(gettokens.user)
