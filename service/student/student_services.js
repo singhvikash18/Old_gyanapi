@@ -8,8 +8,8 @@ const studentservice = async()=>{
     return ss;
 }
 
-const studentId = async(student_id)=>{
-    const si = await studentmodel.findOne({student_ids: student_id})
+const studentId = async(studentid)=>{
+    const si = await studentmodel.find({_id: studentid})
     return si;
 }
 
