@@ -10,6 +10,8 @@ router.post('/forgotpassword',authController.forgotPassword);
 
 router.post('/updatepassword',authController.updatepassword);
 
+router.post('/userupdate',authController.userContolupdate)
+
 //router.post('/forgotpassword',authController.generateResetPasswordToken)
 
 //router.post('/login',authController.login);

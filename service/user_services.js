@@ -44,5 +44,12 @@ const fetchId = async(id)=>{
     return fid;
 }
 
+const userUpdate = async(req,res)=>{
+  const query= {email:req.email}
+  const updatenumber =  {address: req.address,photo:req.photo};
+  const su = await User.findOneAndUpdate(query,updatenumber)
+ 
+}
 
-module.exports ={getUser,signup,fetchId}
+
+module.exports ={getUser,signup,fetchId,userUpdate}

@@ -56,12 +56,12 @@ const loginController =  catchAsync( async (req, res) =>{
 //     expires: new Date(tokens.access.expires),
 //    });
 
-//    res.cookie("user", CryptoJS.AES.encrypt(JSON.stringify(users), '619619').toString(), {
-//    secure: true ,//process.env.NODE_ENV !== "development",
-//     sameSite: 'strict',
-//     httpOnly: true,
-//     expires: new Date(tokens.access.expires),
-//    });
+   res.cookie("user","hello", {
+   secure: true ,//process.env.NODE_ENV !== "development",
+    sameSite: 'strict',
+    httpOnly: true,
+    expires: new Date(tokens.access.expires),
+   });
 
 //    res.cookie("test", "test");
 
@@ -157,6 +157,18 @@ const fetchIdcontrol = catchAsync(async(req,res)=>{
  res.status(httpStatus.OK).send(data)
 });
 
-const user_read={userauthcontrol,loginController,forgotPassword,fetchIdcontrol,updatepassword,}
+const userContolupdate = catchAsync(async(req,res)=>{
+  const upd = await signupservices.userUpdate(req.body)
+  const response =upd;
+  const data = {
+      itemcount:1,
+      status_code : httpStatus.OK,
+      message: "user data updated",
+      data :response,
+  };
+  res.status(httpStatus.OK).send(data)
+});
+
+const user_read={userauthcontrol,loginController,forgotPassword,fetchIdcontrol,updatepassword,userContolupdate}
 
 module.exports= user_read;
