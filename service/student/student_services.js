@@ -1,15 +1,17 @@
 const router= require('express').Router();
 
 const studentmodel = require('../../model/student_model');
-const type = require('../../model/course_type_model');
+//const type = require('../../model/course_type_model');
 
 const studentservice = async()=>{
     const ss = await studentmodel.find()
     return ss;
 }
 
-const studentId = async(studentid)=>{
-    const si = await studentmodel.find({_id: studentid})
+const studentId = async(studentIdDetails)=>{
+   
+    const si = await studentmodel.findOne({_id:studentIdDetails})
+   
     return si;
 }
 

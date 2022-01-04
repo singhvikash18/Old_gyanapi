@@ -14,6 +14,7 @@ const loginroute = require('./auth_route');
 const teacherroute = require('./teacher_route');
 const studroute = require('./student_route');
 const playroute = require('./videoplay_route');
+const paymentroute = require('./payment_route');
 
 
 
@@ -24,6 +25,7 @@ router.use('/authlogin',loginroute);
 // router.post('/email_send',getmails.controlmail);
 
  
+router.use('/getStudent',paymentroute);
 router.use('/email',mailroute);
 router.use('/currentaffair', currentaffairsroute);
 

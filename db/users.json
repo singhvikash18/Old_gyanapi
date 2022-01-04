@@ -1,0 +1,153 @@
+[{
+  "_id": {
+    "$oid": "61c30215fb884cea3da1113b"
+  },
+  "roles": "Teacher",
+  "username": "12",
+  "firstname": "Himanshu",
+  "lastname": "Thakur",
+  "phone": "+911813058953",
+  "email": "vik181nov@gmail.com",
+  "password": "$2a$12$f2qETLiVQc.MjHXNC0FJLu64RP/OIhMQeIpvRBREtaUKf2o2iX/hG",
+  "confirmpassword": "magictym@619619",
+  "createdAt": {
+    "$date": "2021-12-22T10:46:45.868Z"
+  },
+  "updatedAt": {
+    "$date": "2021-12-22T10:46:45.868Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61c30253fb884cea3da1113e"
+  },
+  "roles": "Teacher",
+  "username": "12",
+  "firstname": "Himanshu",
+  "lastname": "Thakur",
+  "phone": "+911813058953",
+  "email": "11s@magictym.com",
+  "password": "$2a$12$f2ok98Iurh1FiOMPDy5.h.56OZ3ZmeWJKXW5cUzmUSJMwR36wnlFa",
+  "confirmpassword": "magictym@619619",
+  "createdAt": {
+    "$date": "2021-12-22T10:47:47.569Z"
+  },
+  "updatedAt": {
+    "$date": "2021-12-22T10:47:47.569Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61c429a4913e79255da66686"
+  },
+  "roles": "Student",
+  "username": "619619",
+  "firstname": "Himanshu",
+  "lastname": "Thakur",
+  "phone": "+911813058953",
+  "email": "619619@magictym.com",
+  "password": "$2a$12$Nf7M6tqMejJy/o5CbxomJ.8.ZzH/T3OplVreAu3NNkeh6sQYaDMz2",
+  "confirmpassword": "619619619",
+  "createdAt": {
+    "$date": "2021-12-23T07:47:48.946Z"
+  },
+  "updatedAt": {
+    "$date": "2021-12-23T07:47:48.946Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61c42a970c4f574805906fc7"
+  },
+  "roles": "Teacher",
+  "username": "magicgqw21host",
+  "firstname": "Himanshu",
+  "lastname": "Thakur",
+  "phone": "+911813058953",
+  "email": "himanshu@magictym.com",
+  "password": "$2a$12$VJ3eIVQgzHdg86KWRfND1u9yLe6QydwZCxbQxj2uRvxFHKzXUqWnG",
+  "confirmpassword": "$2a$12$s04qTEJ8vAGHAoG6Nc.K9uJRtglLCnCnQcoXTWUdb5UFjuG27OHoS",
+  "createdAt": {
+    "$date": "2021-12-23T07:51:51.518Z"
+  },
+  "updatedAt": {
+    "$date": "2021-12-29T11:47:26.658Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61c42b22913e79255da66692"
+  },
+  "roles": "Teacher",
+  "username": "magicgqw1host",
+  "firstname": "Himanshu",
+  "lastname": "Thakur",
+  "phone": "+911813058953",
+  "email": "hertddd2654345@magictym.com",
+  "password": "$2a$12$1Y3j5WAysvWGl0W8GVXibu5R14cx9CORG.TEUE87iCC.lRjVKgZLa",
+  "confirmpassword": "+911813058953",
+  "createdAt": {
+    "$date": "2021-12-23T07:54:10.541Z"
+  },
+  "updatedAt": {
+    "$date": "2021-12-23T07:54:10.541Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61c42bfa913e79255da66695"
+  },
+  "roles": "Teacher",
+  "username": "619",
+  "firstname": "Himanshu",
+  "lastname": "Thakur",
+  "phone": "+911813058953",
+  "email": "619@magictym.com",
+  "password": "$2a$12$e/QB6aNqgf9X8DUisQOER.Sl2IakjOgBvG280QvLjDDdM59/xU1Na",
+  "confirmpassword": "619619619",
+  "createdAt": {
+    "$date": "2021-12-23T07:57:46.897Z"
+  },
+  "updatedAt": {
+    "$date": "2021-12-23T07:57:46.897Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61cac72d85a5c238dac0c629"
+  },
+  "roles": "Student",
+  "username": "aman123",
+  "firstname": "aman",
+  "lastname": "kumar",
+  "phone": "87664455332",
+  "email": "aman98@gmail.com",
+  "password": "$2a$12$qRQ3AbvdyEfdKYJoEli6vOpFpbGkMLgk4vC9BBlCsrYXcHeoMUnz6",
+  "confirmpassword": "$2a$12$eZSKGepQ877mYTYbSzMYX.J2ejN9dzVDqU6SbtkZ3YH7B3BsU8RM2",
+  "createdAt": {
+    "$date": "2021-12-28T08:13:33.487Z"
+  },
+  "updatedAt": {
+    "$date": "2021-12-29T11:34:01.979Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61caffdb775c8420d748b966"
+  },
+  "roles": "Student",
+  "username": "john1345",
+  "firstname": "john",
+  "lastname": "kumar",
+  "phone": "9898763211",
+  "email": "vik18nov@gmail.com",
+  "password": "$2a$12$Rm0NwMqFaOe3iKPEAxJiheXKy80Yqp8oK9AQCDiuxhOLgAH1QIwK2",
+  "confirmpassword": "$2a$12$Rz4Vp3wizWipMWwhHK1S0OXfQX.Hr.k2i3/zvWhutOoeKHAD3aqa.",
+  "createdAt": {
+    "$date": "2021-12-28T12:15:23.721Z"
+  },
+  "updatedAt": {
+    "$date": "2021-12-29T11:33:19.858Z"
+  },
+  "__v": 0
+}]

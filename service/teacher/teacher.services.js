@@ -7,7 +7,7 @@ const teacherServices = async()=>{
 }
 
 const teacherId = async(teacher_id)=>{
-    const ti = await teachermodel.findOne({teacher_fetch : teacher_id})
+    const ti = await teachermodel.findOne({_id: teacher_id})
     return ti;
 }
 

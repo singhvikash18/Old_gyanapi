@@ -1,0 +1,16 @@
+[{
+  "_id": {
+    "$oid": "61c058ca8bfc2db47d0b6201"
+  },
+  "teacher_achievment": "asds",
+  "teacher_address": "delhi",
+  "teacher_bio": "working",
+  "teacher_created_at": "",
+  "teacher_education": "b.tech",
+  "teacher_experience": "2years",
+  "teacher_id": "1345",
+  "teacher_name": "vikash",
+  "teacher_rates": "****",
+  "teacher_watch_time": "2h",
+  "teacher_watch_time_month": "10month"
+}]

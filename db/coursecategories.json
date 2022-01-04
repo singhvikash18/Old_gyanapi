@@ -1,0 +1,71 @@
+[{
+  "_id": {
+    "$oid": "61adb3b1f9e417738f536254"
+  },
+  "course_category_id": "1",
+  "course_category_name": "UPSC CSE",
+  "course_created_at": {
+    "$date": "2021-06-12T18:30:00Z"
+  },
+  "course_category_image": "1.png"
+},{
+  "_id": {
+    "$oid": "61af31b1d0e00b5c7ac460ae"
+  },
+  "course_category_id": "2",
+  "course_category_name": "GEE nd NEET",
+  "course_created_at": {
+    "$date": "2021-06-12T18:30:00Z"
+  },
+  "course_category_image": "2.png"
+},{
+  "_id": {
+    "$oid": "61af31c2d0e00b5c7ac460af"
+  },
+  "course_category_id": "2",
+  "course_category_name": "State PSC",
+  "course_created_at": {
+    "$date": "2021-06-12T18:30:00Z"
+  },
+  "course_category_image": "3.png"
+},{
+  "_id": {
+    "$oid": "61af31d4d0e00b5c7ac460b0"
+  },
+  "course_category_id": "110",
+  "course_category_name": "CAT",
+  "course_created_at": {
+    "$date": "2021-06-12T18:30:00Z"
+  },
+  "course_category_image": "4.png"
+},{
+  "_id": {
+    "$oid": "61af31ead0e00b5c7ac460b1"
+  },
+  "course_category_id": "2",
+  "course_category_name": "UPSC ",
+  "course_created_at": {
+    "$date": "2021-06-12T18:30:00Z"
+  },
+  "course_category_image": "1.png"
+},{
+  "_id": {
+    "$oid": "61af31fed0e00b5c7ac460b2"
+  },
+  "course_category_id": "2",
+  "course_category_name": "UPSC ",
+  "course_created_at": {
+    "$date": "2021-06-12T18:30:00Z"
+  },
+  "course_category_image": "2.png"
+},{
+  "_id": {
+    "$oid": "61af3205d0e00b5c7ac460b3"
+  },
+  "course_category_id": "2",
+  "course_category_name": "UPSC ",
+  "course_created_at": {
+    "$date": "2021-06-12T18:30:00Z"
+  },
+  "course_category_image": "3.png"
+}]

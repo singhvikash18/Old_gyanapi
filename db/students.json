@@ -1,0 +1,39 @@
+[{
+  "_id": {
+    "$oid": "61c16195ae50fec04cd9321c"
+  },
+  "student_id": "123df",
+  "student_firstname": "xxx",
+  "student_lastname": "zxx",
+  "student_class": "regular",
+  "student_address": "New delhi",
+  "student_city": "Delhi",
+  "student_state": "Delhi",
+  "student_country": "India",
+  "student_age": "24",
+  "student_gender": "M",
+  "student_mobile": "09898989987",
+  "student_sociallinks": "xfdefv.aeerfsg/egbd",
+  "student_paid": "yes",
+  "created_at": "",
+  "updated_at": ""
+},{
+  "_id": {
+    "$oid": "61cd8403ae50fec04cd93264"
+  },
+  "student_id": "123hhhf",
+  "student_firstname": "xxx",
+  "student_lastname": "zxx",
+  "student_class": "regular",
+  "student_address": "New delhi",
+  "student_city": "Delhi",
+  "student_state": "Delhi",
+  "student_country": "India",
+  "student_age": "24",
+  "student_gender": "M",
+  "student_mobile": "09898989987",
+  "student_sociallinks": "xfdefv.aeerfsg/egbd",
+  "student_paid": "yes",
+  "created_at": "",
+  "updated_at": ""
+}]

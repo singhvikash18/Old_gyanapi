@@ -1,4 +1,5 @@
 
+const { ObjectId } = require('mongodb');
 const mongoose = require('mongoose')
 
 const coursesSchema = new mongoose.Schema({
@@ -71,7 +72,7 @@ const coursesSchema = new mongoose.Schema({
          required: true
      },
      category_id :{
-         type: String,
+         type: ObjectId,
          required : true
      },
      teacher_id: {

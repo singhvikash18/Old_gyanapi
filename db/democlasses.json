@@ -1,0 +1,57 @@
+[{
+  "_id": {
+    "$oid": "61af2afcdabab01765b20930"
+  },
+  "demoId": "1",
+  "demoTitle": "Masterstroke Human Geography Curriculum",
+  "demoImage": "1.jpg",
+  "demoLesson": "Lesson 5",
+  "demovideo": "bella.mp4",
+  "demoenroll": "1",
+  "demodescription": "In this course, Gyan Prakash will provide in-depth knowledge of Modern History. This course will be helpful for aspirants preparing for BPSC. Learners at any stage of their preparation will be benefited.",
+  "demoDate": {
+    "$date": "2021-12-06T18:30:00Z"
+  }
+},{
+  "_id": {
+    "$oid": "61af3411b336971f31205b24"
+  },
+  "demoId": "2",
+  "demoTitle": "Comprehensive Course on Sociology - Optional Paper I",
+  "demoImage": "2.jpg",
+  "demoLesson": "Lesson 3",
+  "demovideo": "bella.mp4",
+  "demoenroll": "1",
+  "demodescription": "In this course, Gyan Prakash will provide in-depth knowledge of Modern History. This course will be helpful for aspirants preparing for BPSC. Learners at any stage of their preparation will be benefited.",
+  "demoDate": {
+    "$date": "2021-07-12T18:30:00Z"
+  }
+},{
+  "_id": {
+    "$oid": "61af343fb336971f31205b25"
+  },
+  "demoId": "3",
+  "demoTitle": "Masterstroke Human Geography Curriculum",
+  "demoImage": "2.jpg",
+  "demoLesson": "Lesson 6",
+  "demovideo": "bella.mp4",
+  "demoenroll": "1",
+  "demodescription": "In this course, Gyan Prakash will provide in-depth knowledge of Modern History. This course will be helpful for aspirants preparing for BPSC. Learners at any stage of their preparation will be benefited.",
+  "demoDate": {
+    "$date": "2021-07-12T18:30:00Z"
+  }
+},{
+  "_id": {
+    "$oid": "61af345eb336971f31205b26"
+  },
+  "demoId": "4",
+  "demoTitle": "Course on Political Science and International Relations",
+  "demoImage": "3.jpg",
+  "demoLesson": "Lesson 7",
+  "demovideo": "bella.mp4",
+  "demoenroll": "1",
+  "demodescription": "In this course, Gyan Prakash will provide in-depth knowledge of Modern History. This course will be helpful for aspirants preparing for BPSC. Learners at any stage of their preparation will be benefited.",
+  "demoDate": {
+    "$date": "2021-07-12T18:30:00Z"
+  }
+}]

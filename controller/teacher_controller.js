@@ -16,7 +16,7 @@ const teachercontroller = catchAsync(async(req,res)=>{
 });
 
 const teachercontrolId = catchAsync(async(req,res)=>{
-    const tdi = await teachercontrol.teacherId(req.params.teacher_id);
+    const tdi = await teachercontrol.teacherId(req.params._id);
     const response = tdi;
     const data ={
         itemcount : 1,

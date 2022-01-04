@@ -1,0 +1,183 @@
+[{
+  "_id": {
+    "$oid": "61ab419699cbd32738e5e235"
+  },
+  "course_id": "12dwcb",
+  "course_name": "UPSC ",
+  "course_aditional_description": "regular course for 2022 batch",
+  "course_description": "In this course, Gyan Prakash will provide in-depth knowledge of Modern History. This course will be helpful for aspirants preparing for BPSC. Learners at any stage of their preparation will be benefited .",
+  "course_image": "1.jpg",
+  "course_schedule_time": "5:00 - 7:00",
+  "coursetype": "soon",
+  "category_id": "61af31b1d0e00b5c7ac460ae",
+  "course_goal": "prelims",
+  "course_laungauge": "english",
+  "course_live_session_duration": "2 hours",
+  "course_live_session_schedule": "1646915400000",
+  "course_live_session_title": "live sessions",
+  "course_paid_free": "no",
+  "course_payment_id": "sdf345fd",
+  "course_review_video": "https://liveclass?123/gyanias",
+  "course_target_exam": "2022 prelims",
+  "course_topic": "Morden India And current Affairs",
+  "course_written_laungauge": "english",
+  "course_enroll": 1,
+  "created_at": "12/07/2021",
+  "teacher_id": "adsfvwergfw34df32",
+  "updated_at": "12/06/2021",
+  "course_slug": "UPSC-2021"
+},{
+  "_id": {
+    "$oid": "61af4bd4b336971f31205b49"
+  },
+  "course_id": "13dfcb",
+  "course_name": "UPSC-1 ",
+  "course_aditional_description": "regular course for 2022 batch",
+  "course_description": "Geo and current affairs",
+  "course_image": "2.jpg",
+  "course_schedule_time": "5:00 - 7:00",
+  "coursetype": "start",
+  "category_id": "61af3205d0e00b5c7ac460b3",
+  "course_goal": "prelims",
+  "course_laungauge": "english",
+  "course_live_session_duration": "2 hours",
+  "course_live_session_schedule": "1646915401030",
+  "course_live_session_title": "live sessions",
+  "course_paid_free": "no",
+  "course_payment_id": "sdf3455fd",
+  "course_review_video": "https://liveclass?124/gyanias",
+  "course_target_exam": "2022 prelims",
+  "course_topic": "flora-fauna And current Affairs",
+  "course_written_laungauge": "english",
+  "created_at": "12/07/2021",
+  "teacher_id": "adsfvw444434df32",
+  "updated_at": "12/06/2021",
+  "course_slug": "UPSC-1-2021"
+},{
+  "_id": {
+    "$oid": "61af4cc0b336971f31205b4a"
+  },
+  "course_id": "14ertg",
+  "course_name": "UPPSC-1 ",
+  "course_aditional_description": "regular course for 2022 batch",
+  "course_description": "Geo and current affairs",
+  "course_image": "3.jpg",
+  "course_schedule_time": "5:00 - 7:00",
+  "coursetype": "close",
+  "category_id": "61af31d4d0e00b5c7ac460b0",
+  "course_goal": "prelims",
+  "course_laungauge": "english",
+  "course_live_session_duration": "2 hours",
+  "course_live_session_schedule": "1646915400220",
+  "course_live_session_title": "live sessions",
+  "course_paid_free": "no",
+  "course_payment_id": "sdf3455fd",
+  "course_review_video": "https://liveclass?124/gyanias",
+  "course_target_exam": "2022 prelims",
+  "course_topic": "polity And current Affairs",
+  "course_written_laungauge": "english",
+  "created_at": "12/07/2021",
+  "teacher_id": "adsfvw444434df32",
+  "updated_at": "12/08/2021",
+  "course_slug": "UPPSC-2021"
+},{
+  "_id": {
+    "$oid": "61af4d6ab336971f31205b4b"
+  },
+  "course_id": "23ed1",
+  "course_name": "BPSC ",
+  "course_aditional_description": "regular course for 2022 batch",
+  "course_description": "In this course, Gyan Prakash will provide in-depth knowledge of Modern History. This course will be helpful for aspirants preparing for BPSC. Learners at any stage of their preparation will be benefited.",
+  "course_image": "1.jpg",
+  "course_schedule_time": "5:00 - 7:00",
+  "coursetype": "soon",
+  "category_id": "61adb3b1f9e417738f536254",
+  "course_goal": "prelims",
+  "course_laungauge": "english",
+  "course_live_session_duration": "2 hours",
+  "course_live_session_schedule": "1646915400030",
+  "course_live_session_title": "live sessions",
+  "course_paid_free": "no",
+  "course_payment_id": "sdf345fd",
+  "course_review_video": "https://liveclass?123/gyanias",
+  "course_target_exam": "2022 prelims",
+  "course_topic": "External Affairs and relations",
+  "course_written_laungauge": "english",
+  "created_at": "12/07/2021",
+  "teacher_id": "adsfvwergfw34df32",
+  "course_slug": "BPSC-2021",
+  "updated_at": "12/06/2021"
+},{
+  "_id": {
+    "$oid": "61b1f67bb60d24fdde63ab8e"
+  },
+  "course_id": "23ed4",
+  "course_name": "BPSCC ",
+  "course_aditional_description": "regular course for 2022 batch",
+  "course_description": "In this course, Gyan Prakash will provide in-depth knowledge of Modern History. This course will be helpful for aspirants preparing for BPSC. Learners at any stage of their preparation will be benefited.",
+  "course_image": "1.jpg",
+  "course_schedule_time": "5:00 - 7:00",
+  "coursetype": "regular",
+  "category_id": "61adb3b1f9e417738f536254",
+  "course_goal": "prelims",
+  "course_laungauge": "english",
+  "course_live_session_duration": "2 hours",
+  "course_live_session_schedule": "1646915403030",
+  "course_live_session_title": "live sessions",
+  "course_paid_free": "no",
+  "course_payment_id": "sdf345fd",
+  "course_review_video": "https://liveclass?123/gyanias",
+  "course_target_exam": "2022 prelims",
+  "course_topic": "External Affairs and relations",
+  "course_written_laungauge": "english",
+  "created_at": "12/07/2021",
+  "teacher_id": "adsfvwergfw34df32",
+  "course_slug": "BPSC-2021",
+  "updated_at": "12/06/2021"
+},{
+  "_id": {
+    "$oid": "61b6db15f45dc4c4015d7c2d"
+  },
+  "course_id": "23ed45",
+  "course_name": "Foundation Course on Modern History",
+  "course_aditional_description": "regular course for 2022 batch",
+  "course_description": "In this course, Gyan Prakash will provide in-depth knowledge of Modern History. This course will be helpful for aspirants preparing for BPSC. Learners at any stage of their preparation will be benefited.",
+  "course_image": "1.jpg",
+  "course_schedule_time": "5:00 - 7:00",
+  "coursetype": "regular",
+  "category_id": "61adb3b1f9e417738f536254",
+  "course_goal": "prelims",
+  "course_laungauge": "english",
+  "course_live_session_duration": "2 hours",
+  "course_live_session_schedule": "1646915402030",
+  "course_live_session_title": "live sessions",
+  "course_paid_free": "no",
+  "course_payment_id": "sdf345fd",
+  "course_review_video": "https://liveclass?123/gyanias",
+  "course_target_exam": "2022 prelims",
+  "course_topic": "External Affairs and relations",
+  "course_written_laungauge": "english",
+  "created_at": "12/07/2021",
+  "teacher_id": "adsfvwergfw34df32",
+  "course_slug": "BPSC-2021",
+  "updated_at": "12/06/2021"
+},{
+  "_id": {
+    "$oid": "5f415412011e7e39204f3d80"
+  },
+  "amount": 9.99,
+  "payeeEmail": "sb-nvbc83006144@personal.example.com",
+  "paymentCreatedTime": "2020-08-22T17:20:50Z",
+  "paymentGateway": "paypal",
+  "paymentId": "90D935058C856524J",
+  "user": {
+    "$oid": "5f3a5afa8433677894d2a67c"
+  },
+  "createdAt": {
+    "$date": "2020-08-22T17:21:22.431Z"
+  },
+  "updatedAt": {
+    "$date": "2020-08-22T17:21:22.431Z"
+  },
+  "__v": 0
+}]

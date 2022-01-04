@@ -1,0 +1,1540 @@
+[{
+  "_id": {
+    "$oid": "5f415412011e7e39204f3d80"
+  },
+  "amount": 9.99,
+  "payeeEmail": "sb-nvbc83006144@personal.example.com",
+  "paymentCreatedTime": "2020-08-22T17:20:50Z",
+  "paymentGateway": "paypal",
+  "paymentId": "90D935058C856524J",
+  "user": {
+    "$oid": "5f3a5afa8433677894d2a67c"
+  },
+  "createdAt": {
+    "$date": "2020-08-22T17:21:22.431Z"
+  },
+  "updatedAt": {
+    "$date": "2020-08-22T17:21:22.431Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5f418acb6aed5bdaac8a1722"
+  },
+  "amount": 9.99,
+  "payeeEmail": "sb-nvbc83006144@personal.example.com",
+  "paymentCreatedTime": "2020-08-22T21:14:32Z",
+  "paymentGateway": "paypal",
+  "paymentId": "5RF25156HB987725M",
+  "user": {
+    "$oid": "5f3a5afa8433677894d2a67c"
+  },
+  "createdAt": {
+    "$date": "2020-08-22T21:14:51.305Z"
+  },
+  "updatedAt": {
+    "$date": "2020-08-22T21:14:51.305Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5f419bb662f45f5b2cb1bfda"
+  },
+  "amount": 9.99,
+  "payeeEmail": "sb-nvbc83006144@personal.example.com",
+  "paymentCreatedTime": "2020-08-22T22:26:35Z",
+  "paymentGateway": "paypal",
+  "paymentId": "3EA646857D5972002",
+  "user": {
+    "$oid": "5f3a5afa8433677894d2a67c"
+  },
+  "createdAt": {
+    "$date": "2020-08-22T22:27:02.932Z"
+  },
+  "updatedAt": {
+    "$date": "2020-08-22T22:27:02.932Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5f42470074ccf700174bcf3e"
+  },
+  "amount": 9.99,
+  "payeeEmail": "sb-nvbc83006144@personal.example.com",
+  "paymentCreatedTime": "2020-08-23T10:37:05Z",
+  "paymentGateway": "paypal",
+  "paymentId": "9V996770MY479433A",
+  "user": {
+    "$oid": "5f3a5afa8433677894d2a67c"
+  },
+  "createdAt": {
+    "$date": "2020-08-23T10:37:52.922Z"
+  },
+  "updatedAt": {
+    "$date": "2020-08-23T10:37:52.922Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5f4256a7f7952600173e8352"
+  },
+  "amount": 9.99,
+  "payeeEmail": "sb-nvbc83006144@personal.example.com",
+  "paymentCreatedTime": "2020-08-23T11:43:06Z",
+  "paymentGateway": "paypal",
+  "paymentId": "8EY54698FL650582D",
+  "user": {
+    "$oid": "5f424998f7952600173e8342"
+  },
+  "createdAt": {
+    "$date": "2020-08-23T11:44:39.481Z"
+  },
+  "updatedAt": {
+    "$date": "2020-08-23T11:44:39.481Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5f42d79e69492a001781e8bd"
+  },
+  "amount": 9.99,
+  "payeeEmail": "sb-nvbc83006144@personal.example.com",
+  "paymentCreatedTime": "2020-08-23T20:53:34Z",
+  "paymentGateway": "paypal",
+  "paymentId": "7GY12757HU561433N",
+  "user": {
+    "$oid": "5f3a5afa8433677894d2a67c"
+  },
+  "createdAt": {
+    "$date": "2020-08-23T20:54:54.216Z"
+  },
+  "updatedAt": {
+    "$date": "2020-08-23T20:54:54.216Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5f437911e1834300174e2e60"
+  },
+  "amount": 9.99,
+  "payeeEmail": "sb-nvbc83006144@personal.example.com",
+  "paymentCreatedTime": "2020-08-24T08:23:28Z",
+  "paymentGateway": "paypal",
+  "paymentId": "3DC83939DP905664C",
+  "user": {
+    "$oid": "5ee2ccdfc5c9e1f354858484"
+  },
+  "createdAt": {
+    "$date": "2020-08-24T08:23:45.208Z"
+  },
+  "updatedAt": {
+    "$date": "2020-08-24T08:23:45.208Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5f437de7b7075f0017959a53"
+  },
+  "amount": 9.99,
+  "payeeEmail": "sb-nvbc83006144@personal.example.com",
+  "paymentCreatedTime": "2020-08-24T08:43:38Z",
+  "paymentGateway": "paypal",
+  "paymentId": "2K328293D4065862T",
+  "user": {
+    "$oid": "5ee2ccdfc5c9e1f354858484"
+  },
+  "createdAt": {
+    "$date": "2020-08-24T08:44:23.042Z"
+  },
+  "updatedAt": {
+    "$date": "2020-08-24T08:44:23.042Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5f4571a745befa0017f15943"
+  },
+  "amount": 9.99,
+  "payeeEmail": "sb-nvbc83006144@personal.example.com",
+  "paymentCreatedTime": "2020-08-25T20:16:11Z",
+  "paymentGateway": "paypal",
+  "paymentId": "28K52453HH778580X",
+  "user": {
+    "$oid": "5f424998f7952600173e8342"
+  },
+  "createdAt": {
+    "$date": "2020-08-25T20:16:39.681Z"
+  },
+  "updatedAt": {
+    "$date": "2020-08-25T20:16:39.681Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5f457395c0a8020017d78e67"
+  },
+  "amount": 9.99,
+  "payeeEmail": "sb-nvbc83006144@personal.example.com",
+  "paymentCreatedTime": "2020-08-25T20:24:35Z",
+  "paymentGateway": "paypal",
+  "paymentId": "86P871534D827864Y",
+  "user": {
+    "$oid": "5f424998f7952600173e8342"
+  },
+  "createdAt": {
+    "$date": "2020-08-25T20:24:53.488Z"
+  },
+  "updatedAt": {
+    "$date": "2020-08-25T20:24:53.488Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5f45761d308bac0017fecfe1"
+  },
+  "amount": 9.99,
+  "payeeEmail": "sb-nvbc83006144@personal.example.com",
+  "paymentCreatedTime": "2020-08-25T20:35:13Z",
+  "paymentGateway": "paypal",
+  "paymentId": "74J938699A566041T",
+  "user": {
+    "$oid": "5f424998f7952600173e8342"
+  },
+  "createdAt": {
+    "$date": "2020-08-25T20:35:41.064Z"
+  },
+  "updatedAt": {
+    "$date": "2020-08-25T20:35:41.064Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5f45770246c94c00173d476e"
+  },
+  "amount": 9.99,
+  "payeeEmail": "sb-nvbc83006144@personal.example.com",
+  "paymentCreatedTime": "2020-08-25T20:39:08Z",
+  "paymentGateway": "paypal",
+  "paymentId": "73U088124C084334G",
+  "user": {
+    "$oid": "5f424998f7952600173e8342"
+  },
+  "createdAt": {
+    "$date": "2020-08-25T20:39:30.142Z"
+  },
+  "updatedAt": {
+    "$date": "2020-08-25T20:39:30.142Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5f4cbe72e5b93300170d48c1"
+  },
+  "amount": 9.99,
+  "payeeEmail": "sb-nvbc83006144@personal.example.com",
+  "paymentCreatedTime": "2020-08-31T09:09:18Z",
+  "paymentGateway": "paypal",
+  "paymentId": "1D443504YJ5885702",
+  "user": {
+    "$oid": "5f424998f7952600173e8342"
+  },
+  "createdAt": {
+    "$date": "2020-08-31T09:10:10.850Z"
+  },
+  "updatedAt": {
+    "$date": "2020-08-31T09:10:10.850Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5f4cbecfe5b93300170d48c5"
+  },
+  "amount": 9.99,
+  "payeeEmail": "sb-nvbc83006144@personal.example.com",
+  "paymentCreatedTime": "2020-08-31T09:11:12Z",
+  "paymentGateway": "paypal",
+  "paymentId": "4H497058P5754672A",
+  "user": {
+    "$oid": "5f424998f7952600173e8342"
+  },
+  "createdAt": {
+    "$date": "2020-08-31T09:11:43.349Z"
+  },
+  "updatedAt": {
+    "$date": "2020-08-31T09:11:43.349Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5f4cc005e5b93300170d48ca"
+  },
+  "amount": 9.99,
+  "payeeEmail": "sb-nvbc83006144@personal.example.com",
+  "paymentCreatedTime": "2020-08-31T09:16:09Z",
+  "paymentGateway": "paypal",
+  "paymentId": "3AS26922YC268501H",
+  "user": {
+    "$oid": "5f424998f7952600173e8342"
+  },
+  "createdAt": {
+    "$date": "2020-08-31T09:16:53.347Z"
+  },
+  "updatedAt": {
+    "$date": "2020-08-31T09:16:53.347Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5f4cc102e5b93300170d48cd"
+  },
+  "amount": 9.99,
+  "payeeEmail": "sb-nvbc83006144@personal.example.com",
+  "paymentCreatedTime": "2020-08-31T09:20:48Z",
+  "paymentGateway": "paypal",
+  "paymentId": "0JJ08859FC2106221",
+  "user": {
+    "$oid": "5f424998f7952600173e8342"
+  },
+  "createdAt": {
+    "$date": "2020-08-31T09:21:06.392Z"
+  },
+  "updatedAt": {
+    "$date": "2020-08-31T09:21:06.392Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5f4cc1f4e5b93300170d48d1"
+  },
+  "amount": 9.99,
+  "payeeEmail": "sb-nvbc83006144@personal.example.com",
+  "paymentCreatedTime": "2020-08-31T09:24:51Z",
+  "paymentGateway": "paypal",
+  "paymentId": "4L487830FJ034041F",
+  "user": {
+    "$oid": "5f424998f7952600173e8342"
+  },
+  "createdAt": {
+    "$date": "2020-08-31T09:25:08.145Z"
+  },
+  "updatedAt": {
+    "$date": "2020-08-31T09:25:08.145Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5f4cc558e5b93300170d48d4"
+  },
+  "amount": 9.99,
+  "payeeEmail": "sb-nvbc83006144@personal.example.com",
+  "paymentCreatedTime": "2020-08-31T09:38:54Z",
+  "paymentGateway": "paypal",
+  "paymentId": "9FR55437WX4751038",
+  "user": {
+    "$oid": "5f424998f7952600173e8342"
+  },
+  "createdAt": {
+    "$date": "2020-08-31T09:39:36.365Z"
+  },
+  "updatedAt": {
+    "$date": "2020-08-31T09:39:36.365Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5f4e062ced50de0017e6dc34"
+  },
+  "amount": 9.99,
+  "payeeEmail": "sb-nvbc83006144@personal.example.com",
+  "paymentCreatedTime": "2020-09-01T08:27:58Z",
+  "paymentGateway": "paypal",
+  "paymentId": "95V12433UX7870028",
+  "user": {
+    "$oid": "5f424998f7952600173e8342"
+  },
+  "createdAt": {
+    "$date": "2020-09-01T08:28:28.916Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-01T08:28:28.916Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5f4e0b58ed50de0017e6dc3b"
+  },
+  "amount": 9.99,
+  "payeeEmail": "sb-nvbc83006144@personal.example.com",
+  "paymentCreatedTime": "2020-09-01T08:49:47Z",
+  "paymentGateway": "paypal",
+  "paymentId": "1A364807MJ341754G",
+  "user": {
+    "$oid": "5f424998f7952600173e8342"
+  },
+  "createdAt": {
+    "$date": "2020-09-01T08:50:32.150Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-01T08:50:32.150Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5f4e0d01ed50de0017e6dc3f"
+  },
+  "amount": 9.99,
+  "payeeEmail": "sb-nvbc83006144@personal.example.com",
+  "paymentCreatedTime": "2020-09-01T08:57:12Z",
+  "paymentGateway": "paypal",
+  "paymentId": "1HU716564J187891T",
+  "user": {
+    "$oid": "5f424998f7952600173e8342"
+  },
+  "createdAt": {
+    "$date": "2020-09-01T08:57:37.199Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-01T08:57:37.199Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5f4f7dea49e12a0017802cae"
+  },
+  "amount": 9.99,
+  "payeeEmail": "sb-nvbc83006144@personal.example.com",
+  "paymentCreatedTime": "2020-09-02T11:10:47Z",
+  "paymentGateway": "paypal",
+  "paymentId": "4GP09659V82632237",
+  "user": {
+    "$oid": "5f424998f7952600173e8342"
+  },
+  "createdAt": {
+    "$date": "2020-09-02T11:11:38.189Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-02T11:11:38.189Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5f4f813549e12a0017802cb3"
+  },
+  "amount": 9.99,
+  "payeeEmail": "sb-nvbc83006144@personal.example.com",
+  "paymentCreatedTime": "2020-09-02T11:25:03Z",
+  "paymentGateway": "paypal",
+  "paymentId": "3P011128V0861973S",
+  "user": {
+    "$oid": "5f424998f7952600173e8342"
+  },
+  "createdAt": {
+    "$date": "2020-09-02T11:25:41.985Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-02T11:25:41.985Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5f4f844749e12a0017802cb6"
+  },
+  "amount": 9.99,
+  "payeeEmail": "sb-nvbc83006144@personal.example.com",
+  "paymentCreatedTime": "2020-09-02T11:37:32Z",
+  "paymentGateway": "paypal",
+  "paymentId": "7GY48832LF1721640",
+  "user": {
+    "$oid": "5f424998f7952600173e8342"
+  },
+  "createdAt": {
+    "$date": "2020-09-02T11:38:47.046Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-02T11:38:47.046Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5f514a5a0eb2e0001794e015"
+  },
+  "amount": 9.99,
+  "payeeEmail": "sb-nvbc83006144@personal.example.com",
+  "paymentCreatedTime": "2020-09-03T19:49:32Z",
+  "paymentGateway": "paypal",
+  "paymentId": "3T1350217M172393E",
+  "user": {
+    "$oid": "5f424998f7952600173e8342"
+  },
+  "createdAt": {
+    "$date": "2020-09-03T19:56:10.686Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-03T19:56:10.686Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5f5151390eb2e0001794e01d"
+  },
+  "amount": 9.99,
+  "payeeEmail": "sb-nvbc83006144@personal.example.com",
+  "paymentCreatedTime": "2020-09-03T20:25:00Z",
+  "paymentGateway": "paypal",
+  "paymentId": "8TS64769416959208",
+  "user": {
+    "$oid": "5f424998f7952600173e8342"
+  },
+  "createdAt": {
+    "$date": "2020-09-03T20:25:29.571Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-03T20:25:29.571Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5f5155cd0eb2e0001794e022"
+  },
+  "amount": 9.99,
+  "payeeEmail": "sb-nvbc83006144@personal.example.com",
+  "paymentCreatedTime": "2020-09-03T20:44:25Z",
+  "paymentGateway": "paypal",
+  "paymentId": "3T4259426Y145015B",
+  "user": {
+    "$oid": "5f424998f7952600173e8342"
+  },
+  "createdAt": {
+    "$date": "2020-09-03T20:45:01.723Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-03T20:45:01.723Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5f5534c90001f500175bf296"
+  },
+  "amount": 9.99,
+  "payeeEmail": "sb-nvbc83006144@personal.example.com",
+  "paymentCreatedTime": "2020-09-06T19:10:11Z",
+  "paymentGateway": "paypal",
+  "paymentId": "5CH24415X0670083J",
+  "user": {
+    "$oid": "5f424998f7952600173e8342"
+  },
+  "createdAt": {
+    "$date": "2020-09-06T19:13:13.678Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-06T19:13:13.678Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5f5538400001f500175bf29c"
+  },
+  "amount": 9.99,
+  "payeeEmail": "sb-nvbc83006144@personal.example.com",
+  "paymentCreatedTime": "2020-09-06T19:26:42Z",
+  "paymentGateway": "paypal",
+  "paymentId": "7BJ614646S9767334",
+  "user": {
+    "$oid": "5f424998f7952600173e8342"
+  },
+  "createdAt": {
+    "$date": "2020-09-06T19:28:00.583Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-06T19:28:00.583Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5f5cc96fbc64430017c25359"
+  },
+  "amount": 9.99,
+  "payeeEmail": "sb-nvbc83006144@personal.example.com",
+  "paymentCreatedTime": "2020-09-12T13:12:46Z",
+  "paymentGateway": "paypal",
+  "paymentId": "5W308060AG626494W",
+  "user": {
+    "$oid": "5f424998f7952600173e8342"
+  },
+  "createdAt": {
+    "$date": "2020-09-12T13:13:19.326Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-12T13:13:19.326Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5f5e0665e6c261001728ee3a"
+  },
+  "amount": 9.99,
+  "payeeEmail": "sb-nvbc83006144@personal.example.com",
+  "paymentCreatedTime": "2020-09-13T11:45:02Z",
+  "paymentGateway": "paypal",
+  "paymentId": "4TH86280XK345562V",
+  "user": {
+    "$oid": "5f424998f7952600173e8342"
+  },
+  "createdAt": {
+    "$date": "2020-09-13T11:45:41.538Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-13T11:45:41.538Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5f61f1357a440000172cf50e"
+  },
+  "amount": 9.99,
+  "payeeEmail": "sb-nvbc83006144@personal.example.com",
+  "paymentCreatedTime": "2020-09-16T11:03:51Z",
+  "paymentGateway": "paypal",
+  "paymentId": "4YT414476M0597050",
+  "user": {
+    "$oid": "5f424998f7952600173e8342"
+  },
+  "createdAt": {
+    "$date": "2020-09-16T11:04:21.073Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-16T11:04:21.073Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5f61f8007a440000172cf522"
+  },
+  "amount": 9.99,
+  "payeeEmail": "sb-nvbc83006144@personal.example.com",
+  "paymentCreatedTime": "2020-09-16T11:32:48Z",
+  "paymentGateway": "paypal",
+  "paymentId": "677792474U283573W",
+  "user": {
+    "$oid": "5f424998f7952600173e8342"
+  },
+  "createdAt": {
+    "$date": "2020-09-16T11:33:20.958Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-16T11:33:20.958Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5f67b2725f29a1c678b6d5a7"
+  },
+  "amount": 9.99,
+  "payeeEmail": "sb-nvbc83006144@personal.example.com",
+  "paymentCreatedTime": "2020-09-20T19:49:43Z",
+  "paymentGateway": "paypal",
+  "paymentId": "7AD82259A4093624D",
+  "user": {
+    "$oid": "5ee2ccdfc5c9e1f354858484"
+  },
+  "createdAt": {
+    "$date": "2020-09-20T19:50:10.376Z"
+  },
+  "updatedAt": {
+    "$date": "2020-09-20T19:50:10.376Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5feae79b2bb4ba3f3097a10c"
+  },
+  "amount": 9.99,
+  "payeeEmail": "sb-nvbc83006144@personal.example.com",
+  "paymentCreatedTime": "2020-12-29T08:18:47Z",
+  "paymentGateway": "paypal",
+  "paymentId": "5K268559LE510660T",
+  "user": {
+    "$oid": "5f424998f7952600173e8342"
+  },
+  "createdAt": {
+    "$date": "2020-12-29T08:23:55.300Z"
+  },
+  "updatedAt": {
+    "$date": "2020-12-29T08:23:55.300Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5feaea9b2bb4ba3f3097a10d"
+  },
+  "amount": 9.99,
+  "payeeEmail": "sb-nvbc83006144@personal.example.com",
+  "paymentCreatedTime": "2020-12-29T08:36:25Z",
+  "paymentGateway": "paypal",
+  "paymentId": "0BC23520TU626235K",
+  "user": {
+    "$oid": "5f424998f7952600173e8342"
+  },
+  "createdAt": {
+    "$date": "2020-12-29T08:36:43.088Z"
+  },
+  "updatedAt": {
+    "$date": "2020-12-29T08:36:43.088Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5feaed2d2bb4ba3f3097a10e"
+  },
+  "amount": 9.99,
+  "payeeEmail": "sb-nvbc83006144@personal.example.com",
+  "paymentCreatedTime": "2020-12-29T08:47:00Z",
+  "paymentGateway": "paypal",
+  "paymentId": "6FW40463V20064407",
+  "user": {
+    "$oid": "5f424998f7952600173e8342"
+  },
+  "createdAt": {
+    "$date": "2020-12-29T08:47:41.992Z"
+  },
+  "updatedAt": {
+    "$date": "2020-12-29T08:47:41.992Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5feaf5f231935f5bf087b390"
+  },
+  "amount": 9.99,
+  "payeeEmail": "sb-nvbc83006144@personal.example.com",
+  "paymentCreatedTime": "2020-12-29T09:24:29Z",
+  "paymentGateway": "paypal",
+  "paymentId": "24T218102U445942W",
+  "user": {
+    "$oid": "5f424998f7952600173e8342"
+  },
+  "createdAt": {
+    "$date": "2020-12-29T09:25:06.022Z"
+  },
+  "updatedAt": {
+    "$date": "2020-12-29T09:25:06.022Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5feaf65c31935f5bf087b391"
+  },
+  "amount": 9.99,
+  "payeeEmail": "sb-nvbc83006144@personal.example.com",
+  "paymentCreatedTime": "2020-12-29T09:26:37Z",
+  "paymentGateway": "paypal",
+  "paymentId": "8L387672UM684922M",
+  "user": {
+    "$oid": "5f424998f7952600173e8342"
+  },
+  "createdAt": {
+    "$date": "2020-12-29T09:26:52.613Z"
+  },
+  "updatedAt": {
+    "$date": "2020-12-29T09:26:52.613Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5feaf702b7cd8333c03a5cb7"
+  },
+  "amount": 9.99,
+  "payeeEmail": "sb-nvbc83006144@personal.example.com",
+  "paymentCreatedTime": "2020-12-29T09:29:25Z",
+  "paymentGateway": "paypal",
+  "paymentId": "3XT55748DS806440E",
+  "user": {
+    "$oid": "5f424998f7952600173e8342"
+  },
+  "createdAt": {
+    "$date": "2020-12-29T09:29:38.581Z"
+  },
+  "updatedAt": {
+    "$date": "2020-12-29T09:29:38.581Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5feb1ce81f8563001773c0bc"
+  },
+  "amount": 9.99,
+  "payeeEmail": "sb-nvbc83006144@personal.example.com",
+  "paymentCreatedTime": "2020-12-29T12:09:51Z",
+  "paymentGateway": "paypal",
+  "paymentId": "36V02947RS592951J",
+  "user": {
+    "$oid": "5feb1b8f1f8563001773c0b9"
+  },
+  "createdAt": {
+    "$date": "2020-12-29T12:11:20.140Z"
+  },
+  "updatedAt": {
+    "$date": "2020-12-29T12:11:20.140Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5ff0dc615bda6e0017345d96"
+  },
+  "amount": 9.99,
+  "payeeEmail": "sb-nvbc83006144@personal.example.com",
+  "paymentCreatedTime": "2021-01-02T20:49:17Z",
+  "paymentGateway": "paypal",
+  "paymentId": "3E022905VY1493715",
+  "user": {
+    "$oid": "5ee2ccdfc5c9e1f354858484"
+  },
+  "createdAt": {
+    "$date": "2021-01-02T20:49:37.872Z"
+  },
+  "updatedAt": {
+    "$date": "2021-01-02T20:49:37.872Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5ff189ff0bd1f20017c8a9dc"
+  },
+  "amount": 9.99,
+  "payeeEmail": "sb-nvbc83006144@personal.example.com",
+  "paymentCreatedTime": "2021-01-03T09:08:23Z",
+  "paymentGateway": "paypal",
+  "paymentId": "0FS87482R0093193D",
+  "user": {
+    "$oid": "5ff187ab0bd1f20017c8a9d7"
+  },
+  "createdAt": {
+    "$date": "2021-01-03T09:10:23.293Z"
+  },
+  "updatedAt": {
+    "$date": "2021-01-03T09:10:23.293Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5ff18cb10bd1f20017c8a9e5"
+  },
+  "amount": 9.99,
+  "payeeEmail": "sb-nvbc83006144@personal.example.com",
+  "paymentCreatedTime": "2021-01-03T09:20:36Z",
+  "paymentGateway": "paypal",
+  "paymentId": "72E59249NX547650X",
+  "user": {
+    "$oid": "5f424998f7952600173e8342"
+  },
+  "createdAt": {
+    "$date": "2021-01-03T09:21:53.897Z"
+  },
+  "updatedAt": {
+    "$date": "2021-01-03T09:21:53.897Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5ff190080bd1f20017c8a9ec"
+  },
+  "amount": 9.99,
+  "payeeEmail": "sb-nvbc83006144@personal.example.com",
+  "paymentCreatedTime": "2021-01-03T09:35:33Z",
+  "paymentGateway": "paypal",
+  "paymentId": "8EY07746WC494401G",
+  "user": {
+    "$oid": "5f424998f7952600173e8342"
+  },
+  "createdAt": {
+    "$date": "2021-01-03T09:36:08.405Z"
+  },
+  "updatedAt": {
+    "$date": "2021-01-03T09:36:08.405Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5ff1b063fed89a001794ec5d"
+  },
+  "amount": 9.99,
+  "payeeEmail": "sb-nvbc83006144@personal.example.com",
+  "paymentCreatedTime": "2021-01-03T11:53:38Z",
+  "paymentGateway": "paypal",
+  "paymentId": "8UP62372255054112",
+  "user": {
+    "$oid": "5ff187ab0bd1f20017c8a9d7"
+  },
+  "createdAt": {
+    "$date": "2021-01-03T11:54:11.565Z"
+  },
+  "updatedAt": {
+    "$date": "2021-01-03T11:54:11.565Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5ff20b8b5f18aa0017bc662b"
+  },
+  "amount": 9.99,
+  "payeeEmail": "sb-nvbc83006144@personal.example.com",
+  "paymentCreatedTime": "2021-01-03T18:20:29Z",
+  "paymentGateway": "paypal",
+  "paymentId": "676704384T734090P",
+  "user": {
+    "$oid": "5f424998f7952600173e8342"
+  },
+  "createdAt": {
+    "$date": "2021-01-03T18:23:07.698Z"
+  },
+  "updatedAt": {
+    "$date": "2021-01-03T18:23:07.698Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5ff2f07671921e00174f79a5"
+  },
+  "amount": 9.99,
+  "payeeEmail": "sb-nvbc83006144@personal.example.com",
+  "paymentCreatedTime": "2021-01-04T10:39:18Z",
+  "paymentGateway": "paypal",
+  "paymentId": "4AD39247LF255344P",
+  "user": {
+    "$oid": "5f424998f7952600173e8342"
+  },
+  "createdAt": {
+    "$date": "2021-01-04T10:39:50.922Z"
+  },
+  "updatedAt": {
+    "$date": "2021-01-04T10:39:50.922Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5ff2f17171921e00174f79a7"
+  },
+  "amount": 9.99,
+  "payeeEmail": "sb-nvbc83006144@personal.example.com",
+  "paymentCreatedTime": "2021-01-04T10:43:41Z",
+  "paymentGateway": "paypal",
+  "paymentId": "5VJ70559TH1120359",
+  "user": {
+    "$oid": "5f424998f7952600173e8342"
+  },
+  "createdAt": {
+    "$date": "2021-01-04T10:44:01.469Z"
+  },
+  "updatedAt": {
+    "$date": "2021-01-04T10:44:01.469Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5ff2f63971921e00174f79b6"
+  },
+  "amount": 9.99,
+  "payeeEmail": "sb-nvbc83006144@personal.example.com",
+  "paymentCreatedTime": "2021-01-04T11:03:55Z",
+  "paymentGateway": "paypal",
+  "paymentId": "28C42664PR6445157",
+  "user": {
+    "$oid": "5f424998f7952600173e8342"
+  },
+  "createdAt": {
+    "$date": "2021-01-04T11:04:25.716Z"
+  },
+  "updatedAt": {
+    "$date": "2021-01-04T11:04:25.716Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5ff2f7fa71921e00174f79bb"
+  },
+  "amount": 9.99,
+  "payeeEmail": "sb-nvbc83006144@personal.example.com",
+  "paymentCreatedTime": "2021-01-04T11:11:32Z",
+  "paymentGateway": "paypal",
+  "paymentId": "7TF3567618522984D",
+  "user": {
+    "$oid": "5ff187ab0bd1f20017c8a9d7"
+  },
+  "createdAt": {
+    "$date": "2021-01-04T11:11:54.982Z"
+  },
+  "updatedAt": {
+    "$date": "2021-01-04T11:11:54.982Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5ff2f85571921e00174f79bd"
+  },
+  "amount": 9.99,
+  "payeeEmail": "sb-nvbc83006144@personal.example.com",
+  "paymentCreatedTime": "2021-01-04T11:12:54Z",
+  "paymentGateway": "paypal",
+  "paymentId": "54S66604UR968601T",
+  "user": {
+    "$oid": "5ff187ab0bd1f20017c8a9d7"
+  },
+  "createdAt": {
+    "$date": "2021-01-04T11:13:25.021Z"
+  },
+  "updatedAt": {
+    "$date": "2021-01-04T11:13:25.021Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5ff2f8c071921e00174f79c0"
+  },
+  "amount": 9.99,
+  "payeeEmail": "sb-nvbc83006144@personal.example.com",
+  "paymentCreatedTime": "2021-01-04T11:14:57Z",
+  "paymentGateway": "paypal",
+  "paymentId": "9G018588BR574740N",
+  "user": {
+    "$oid": "5ff187ab0bd1f20017c8a9d7"
+  },
+  "createdAt": {
+    "$date": "2021-01-04T11:15:12.917Z"
+  },
+  "updatedAt": {
+    "$date": "2021-01-04T11:15:12.917Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5ff99614cf66be0017336e03"
+  },
+  "amount": 9.99,
+  "payeeEmail": "sb-nvbc83006144@personal.example.com",
+  "paymentCreatedTime": "2021-01-09T11:39:25Z",
+  "paymentGateway": "paypal",
+  "paymentId": "00A9812292348474F",
+  "user": {
+    "$oid": "5ff187ab0bd1f20017c8a9d7"
+  },
+  "createdAt": {
+    "$date": "2021-01-09T11:40:04.248Z"
+  },
+  "updatedAt": {
+    "$date": "2021-01-09T11:40:04.248Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5ff99a49cf66be0017336e09"
+  },
+  "amount": 9.99,
+  "payeeEmail": "sb-nvbc83006144@personal.example.com",
+  "paymentCreatedTime": "2021-01-09T11:57:40Z",
+  "paymentGateway": "paypal",
+  "paymentId": "1BE79575X4598031G",
+  "user": {
+    "$oid": "5ff187ab0bd1f20017c8a9d7"
+  },
+  "createdAt": {
+    "$date": "2021-01-09T11:58:01.396Z"
+  },
+  "updatedAt": {
+    "$date": "2021-01-09T11:58:01.396Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5ff9e890ebf04400178240c9"
+  },
+  "amount": 9.99,
+  "payeeEmail": "sb-nvbc83006144@personal.example.com",
+  "paymentCreatedTime": "2021-01-09T17:28:58Z",
+  "paymentGateway": "paypal",
+  "paymentId": "2LN25154BM6307458",
+  "user": {
+    "$oid": "5ff9e20eebf04400178240c6"
+  },
+  "createdAt": {
+    "$date": "2021-01-09T17:32:00.579Z"
+  },
+  "updatedAt": {
+    "$date": "2021-01-09T17:32:00.579Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6007ddebc015930017ee0aea"
+  },
+  "amount": 9.99,
+  "payeeEmail": "sb-nvbc83006144@personal.example.com",
+  "paymentCreatedTime": "2021-01-20T07:37:42Z",
+  "paymentGateway": "paypal",
+  "paymentId": "93519936YM2626243",
+  "user": {
+    "$oid": "5f424998f7952600173e8342"
+  },
+  "createdAt": {
+    "$date": "2021-01-20T07:38:19.619Z"
+  },
+  "updatedAt": {
+    "$date": "2021-01-20T07:38:19.619Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "600bda026e0afcce40cdb0de"
+  },
+  "amount": 9.99,
+  "payeeEmail": "sb-nvbc83006144@personal.example.com",
+  "paymentCreatedTime": "2021-01-23T08:10:10Z",
+  "paymentGateway": "paypal",
+  "paymentId": "0AC448910K767353K",
+  "user": {
+    "$oid": "5ee2ccdfc5c9e1f354858484"
+  },
+  "createdAt": {
+    "$date": "2021-01-23T08:10:42.084Z"
+  },
+  "updatedAt": {
+    "$date": "2021-01-23T08:10:42.084Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "600c91f66ee6f0e75c36a15c"
+  },
+  "amount": 17,
+  "payeeEmail": "sb-nvbc83006144@personal.example.com",
+  "paymentCreatedTime": "2021-01-23T21:12:22Z",
+  "paymentGateway": "paypal",
+  "paymentId": "25S59388HC4432736",
+  "user": {
+    "$oid": "5ee2ccdfc5c9e1f354858484"
+  },
+  "createdAt": {
+    "$date": "2021-01-23T21:15:34.745Z"
+  },
+  "updatedAt": {
+    "$date": "2021-01-23T21:15:34.745Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6028fb0e7759ef187043db68"
+  },
+  "amount": 80,
+  "payeeEmail": "sb-nvbc83006144@personal.example.com",
+  "paymentCreatedTime": "2021-02-14T10:26:54Z",
+  "paymentGateway": "paypal",
+  "paymentId": "8UC030587B3796329",
+  "user": {
+    "$oid": "5ee2ccdfc5c9e1f354858484"
+  },
+  "createdAt": {
+    "$date": "2021-02-14T10:27:26.297Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-14T10:27:26.297Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6028fc547759ef187043db69"
+  },
+  "amount": 80,
+  "payeeEmail": "sb-nvbc83006144@personal.example.com",
+  "paymentCreatedTime": "2021-02-14T10:32:32Z",
+  "paymentGateway": "paypal",
+  "paymentId": "6CX82983FK232805U",
+  "user": {
+    "$oid": "5ee2ccdfc5c9e1f354858484"
+  },
+  "createdAt": {
+    "$date": "2021-02-14T10:32:52.154Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-14T10:32:52.154Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6028fd8d7759ef187043db6a"
+  },
+  "amount": 80,
+  "payeeEmail": "sb-nvbc83006144@personal.example.com",
+  "paymentCreatedTime": "2021-02-14T10:34:02Z",
+  "paymentGateway": "paypal",
+  "paymentId": "5NU835066A797882H",
+  "user": {
+    "$oid": "5ee2ccdfc5c9e1f354858484"
+  },
+  "createdAt": {
+    "$date": "2021-02-14T10:38:05.994Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-14T10:38:05.994Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6028fec51888b83554a0c17b"
+  },
+  "amount": 80,
+  "payeeEmail": "sb-nvbc83006144@personal.example.com",
+  "paymentCreatedTime": "2021-02-14T10:42:54Z",
+  "paymentGateway": "paypal",
+  "paymentId": "5L562810DF408290R",
+  "user": {
+    "$oid": "5ee2ccdfc5c9e1f354858484"
+  },
+  "createdAt": {
+    "$date": "2021-02-14T10:43:17.052Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-14T10:43:17.052Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6028ff201888b83554a0c17c"
+  },
+  "amount": 80,
+  "payeeEmail": "sb-nvbc83006144@personal.example.com",
+  "paymentCreatedTime": "2021-02-14T10:44:31Z",
+  "paymentGateway": "paypal",
+  "paymentId": "86C0936460575122P",
+  "user": {
+    "$oid": "5ee2ccdfc5c9e1f354858484"
+  },
+  "createdAt": {
+    "$date": "2021-02-14T10:44:48.874Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-14T10:44:48.874Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60290c9f77d6c6605c063492"
+  },
+  "amount": 62,
+  "payeeEmail": "sb-nvbc83006144@personal.example.com",
+  "paymentCreatedTime": "2021-02-14T11:41:56Z",
+  "paymentGateway": "paypal",
+  "paymentId": "00A490363G131044P",
+  "user": {
+    "$oid": "5ee2ccdfc5c9e1f354858484"
+  },
+  "createdAt": {
+    "$date": "2021-02-14T11:42:23.193Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-14T11:42:23.193Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6029646177d6c6605c063493"
+  },
+  "amount": 62,
+  "payeeEmail": "sb-nvbc83006144@personal.example.com",
+  "paymentCreatedTime": "2021-02-14T17:56:01Z",
+  "paymentGateway": "paypal",
+  "paymentId": "066626235R002542F",
+  "user": {
+    "$oid": "5ee2ccdfc5c9e1f354858484"
+  },
+  "createdAt": {
+    "$date": "2021-02-14T17:56:49.068Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-14T17:56:49.068Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "602964dc77d6c6605c063494"
+  },
+  "amount": 62,
+  "payeeEmail": "sb-nvbc83006144@personal.example.com",
+  "paymentCreatedTime": "2021-02-14T17:58:30Z",
+  "paymentGateway": "paypal",
+  "paymentId": "2CD75034894404500",
+  "user": {
+    "$oid": "5ee2ccdfc5c9e1f354858484"
+  },
+  "createdAt": {
+    "$date": "2021-02-14T17:58:52.252Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-14T17:58:52.252Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6029663877d6c6605c063495"
+  },
+  "amount": 54,
+  "payeeEmail": "sb-nvbc83006144@personal.example.com",
+  "paymentCreatedTime": "2021-02-14T18:04:02Z",
+  "paymentGateway": "paypal",
+  "paymentId": "0P835832U3009635T",
+  "user": {
+    "$oid": "5ee2ccdfc5c9e1f354858484"
+  },
+  "createdAt": {
+    "$date": "2021-02-14T18:04:40.648Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-14T18:04:40.648Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6029673e77d6c6605c063496"
+  },
+  "amount": 54,
+  "payeeEmail": "sb-nvbc83006144@personal.example.com",
+  "paymentCreatedTime": "2021-02-14T18:08:40Z",
+  "paymentGateway": "paypal",
+  "paymentId": "6SR2087602030121D",
+  "user": {
+    "$oid": "5ee2ccdfc5c9e1f354858484"
+  },
+  "createdAt": {
+    "$date": "2021-02-14T18:09:02.186Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-14T18:09:02.186Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60297e224acf3e72ec62b08d"
+  },
+  "amount": 39,
+  "payeeEmail": "sb-nvbc83006144@personal.example.com",
+  "paymentCreatedTime": "2021-02-14T19:41:07Z",
+  "paymentGateway": "paypal",
+  "paymentId": "7FA13210MD392833A",
+  "user": {
+    "$oid": "5ee2ccdfc5c9e1f354858484"
+  },
+  "createdAt": {
+    "$date": "2021-02-14T19:46:42.762Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-14T19:46:42.762Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6031a4d024226400175f58b5"
+  },
+  "amount": 62,
+  "payeeEmail": "sb-nvbc83006144@personal.example.com",
+  "paymentCreatedTime": "2021-02-21T00:09:23Z",
+  "paymentGateway": "paypal",
+  "paymentId": "8T223926A4677001V",
+  "user": {
+    "$oid": "5ff187ab0bd1f20017c8a9d7"
+  },
+  "createdAt": {
+    "$date": "2021-02-21T00:09:52.642Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-21T00:09:52.642Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6031a65524226400175f58b8"
+  },
+  "amount": 48,
+  "payeeEmail": "sb-nvbc83006144@personal.example.com",
+  "paymentCreatedTime": "2021-02-21T00:16:02Z",
+  "paymentGateway": "paypal",
+  "paymentId": "88S37531C0766471G",
+  "user": {
+    "$oid": "5ff187ab0bd1f20017c8a9d7"
+  },
+  "createdAt": {
+    "$date": "2021-02-21T00:16:21.023Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-21T00:16:21.023Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6031a89c24226400175f58bb"
+  },
+  "amount": 66,
+  "payeeEmail": "sb-nvbc83006144@personal.example.com",
+  "paymentCreatedTime": "2021-02-21T00:25:12Z",
+  "paymentGateway": "paypal",
+  "paymentId": "94193258M6505905C",
+  "user": {
+    "$oid": "5f424998f7952600173e8342"
+  },
+  "createdAt": {
+    "$date": "2021-02-21T00:26:04.356Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-21T00:26:04.356Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "607d4b67e5f4fb062c97e4ec"
+  },
+  "amount": 19,
+  "payeeEmail": "sb-nvbc83006144@personal.example.com",
+  "paymentCreatedTime": "2021-04-19T09:20:02Z",
+  "paymentGateway": "paypal",
+  "paymentId": "15T72939HP528300F",
+  "user": {
+    "$oid": "5ff9e20eebf04400178240c6"
+  },
+  "createdAt": {
+    "$date": "2021-04-19T09:20:39.387Z"
+  },
+  "updatedAt": {
+    "$date": "2021-04-19T09:20:39.387Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "607e84b685fcd6360038fe12"
+  },
+  "amount": 19,
+  "payeeEmail": "sb-nvbc83006144@personal.example.com",
+  "paymentCreatedTime": "2021-04-20T07:36:56Z",
+  "paymentGateway": "paypal",
+  "paymentId": "3XV55452SY620142X",
+  "user": {
+    "$oid": "5ff9e20eebf04400178240c6"
+  },
+  "createdAt": {
+    "$date": "2021-04-20T07:37:26.005Z"
+  },
+  "updatedAt": {
+    "$date": "2021-04-20T07:37:26.005Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "607e862085fcd6360038fe17"
+  },
+  "amount": 19,
+  "payeeEmail": "sb-nvbc83006144@personal.example.com",
+  "paymentCreatedTime": "2021-04-20T07:43:13Z",
+  "paymentGateway": "paypal",
+  "paymentId": "4XB01200D3848981D",
+  "user": {
+    "$oid": "5ff9e20eebf04400178240c6"
+  },
+  "createdAt": {
+    "$date": "2021-04-20T07:43:28.819Z"
+  },
+  "updatedAt": {
+    "$date": "2021-04-20T07:43:28.819Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "607e88a385fcd6360038fe22"
+  },
+  "amount": 19,
+  "payeeEmail": "sb-nvbc83006144@personal.example.com",
+  "paymentCreatedTime": "2021-04-20T07:53:43Z",
+  "paymentGateway": "paypal",
+  "paymentId": "7RC766168J116282A",
+  "user": {
+    "$oid": "5ff9e20eebf04400178240c6"
+  },
+  "createdAt": {
+    "$date": "2021-04-20T07:54:11.711Z"
+  },
+  "updatedAt": {
+    "$date": "2021-04-20T07:54:11.711Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "607e8abb85fcd6360038fe29"
+  },
+  "amount": 19,
+  "payeeEmail": "sb-nvbc83006144@personal.example.com",
+  "paymentCreatedTime": "2021-04-20T08:02:52Z",
+  "paymentGateway": "paypal",
+  "paymentId": "9T995442Y62798644",
+  "user": {
+    "$oid": "5ff9e20eebf04400178240c6"
+  },
+  "createdAt": {
+    "$date": "2021-04-20T08:03:07.523Z"
+  },
+  "updatedAt": {
+    "$date": "2021-04-20T08:03:07.523Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "607e8cd385fcd6360038fe2e"
+  },
+  "amount": 18,
+  "payeeEmail": "sb-nvbc83006144@personal.example.com",
+  "paymentCreatedTime": "2021-04-20T08:11:43Z",
+  "paymentGateway": "paypal",
+  "paymentId": "5CT70852K21343245",
+  "user": {
+    "$oid": "5ff9e20eebf04400178240c6"
+  },
+  "createdAt": {
+    "$date": "2021-04-20T08:12:03.772Z"
+  },
+  "updatedAt": {
+    "$date": "2021-04-20T08:12:03.772Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "607eb66485fcd6360038fe3d"
+  },
+  "amount": 19,
+  "payeeEmail": "sb-nvbc83006144@personal.example.com",
+  "paymentCreatedTime": "2021-04-20T11:08:57Z",
+  "paymentGateway": "paypal",
+  "paymentId": "8K827495BD802224T",
+  "user": {
+    "$oid": "5ff9e20eebf04400178240c6"
+  },
+  "createdAt": {
+    "$date": "2021-04-20T11:09:24.304Z"
+  },
+  "updatedAt": {
+    "$date": "2021-04-20T11:09:24.304Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6087d5b6abae2f2f10a94a78"
+  },
+  "amount": 43,
+  "payeeEmail": "sb-nvbc83006144@personal.example.com",
+  "paymentCreatedTime": "2021-04-27T09:13:05Z",
+  "paymentGateway": "paypal",
+  "paymentId": "0EA9203080410643Y",
+  "user": {
+    "$oid": "5ff9e20eebf04400178240c6"
+  },
+  "createdAt": {
+    "$date": "2021-04-27T09:13:26.307Z"
+  },
+  "updatedAt": {
+    "$date": "2021-04-27T09:13:26.307Z"
+  },
+  "__v": 0
+}]

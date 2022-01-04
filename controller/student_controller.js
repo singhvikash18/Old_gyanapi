@@ -16,7 +16,7 @@ const studentController = catchAsync(async(req,res)=>{
 });
 
 const studentControllerId = catchAsync(async(req,res)=>{
-    const dmo = await studentcontrol.studentId(req.params.student_id);
+    const dmo = await studentcontrol.studentId(req.params._id);
     const response = dmo;
     const data ={
         itemcount : 2,
