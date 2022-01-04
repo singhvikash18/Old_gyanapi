@@ -2,6 +2,6 @@ const router =require('express').Router();
 
 const getpayment = require('../controller/payment.controller');
 
-router.post('/paidStudent',getpayment.paymentController);
+router.post('/getPayment',getpayment.paymentController);
 
 module.exports = router;

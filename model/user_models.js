@@ -51,7 +51,28 @@ const userSchema = new mongoose.Schema({
             },
             message:'passwords are not same!'
         }
+    },
+    address:{
+        type: String,
+        required: true
+    },
+    city :{
+        type: String,
+        required:true
+    },
+    states:{
+        type: String,
+        required: true
+    },
+    photo :{
+        type: String,
+        required: true
+    },
+    country :{
+        type : String,
+        required : true
     }
+
 },
 {
     timestamps:true,

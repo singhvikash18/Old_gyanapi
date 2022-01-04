@@ -25,7 +25,7 @@ router.use('/authlogin',loginroute);
 // router.post('/email_send',getmails.controlmail);
 
  
-router.use('/getStudent',paymentroute);
+router.use('/payment',paymentroute);
 router.use('/email',mailroute);
 router.use('/currentaffair', currentaffairsroute);
 
