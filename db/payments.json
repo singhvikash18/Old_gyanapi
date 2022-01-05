@@ -1,0 +1,235 @@
+[{
+  "_id": {
+    "$oid": "5f415412011e7e39204f3d80"
+  },
+  "amount": "9.99",
+  "payeeEmail": "sb-nvbc83006144@personal.example.com",
+  "paymentCreatedTime": "2020-08-22T17:20:50Z",
+  "paymentGateway": "paypal",
+  "paymentId": "90D935058C856524J",
+  "user": {
+    "$oid": "61c429a4913e79255da66686"
+  },
+  "createdAt": {
+    "$date": "2020-12-22T17:21:22.431Z"
+  },
+  "updatedAt": {
+    "$date": "2020-08-22T17:21:22.431Z"
+  },
+  "__v": 0,
+  "category_id": {
+    "$oid": "61adb3b1f9e417738f536254"
+  },
+  "coursePeriod": "30"
+},{
+  "_id": {
+    "$oid": "5f437911e1834300174e2e60"
+  },
+  "amount": "9.99",
+  "payeeEmail": "sb-nvbc83006144@personal.example.com",
+  "paymentCreatedTime": "2020-08-24T08:23:28Z",
+  "paymentGateway": "paypal",
+  "paymentId": "3DC83939DP905664C",
+  "user": {
+    "$oid": "5ee2ccdfc5c9e1f354858484"
+  },
+  "createdAt": {
+    "$date": "2020-08-24T08:23:45.208Z"
+  },
+  "updatedAt": {
+    "$date": "2020-08-24T08:23:45.208Z"
+  },
+  "__v": 0,
+  "category_id": {
+    "$oid": "61af3205d0e00b5c7ac460b3"
+  },
+  "coursePeriod": "30"
+},{
+  "_id": {
+    "$oid": "5f418acb6aed5bdaac8a1722"
+  },
+  "amount": "9.99",
+  "payeeEmail": "sb-nvbc83006144@personal.example.com",
+  "paymentCreatedTime": "2020-08-22T21:14:32Z",
+  "paymentGateway": "paypal",
+  "paymentId": "5RF25156HB987725M",
+  "user": {
+    "$oid": "5f3a5afa8433677894d2a6dd"
+  },
+  "createdAt": {
+    "$date": "2020-08-22T21:14:51.305Z"
+  },
+  "updatedAt": {
+    "$date": "2020-08-22T21:14:51.305Z"
+  },
+  "__v": 0,
+  "category_id": {
+    "$oid": "61af31b1d0e00b5c7ac460ae"
+  },
+  "coursePeriod": "30"
+},{
+  "_id": {
+    "$oid": "5f4cc1f4e5b93300170d48d1"
+  },
+  "amount": "9.99",
+  "payeeEmail": "sb-nvbc83006144@personal.example.com",
+  "paymentCreatedTime": "2020-08-31T09:24:51Z",
+  "paymentGateway": "paypal",
+  "paymentId": "4L487830FJ034041F",
+  "user": {
+    "$oid": "5f424998f7952600173e8342"
+  },
+  "createdAt": {
+    "$date": "2020-08-31T09:25:08.145Z"
+  },
+  "updatedAt": {
+    "$date": "2020-08-31T09:25:08.145Z"
+  },
+  "__v": 0,
+  "category_id": {
+    "$oid": "61af3205d0e00b5c7ac460b3"
+  },
+  "coursePeriod": "30"
+},{
+  "_id": {
+    "$oid": "5f42d79e69492a001781e8bd"
+  },
+  "amount": 9.99,
+  "payeeEmail": "sb-nvbc83006144@personal.example.com",
+  "paymentCreatedTime": "2020-08-23T20:53:34Z",
+  "paymentGateway": "paypal",
+  "paymentId": "7GY12757HU561433N",
+  "user": {
+    "$oid": "61c429a4913e79255da66686"
+  },
+  "createdAt": {
+    "$date": "2021-12-23T20:54:54.216Z"
+  },
+  "updatedAt": {
+    "$date": "2020-08-23T20:54:54.216Z"
+  },
+  "__v": 0,
+  "category_id": {
+    "$oid": "61af31fed0e00b5c7ac460b2"
+  }
+},{
+  "_id": {
+    "$oid": "5f45761d308bac0017fecfe1"
+  },
+  "amount": "9.99",
+  "payeeEmail": "sb-nvbc83006144@personal.example.com",
+  "paymentCreatedTime": "2020-08-25T20:35:13Z",
+  "paymentGateway": "paypal",
+  "paymentId": "74J938699A566041T",
+  "user": {
+    "$oid": "5f424998f7952600173e8342"
+  },
+  "createdAt": {
+    "$date": "2020-08-25T20:35:41.064Z"
+  },
+  "updatedAt": {
+    "$date": "2020-08-25T20:35:41.064Z"
+  },
+  "__v": 0,
+  "category_id": {
+    "$oid": "61af31b1d0e00b5c7ac460ae"
+  }
+},{
+  "_id": {
+    "$oid": "5f45770246c94c00173d476e"
+  },
+  "amount": "9.99",
+  "payeeEmail": "sb-nvbc83006144@personal.example.com",
+  "paymentCreatedTime": "2020-08-25T20:39:08Z",
+  "paymentGateway": "paypal",
+  "paymentId": "73U088124C084334G",
+  "user": {
+    "$oid": "5f424998f7952600173e8342"
+  },
+  "createdAt": {
+    "$date": "2020-08-25T20:39:30.142Z"
+  },
+  "updatedAt": {
+    "$date": "2020-08-25T20:39:30.142Z"
+  },
+  "__v": 0,
+  "category_id": {
+    "$oid": "61af31ead0e00b5c7ac460b1"
+  }
+},{
+  "_id": {
+    "$oid": "5feaea9b2bb4ba3f3097a10d"
+  },
+  "amount": 9.99,
+  "payeeEmail": "sb-nvbc83006144@personal.example.com",
+  "paymentCreatedTime": "2020-12-29T08:36:25Z",
+  "paymentGateway": "paypal",
+  "paymentId": "0BC23520TU626235K",
+  "user": {
+    "$oid": "5f424998f7952600173e8342"
+  },
+  "createdAt": {
+    "$date": "2020-12-29T08:36:43.088Z"
+  },
+  "updatedAt": {
+    "$date": "2020-12-29T08:36:43.088Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5feaf65c31935f5bf087b391"
+  },
+  "amount": 9.99,
+  "payeeEmail": "sb-nvbc83006144@personal.example.com",
+  "paymentCreatedTime": "2020-12-29T09:26:37Z",
+  "paymentGateway": "paypal",
+  "paymentId": "8L387672UM684922M",
+  "user": {
+    "$oid": "5f424998f7952600173e8342"
+  },
+  "createdAt": {
+    "$date": "2020-12-29T09:26:52.613Z"
+  },
+  "updatedAt": {
+    "$date": "2020-12-29T09:26:52.613Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "600bda026e0afcce40cdb0de"
+  },
+  "amount": 9.99,
+  "payeeEmail": "sb-nvbc83006144@personal.example.com",
+  "paymentCreatedTime": "2021-01-23T08:10:10Z",
+  "paymentGateway": "paypal",
+  "paymentId": "0AC448910K767353K",
+  "user": {
+    "$oid": "5ee2ccdfc5c9e1f354858484"
+  },
+  "createdAt": {
+    "$date": "2021-01-23T08:10:42.084Z"
+  },
+  "updatedAt": {
+    "$date": "2021-01-23T08:10:42.084Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60297e224acf3e72ec62b08d"
+  },
+  "amount": 39,
+  "payeeEmail": "sb-nvbc83006144@personal.example.com",
+  "paymentCreatedTime": "2021-02-14T19:41:07Z",
+  "paymentGateway": "paypal",
+  "paymentId": "7FA13210MD392833A",
+  "user": {
+    "$oid": "5ee2ccdfc5c9e1f354858484"
+  },
+  "createdAt": {
+    "$date": "2021-02-14T19:46:42.762Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-14T19:46:42.762Z"
+  },
+  "__v": 0
+}]

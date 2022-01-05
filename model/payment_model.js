@@ -37,7 +37,20 @@ const paymentSchema = new mongoose.Schema ({
     category_id  : {
         type : ObjectId,
         required : true
+    },
+    duration :{
+        type: String,
+        required : true
+    },
+    payentStartTime :{
+        type: Date,
+        required:true
+    },
+    paymentEndTime :{
+        type: Date,
+        required:true
     }
+
     
 
 },

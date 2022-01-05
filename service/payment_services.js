@@ -10,8 +10,9 @@ const paymentservice = async(userid)=>{
         [   
            
             
-            { $match : { user : ObjectId(userid),  createdAt: { $lte: new Date(), $gte: new Date(new Date().setDate(new Date().getDate() - 30)) }  },
-                 
+            { 
+                // $match : { user : ObjectId(userid),  createdAt: { $lte: new Date(), $gte: new Date(new Date().setDate(new Date().getDate() - "$coursePeriod")) }  },
+                 $match : { user : ObjectId(userid),  paymentEndTime: { $gte: new Date() }, paymentStartTime: { $lte: new Date() }  }, 
             }, 
            {
             $unwind: "$category_id"
