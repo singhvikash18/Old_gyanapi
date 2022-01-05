@@ -10,7 +10,7 @@ const paymentservice = async(userid)=>{
         [   
            
             
-             { $match : { user : ObjectId(userid),  createdAt: { $lte: new Date(), $gte: new Date(new Date().setDate(new Date().getDate() - 30)) }  },
+            { $match : { user : ObjectId(userid),  createdAt: { $lte: new Date(), $gte: new Date(new Date().setDate(new Date().getDate() - 30)) }  },
                  
             }, 
            {
@@ -19,9 +19,9 @@ const paymentservice = async(userid)=>{
             {
                 $lookup :
                 {
-                    from: "courses",
+                    from: "coursecategories",
                     localField : "category_id",
-                    foreignField : "category_id",
+                    foreignField : "_id",
                     as : "paid_user"
                 }
                

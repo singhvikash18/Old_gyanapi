@@ -158,7 +158,7 @@ const fetchIdcontrol = catchAsync(async(req,res)=>{
 });
 
 const userContolupdate = catchAsync(async(req,res)=>{
-  const upd = await signupservices.userUpdate(req.body)
+  const upd = await signupservices.userPIUpdate(req.body)
   const response =upd;
   const data = {
       itemcount:1,
