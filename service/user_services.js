@@ -44,11 +44,32 @@ const fetchId = async(id)=>{
     return fid;
 }
 
+const isEmailDuplicate = async(useremail)=>{
+
+  const user = await userModel.findOne({email:useremail})
+    if(user){
+        //return user;
+        throw new AppError(httpStatus.BAD_REQUEST, "Email already taken");
+    }
+}
+
+const isUsernameDuplicate = async(username)=>{
+  const user = await userModel.findOne({username:username})
+    if(user){
+        //return user;
+        throw new AppError(httpStatus.BAD_REQUEST, "Username already taken");
+    }
+}
+
 const userPIUpdate = async(req,res)=>{
   const query= {_id:req._id}
-  const updatenumber =  {firstname: req.firstname,lastname:req.lastname,username:req.username,email: req.email,address:req.address};
+  const validemail = await isEmailDuplicate(req.email);
+  const validusername = await isUsernameDuplicate(req.username);
+const updatenumber =  {firstname: req.firstname,lastname:req.lastname,address:req.address ,username:req.username,email: req.email};
+  
+
   const su = await User.findOneAndUpdate(query,updatenumber)
- 
+
 }
 
 
