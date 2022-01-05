@@ -45,8 +45,8 @@ const fetchId = async(id)=>{
 }
 
 const userPIUpdate = async(req,res)=>{
-  const query= {email:req.email}
-  const updatenumber =  {firstname: req.firstname,lastname:req.lastname,address:req.address};
+  const query= {_id:req._id}
+  const updatenumber =  {firstname: req.firstname,lastname:req.lastname,username:req.username,email: req.email,address:req.address};
   const su = await User.findOneAndUpdate(query,updatenumber)
  
 }
