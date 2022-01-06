@@ -169,6 +169,18 @@ const userContolupdate = catchAsync(async(req,res)=>{
   res.status(httpStatus.OK).send(data)
 });
 
-const user_read={userauthcontrol,loginController,forgotPassword,fetchIdcontrol,updatepassword,userContolupdate}
+const userPassControlupdate = catchAsync(async(req,res)=>{
+  const upd = await signupservices.userPassupdate(req.body)
+  const response =upd;
+  const data = {
+      itemcount:1,
+      status_code : httpStatus.OK,
+      message: "user password updated",
+      data :response,
+  };
+  res.status(httpStatus.OK).send(data)
+});
+
+const user_read={userauthcontrol,loginController,forgotPassword,fetchIdcontrol,updatepassword,userContolupdate,userPassControlupdate}
 
 module.exports= user_read;

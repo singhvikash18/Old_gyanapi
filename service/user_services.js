@@ -5,6 +5,7 @@ const userModel = require('../model/user_models');
 const AppError = require('../utils/app_error');
 const JWT = require('jsonwebtoken');
 const { ObjectId } = require('mongodb');
+const bcrypt = require('bcryptjs');
 
 
 const checkDuplicateEmail = async(signupbodyemail, excludeUserId)=>{
@@ -44,6 +45,9 @@ const fetchId = async(id)=>{
     return fid;
 }
 
+
+//for user PI update...
+
 const isEmailDuplicate = async(useremail)=>{
 
   const user = await userModel.findOne({email:useremail})
@@ -65,12 +69,37 @@ const userPIUpdate = async(req,res)=>{
   const query= {_id:req._id}
   const validemail = await isEmailDuplicate(req.email);
   const validusername = await isUsernameDuplicate(req.username);
-const updatenumber =  {firstname: req.firstname,lastname:req.lastname,address:req.address ,username:req.username,email: req.email};
+  const updatenumber =  {firstname: req.firstname,lastname:req.lastname,address:req.address ,username:req.username,email: req.email};
   
 
   const su = await User.findOneAndUpdate(query,updatenumber)
 
 }
 
+// for user password update....
+// const UsernameDuplicate = async(reqpassword,reqconfirmpassword)=>{
+//   const user = await userModel.findOne({password:reqpassword})
+//   const confuser = await userModel.findOne({confirmpassword : reqconfirmpassword})
 
-module.exports ={getUser,signup,fetchId,userPIUpdate}
+// }
+const userPassupdate = async(req,res) =>{
+  const query = {_id : req._id}
+  const confirmPassword =  await bcrypt.hash(req.confirmpassword, 12)
+  const passsord = await bcrypt.hash(req.password, 12)
+  const updatepass = {password: passsord , confirmpassword:confirmPassword }
+
+
+if(req.confirmpassword === req.password){
+  const updatepass1 = await User.findOneAndUpdate(query,updatepass)
+}else{
+  
+    //return user;
+    throw new AppError(httpStatus.BAD_REQUEST, "password dosen't match ");
+
+}
+}
+
+
+
+
+module.exports ={getUser,signup,fetchId,userPIUpdate,userPassupdate}
