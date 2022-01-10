@@ -38,6 +38,11 @@ const paymentservice = async(userid)=>{
 
 
 const paymentStatus = async(userId,categoryId)=>{
+
+    if(!userId && !categoryId){
+        throw new AppError(httpStatus.BAD_REQUEST, "Payment not found");  
+    }
+
    const status = await payment.findOne({user:userId,category_id:categoryId}) ;
    if (status) {
     return "payment found"
