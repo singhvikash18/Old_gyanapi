@@ -1,8 +1,8 @@
 const router = require('express').Router();
 const mongoose =require('mongoose')
 const payment = require('../model/payment_model');
-// const AppError = require('../utils/app_error');
-//const httpStatus = require('http-status');
+ const AppError = require('../utils/app_error');
+const httpStatus = require('http-status');
 
 const paymentservice = async(userid)=>{
    // console.log(userid)
@@ -40,9 +40,10 @@ const paymentservice = async(userid)=>{
 const paymentStatus = async(userId,categoryId)=>{
    const status = await payment.findOne({user:userId,category_id:categoryId}) ;
    if (status) {
-    return "payment  found"
+    return "payment found"
   }else{
-      throw "payment noot found"
+    throw new AppError(httpStatus.BAD_REQUEST, "Payment not found");
   }
+
 }
 module.exports = {paymentservice,paymentStatus,};
