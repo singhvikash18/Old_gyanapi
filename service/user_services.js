@@ -7,6 +7,10 @@ const JWT = require('jsonwebtoken');
 const { ObjectId } = require('mongodb');
 const bcrypt = require('bcryptjs');
 
+const multer  = require('multer')
+const upload = multer({ dest: 'profile/' })
+
+
 
 const checkDuplicateEmail = async(signupbodyemail, excludeUserId)=>{
     const user = await userModel.findOne({email:signupbodyemail, _id: excludeUserId })
@@ -60,7 +64,7 @@ const isEmailDuplicate = async(useremail)=>{
 const isUsernameDuplicate = async(username)=>{
   const user = await userModel.findOne({username:username})
     if(user){
-        //return user;
+       
         throw new AppError(httpStatus.BAD_REQUEST, "Username already taken");
     }
 }
@@ -76,12 +80,7 @@ const userPIUpdate = async(req,res)=>{
 
 }
 
-// for user password update....
-// const UsernameDuplicate = async(reqpassword,reqconfirmpassword)=>{
-//   const user = await userModel.findOne({password:reqpassword})
-//   const confuser = await userModel.findOne({confirmpassword : reqconfirmpassword})
-
-// }
+// for password update 
 const userPassupdate = async(req,res) =>{
   const query = {_id : req._id}
   const confirmPassword =  await bcrypt.hash(req.confirmpassword, 12)
@@ -93,13 +92,24 @@ if(req.confirmpassword === req.password){
   const updatepass1 = await User.findOneAndUpdate(query,updatepass)
 }else{
   
-    //return user;
+   
     throw new AppError(httpStatus.BAD_REQUEST, "password dosen't match ");
 
 }
 }
 
+//change avatar 
+
+const userAvatar =  async(req,res)=>{
+ /// console.log(req)
+  const query ={_id:req.body.userid}
+  const updateimage = {photo : req.headers.host+'/profile/'+req.file.filename}
+
+  const uploadpic = await User.findOneAndUpdate(query,updateimage)
+ 
+    
+}
 
 
 
-module.exports ={getUser,signup,fetchId,userPIUpdate,userPassupdate}
+module.exports ={getUser,signup,fetchId,userPIUpdate,userPassupdate,userAvatar}

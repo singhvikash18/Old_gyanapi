@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const cors =require('cors')
 const dotenv = require('dotenv');
-
+const multer  = require('multer')
 dotenv.config({path:'./config/config.env'})
 
 const mongoose = require('mongoose')
@@ -29,6 +29,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 const port = process.env.PORT ;
 
+
+app.use('/profile', express.static('profile'));
 
 const allroutes = require('./routes/index')
 app.use('/api', allroutes);

@@ -181,6 +181,18 @@ const userPassControlupdate = catchAsync(async(req,res)=>{
   res.status(httpStatus.OK).send(data)
 });
 
-const user_read={userauthcontrol,loginController,forgotPassword,fetchIdcontrol,updatepassword,userContolupdate,userPassControlupdate}
+const userAvatarControlupdate = catchAsync(async(req,res)=>{
+  const upd = await signupservices.userAvatar(req)
+  const response =upd;
+  const data = {
+      itemcount:1,
+      status_code : httpStatus.OK,
+      message: "avatar uploded",
+      data :response,
+  };
+  res.status(httpStatus.OK).send(data)
+});
+
+const user_read={userauthcontrol,loginController,forgotPassword,fetchIdcontrol,updatepassword,userContolupdate,userPassControlupdate,userAvatarControlupdate}
 
 module.exports= user_read;
