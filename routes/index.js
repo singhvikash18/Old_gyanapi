@@ -16,6 +16,7 @@ const studroute = require('./student_route');
 const playroute = require('./videoplay_route');
 const paymentroute = require('./payment_route');
 const noteroute = require('./notes_route');
+const subscriptionroute = require('./subscription_route');
 
 
 router.use('/play',playroute);
@@ -29,6 +30,8 @@ router.use('/payment',paymentroute);
 router.use('/email',mailroute);
 router.use('/currentaffair', currentaffairsroute);
 
+
+router.use('/subscription',subscriptionroute);
 router.use('/course',croute);
 //router.use('/coursedetails',croute);
 
