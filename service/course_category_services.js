@@ -7,7 +7,13 @@ const course_Category = async()=>{
     return c_cat;
 }
 
+const course_cat_idService = async(categoryId)=>{
+    const scis = await Category.findOne({_id:categoryId})
+    return scis;
+}
+
 
 module.exports ={
      course_Category,
+     course_cat_idService,
 };
