@@ -1,5 +1,6 @@
 const { ObjectId } = require('mongodb');
 const mongoose = require('mongoose');
+const { Schema } = mongoose;
 
 const SubsSchema = new mongoose.Schema({
     packageName:{
@@ -28,15 +29,18 @@ const SubsSchema = new mongoose.Schema({
         type:Date,
         required:true
     },
-    category_id:{
-        type:mongoose.Schema.Types.ObjectId,ref:'category',
+    category_id: {
+        type:mongoose.SchemaTypes.ObjectId, ref:"coursecategory",
         required:true
+
     }
     
 
 },
 {
-    timestamps:true
+    timestamps:true,
+    toObject: { getters: true },
+    toJSON: { getters: true },
 }
 );
 module.exports =mongoose.model('subscription',SubsSchema);

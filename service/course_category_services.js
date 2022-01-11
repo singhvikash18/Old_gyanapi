@@ -7,6 +7,7 @@ const course_Category = async()=>{
     return c_cat;
 }
 
+
 module.exports ={
      course_Category,
 };
