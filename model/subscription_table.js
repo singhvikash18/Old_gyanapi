@@ -29,7 +29,7 @@ const SubsSchema = new mongoose.Schema({
         required:true
     },
     category_id:{
-        type:ObjectId,
+        type:mongoose.Schema.Types.ObjectId,ref:'category',
         required:true
     }
     

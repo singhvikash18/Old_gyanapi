@@ -8,7 +8,7 @@ const subsServices = async(req,res)=>{
 }
 
 const subsCategoryServices = async(categoryId)=>{
-    const scs = await subs.find({category_id:categoryId});
+    const scs = await subs.find({category_id:categoryId}).populate('category');
     return scs;
 }
 
