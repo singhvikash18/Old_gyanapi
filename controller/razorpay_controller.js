@@ -17,7 +17,20 @@ const razorpayController = catchAsync(async(req,res)=>{
     res.status(httpStatus.OK).send(data)
 });
 
-const pay_read= {razorpayController,}
+
+const razorpayVerifyController = catchAsync(async(req,res)=>{
+    const dmo = await razorservice.verifyrazorPayServices(req)
+    const response = dmo;
+    const data ={
+        itemcount : 1,
+        status_code : httpStatus.OK,
+        message: "successfully sent",
+        data: response,
+
+    };
+    res.status(httpStatus.OK).send(data)
+});
+const pay_read= {razorpayController,razorpayVerifyController}
 
 module.exports = pay_read;
 
