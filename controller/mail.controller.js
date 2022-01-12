@@ -1,5 +1,6 @@
 const mailservicecontroller = require('../service/mails.services');
 const   mailroutecontroller = require('../routes/index');
+const catchAsync = require('./../utils/catch_async');
 const httpStatus = require("http-status")
 const { response } = require('express');
 

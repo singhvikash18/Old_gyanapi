@@ -1,8 +1,8 @@
 const notesService= require('../service/notes_services');
-
+const catchAsync = require('./../utils/catch_async');
 const httpStatus = require('http-status');
 
-const notesController = async(req,res)=>{
+const notesController = catchAsync(async(req,res)=>{
     const test=await notesService.notesService();
     const response = test;
     const data ={
@@ -13,7 +13,7 @@ const notesController = async(req,res)=>{
 
     };
     res.status(httpStatus.OK).send(data)
-}
+});
 const read ={
     notesController,
 }

@@ -1,8 +1,8 @@
 const courseController =require('../service/courses.services')
-
+const catchAsync = require('./../utils/catch_async');
 const httpStatus = require('http-status');
 
-const controlCourse = async(req,res)=>{
+const controlCourse = catchAsync(async(req,res)=>{
     const test =  await courseController.courseService();
    // console.log(test);
     const response = test;
@@ -14,9 +14,9 @@ const controlCourse = async(req,res)=>{
 
     };
     res.status(httpStatus.OK).send(data)
-};
+});
 
-const controlCategoryId = async (req,res)=>{
+const controlCategoryId = catchAsync(async (req,res)=>{
     //console.log(req.params);
 const test1 =  await courseController.categoryIdService(req.params.category_id);
 // console.log(test1);
@@ -29,9 +29,9 @@ const data ={
 
 };
 res.status(httpStatus.OK).send(data)
-};
+});
 
-const controlcoursedetails = async (req,res)=>{
+const controlcoursedetails = catchAsync(async (req,res)=>{
     //console.log(req.params);
 const details =  await courseController.coursedetailsService(req.params.course_slug);
 // console.log(test1);
@@ -44,9 +44,9 @@ const data ={
 
 };
 res.status(httpStatus.OK).send(data)
-};
+});
 
-const Coursescommingsoon = async (req,res)=>{
+const Coursescommingsoon = catchAsync(async (req,res)=>{
     //console.log(req.params);
 const soonclass =  await courseController.coursecomingSoonService();
 // console.log(test1);
@@ -59,7 +59,7 @@ const datas ={
 
 };
 res.status(httpStatus.OK).send(datas)
-};
+});
 
 const course_read ={
     controlCourse, Coursescommingsoon, controlCategoryId, controlcoursedetails, 

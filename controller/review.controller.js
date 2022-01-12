@@ -1,8 +1,8 @@
 const reviewcontrol = require('../service/review.services');
-
+const catchAsync = require('./../utils/catch_async');
 const httpStatus = require('http-status');
 
-const reviewController = async(req,res)=>{
+const reviewController = catchAsync(async(req,res)=>{
     const dmo = await reviewcontrol.reviewservice();
     const response = dmo;
     const data ={
@@ -13,7 +13,7 @@ const reviewController = async(req,res)=>{
 
     };
     res.status(httpStatus.OK).send(data)
-};
+});
 const review_read ={
     reviewController,
 }

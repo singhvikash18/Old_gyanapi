@@ -16,12 +16,10 @@ const subsCategoryServices = async(categoryId)=>{
     
     
     const scs = await subs.find({category_id:categoryId}).populate("category_id")
-    if(scs ==0){
-        throw new AppError(httpStatus.BAD_REQUEST, "Payment not found");
-    }
+    return scs;
    
 
-    return scs;
+    
 
 }
 

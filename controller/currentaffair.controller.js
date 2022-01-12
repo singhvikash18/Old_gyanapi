@@ -20,7 +20,7 @@ const controlcurrent_affairs = catchAsync(async(req,res)=>{
 
 
 
-const controlcurrent_affairs_slug = async(req,res)=>{
+const controlcurrent_affairs_slug = catchAsync(async(req,res)=>{
         //console.log(req.params);
     const test1 =  await currentaffairservices.caslug(req.params.currentaffair_slug);
     //console.log(test1);
@@ -33,7 +33,7 @@ const controlcurrent_affairs_slug = async(req,res)=>{
 
     };
     res.status(httpStatus.OK).send(data)
-};
+});
 
 const controlcurrent = {
     controlcurrent_affairs, controlcurrent_affairs_slug,

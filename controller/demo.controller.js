@@ -1,8 +1,8 @@
 const democontrol = require('../service/demo_services')
-
+const catchAsync = require('./../utils/catch_async');
 const httpStatus = require('http-status');
 
-const demoController = async(req,res)=>{
+const demoController = catchAsync(async(req,res)=>{
     const dmo = await democontrol.demoservice();
     const response = dmo;
     const data ={
@@ -13,9 +13,9 @@ const demoController = async(req,res)=>{
 
     };
     res.status(httpStatus.OK).send(data)
-};
+});
 
-const demoControllerId = async(req,res)=>{
+const demoControllerId = catchAsync(async(req,res)=>{
     const dmi = await democontrol.demodetailId(req.params.demoId);
     const response = dmi;
     const data ={
@@ -26,7 +26,7 @@ const demoControllerId = async(req,res)=>{
 
     };
     res.status(httpStatus.OK).send(data)
-};
+});
 const demo_read ={
     demoController,
     demoControllerId,

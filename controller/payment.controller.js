@@ -1,9 +1,9 @@
 const paymentServices = require('../service/payment_services');
-
+const catchAsync = require('./../utils/catch_async');
 const httpStatus = require('http-status');
-const catchAsync = require('../utils/catch_async');
 
-const paymentController = async(req,res)=>{
+
+const paymentController = catchAsync(async(req,res)=>{
     const dmo = await paymentServices.paymentservice(req.body.user);
     const response = dmo;
     const data ={
@@ -14,7 +14,7 @@ const paymentController = async(req,res)=>{
 
     };
     res.status(httpStatus.OK).send(data)
-};
+});
 const paymentStatusController =  catchAsync(async(req,res)=>{
     const dmo = await paymentServices.paymentStatus(req.body.user, req.body.category_id);
     const response = dmo;
