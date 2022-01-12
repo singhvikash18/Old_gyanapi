@@ -5,10 +5,10 @@ const httpStatus = require('http-status');
 
 
 const razorpayController = catchAsync(async(req,res)=>{
-    const dmo = await razorservice.razorPayService(req.body)
+    const dmo = await razorservice.razorPayService(req.body);
     const response = dmo;
     const data ={
-        itemcount : 2,
+        itemcount : 6,
         status_code : httpStatus.OK,
         message: "successfully sent",
         data: response,

@@ -2,6 +2,8 @@ const Razorpay =require('razorpay');
 const uniquID = require('uniqid');
 const dotenv = require('dotenv');
 dotenv.config({path:'./config/config.env'})
+const AppError = require('../utils/app_error');
+const httpStatus = require('http-status');
 
 
 
@@ -10,25 +12,25 @@ var instance = new Razorpay({
     key_secret: process.env.KEY_SECRET,
   });
 
-const razorPayService= (req,res)=>{
+const razorPayService= async(reqdata)=>{
     var options = {
-        amount: 50000,  // amount in the smallest currency unit
+        amount: reqdata.amount,  // amount in the smallest currency unit
         currency: "INR",
         receipt: uniquID(),
         "notes":{
-            "subscriptionid": req.body.subscriptionid,
-                "categoryid": req.body.categoryid,
+            "subscriptionid": reqdata.subscriptionid,
+                "categoryid": reqdata.categoryid,
         }
       };
-      instance.orders.create(options, function(err, order) {
-        if(err){
-            return res.status(500).json({
-                error:err
-            })
-        }
-        res.json(order)
-      });
+      const response = await instance.orders.create(options);
+     if(response){
+        return response;
 
+     }
+     else{
+        throw new AppError(httpStatus.BAD_REQUEST, " Not found");
+     }
+     
 }  
 //exports.createOrder 
 module.exports={razorPayService,}
