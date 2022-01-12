@@ -1,6 +1,6 @@
 const router =require('express').Router();
-const{createOrder}= require('../controller/razorpay_controller');
+const payController= require('../controller/razorpay_controller');
 
-router.get('/createorder',createOrder);
+router.get('/createorder',payController.razorpayController);
 
 module.exports = router;
