@@ -14,7 +14,7 @@ var instance = new Razorpay({
 
 const razorPayService= async(reqdata)=>{
     var options = {
-        amount: reqdata.amount,  // amount in the smallest currency unit
+        amount: (reqdata.amount * 100).toString() ,  // amount in the smallest currency unit
         currency: "INR",
         receipt: uniquID(),
         "notes":{
