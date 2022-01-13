@@ -20,6 +20,7 @@ const subscriptionroute = require('./subscription_route');
 const syllAbusroute = require('./syllabus_route');
 const razorroute = require('./razorPay_route');
 const mcqroute = require('./mcq_routes');
+const ansroute = require('./answer_route');
 
 
 
@@ -28,7 +29,7 @@ router.use('/razorpay',razorroute);
 router.use('/play',playroute);
 router.use('/auth',authroute);
 
-
+router.use('/answerUpdate',ansroute);
 router.use('/mcq',mcqroute);
 router.use('/authlogin',loginroute);
 // router.post('/email_send',getmails.controlmail);

@@ -5,9 +5,8 @@ dotenv.config({path:'./config/config.env'})
 const AppError = require('../utils/app_error');
 const httpStatus = require('http-status');
 const crypto = require("crypto");
-const paymentData = require('../model/payment_model');
 const moment = require('moment');
-
+const paymentData = require('../model/payment_model');
 
 var instance = new Razorpay({
     key_id: process.env.KEY_ID,
@@ -37,11 +36,11 @@ const razorPayService= async(reqdata)=>{
      }
      
 }  
-const verifyrazorPayServices =async(req,res)=>{
+const verifyrazorPayServices = async(req,res)=>{
     const {order_id, payment_id} = req.body;  
-    console.log(req.body)   
-    const razorpay_signature =  req.headers['x-razorpay-signature'];
-  
+    //console.log(req.headers['x-razorpay-signature'])   
+    const razorpay_signature = await req.headers['x-razorpay-signature'];
+    //console.log(order_id, payment_id)  
     
     const key_secret = process.env.KEY_SECRET;     
  
@@ -52,13 +51,12 @@ const verifyrazorPayServices =async(req,res)=>{
       
     
     const generated_signature = hmac.digest('hex');
+   // console.log(generated_signature)  
       
-      
-    if(razorpay_signature===generated_signature){
+     if(razorpay_signature===generated_signature){
 
-        const paymentdetail =instance.payments.fetch(payment_id)
-        //console.log(paymentdetail)
-
+        const paymentdetail = await instance.payments.fetch(payment_id)
+        
         const paymentall = {
             amount:paymentdetail.amount,
             payeeEmail:paymentdetail.email, 
@@ -72,14 +70,10 @@ const verifyrazorPayServices =async(req,res)=>{
             paymentEndTime:moment().add(paymentdetail.notes.packageDuration, 'days')
         }
         console.log(paymentall)
-
-        //insert query
-        // paymentdetail.insertMany(paymentall(function (obj) {
-        //     return obj
-        //   }))
-            
-          const paymenttable = await paymentData.create(paymentall);
+        // insert query
+        const paymenttable = await paymentData.create(paymentall);
         return paymenttable;
+        // return "Payment has been verified";
     }
     else{
     return "Payment verification failed";
