@@ -26,14 +26,6 @@ const paymentSchema = new mongoose.Schema ({
         type : ObjectId,
         required: true
     },
-    createdAt : {
-        type : Date,
-        required: true
-    },
-    updatedAt : {
-        type : Date,
-        required : true
-    },
     category_id  : {
         type : ObjectId,
         required : true
