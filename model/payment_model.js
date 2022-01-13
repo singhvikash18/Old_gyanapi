@@ -42,7 +42,7 @@ const paymentSchema = new mongoose.Schema ({
         type: String,
         required : true
     },
-    payentStartTime :{
+    paymentStartTime :{
         type: Date,
         required:true
     },
