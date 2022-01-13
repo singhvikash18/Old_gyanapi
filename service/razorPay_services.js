@@ -69,7 +69,7 @@ const verifyrazorPayServices =async(req,res)=>{
             category_id:paymentdetail.notes.categoryid, 
             duration:paymentdetail.notes.packageDuration,
             paymentStarttime:new Date(), 
-            paymentEndTime:moment().add(packageDuration, 'days')
+            paymentEndTime:moment().add(duration, 'days')
         }
         console.log(paymentall)
 
