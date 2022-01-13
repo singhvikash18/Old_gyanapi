@@ -37,7 +37,7 @@ const razorPayService= async(reqdata)=>{
      
 }  
 const verifyrazorPayServices = async(req,res)=>{
-    const {order_id, payment_id,newamount} = req.body;  
+    const {order_id, payment_id,amount} = req.body;  
     //console.log(req.headers['x-razorpay-signature'])   
     const razorpay_signature = await req.headers['x-razorpay-signature'];
     //console.log(order_id, payment_id)  
@@ -58,7 +58,7 @@ const verifyrazorPayServices = async(req,res)=>{
         const paymentdetail = await instance.payments.fetch(payment_id)
         
         const paymentall = {
-            amount:newamount,
+            amount:amount,
             payeeEmail:paymentdetail.email, 
             paymentCreatedTime:new Date(), 
             paymentGateway: "razorpay"+paymentdetail.status,
