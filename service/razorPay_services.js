@@ -5,7 +5,8 @@ dotenv.config({path:'./config/config.env'})
 const AppError = require('../utils/app_error');
 const httpStatus = require('http-status');
 const crypto = require("crypto");
-
+const paymentData = require('../model/payment_model');
+const moment = require('moment');
 
 
 var instance = new Razorpay({
@@ -22,6 +23,8 @@ const razorPayService= async(reqdata)=>{
         "notes":{
             "subscriptionid": reqdata.subscriptionid,
                 "categoryid": reqdata.categoryid,
+                "userid": reqdata.userid,
+                "packageDuration": reqdata.packageDuration,
         }
       };
       const response = await instance.orders.create(options);
@@ -34,7 +37,7 @@ const razorPayService= async(reqdata)=>{
      }
      
 }  
-const verifyrazorPayServices =(req,res)=>{
+const verifyrazorPayServices =async(req,res)=>{
     const {order_id, payment_id} = req.body;  
     console.log(req.body)   
     const razorpay_signature =  req.headers['x-razorpay-signature'];
@@ -52,7 +55,31 @@ const verifyrazorPayServices =(req,res)=>{
       
       
     if(razorpay_signature===generated_signature){
-        return "Payment has been verified";
+
+        const paymentdetail =instance.payments.fetch(payment_id)
+        //console.log(paymentdetail)
+
+        const paymentall = {
+            amount:paymentdetail.amount,
+            payeeemail:paymentdetail.email, 
+            paymentCreatedTime:new Date(), 
+            paymentGateway: "razorpay"+paymentdetail.status,
+            paymentId: paymentdetail.id, 
+            user:paymentdetail.notes.userid, 
+            category_id:paymentdetail.categoryid, 
+            duration:paymentdetail.packageDuration,
+            paymentStarttime:new Date(), 
+            paymentEndTime:moment().add(packageDuration, 'days')
+        }
+        console.log(paymentall)
+
+        //insert query
+        // paymentdetail.insertMany(paymentall(function (obj) {
+        //     return obj
+        //   }))
+            
+          const paymenttable = await paymentData.create(paymentall);
+        return paymenttable;
     }
     else{
     return "Payment verification failed";

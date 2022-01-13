@@ -49,6 +49,10 @@ const paymentSchema = new mongoose.Schema ({
     paymentEndTime :{
         type: Date,
         required:true
+    },
+    subscriptionid:{
+        type:String,
+        required:true
     }
 
     
