@@ -11,7 +11,7 @@ const paymentSchema = new mongoose.Schema ({
         required : true
     },
     paymentCreatedTime : {
-        type : String,
+        type : Date,
         required : true
     },
     paymentGateway : {
