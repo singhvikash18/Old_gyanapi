@@ -66,8 +66,8 @@ const verifyrazorPayServices =async(req,res)=>{
             paymentGateway: "razorpay"+paymentdetail.status,
             paymentId: paymentdetail.id, 
             user:paymentdetail.notes.userid, 
-            category_id:paymentdetail.categoryid, 
-            duration:paymentdetail.packageDuration,
+            category_id:paymentdetail.notes.categoryid, 
+            duration:paymentdetail.notes.packageDuration,
             paymentStarttime:new Date(), 
             paymentEndTime:moment().add(packageDuration, 'days')
         }
