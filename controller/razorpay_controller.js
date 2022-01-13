@@ -24,7 +24,7 @@ const razorpayVerifyController = catchAsync(async(req,res)=>{
     const data ={
         itemcount : 1,
         status_code : httpStatus.OK,
-        message: "successfully sent",
+        message: "payment sent successfully ",
         data: response,
 
     };
