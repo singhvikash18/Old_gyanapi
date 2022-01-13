@@ -42,7 +42,7 @@ const verifyrazorPayServices =(req,res)=>{
     
     const key_secret = process.env.KEY_SECRET;     
  
-    let hmac = crypto.createHmac('sha256', '619619'); 
+    let hmac = crypto.createHmac('sha256', key_secret); 
   
    
     hmac.update(order_id + "|" + payment_id);
