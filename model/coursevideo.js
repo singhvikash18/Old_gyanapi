@@ -1,3 +1,4 @@
+const { ObjectId } = require('mongodb');
 const mongoose =require('mongoose')
 
 const videoSchema = new mongoose.Schema({
@@ -48,6 +49,18 @@ const videoSchema = new mongoose.Schema({
     videoDate :
     {
         type : String,
+        required:true
+    },
+    liveVideo:{
+        type:Number,
+        required:true
+    },
+    recordedVideo:{
+        type:Number,
+        required:true
+    },
+    categoryid:{
+        type:ObjectId,
         required:true
     }
     

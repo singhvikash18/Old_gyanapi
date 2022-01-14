@@ -16,7 +16,7 @@ const course_videcontrol = catchAsync(async(req,res)=>{
 });
 
 const course_videIDcontrol = catchAsync(async(req,res)=>{
-    const cvd = await videocontroller.videoserviceId(req.params.video_id);
+    const cvd = await videocontroller.videoserviceId(req.params._id);
     const response = cvd;
     const data ={
         itemcount : 2,

@@ -4,7 +4,7 @@ const videorouter = require('../controller/video.controller');
 
 router.get('/video',videorouter.course_videcontrol);
 
-router.get('/:video_id',videorouter.course_videIDcontrol);
+router.get('/:_id',videorouter.course_videIDcontrol);
 
 
 module.exports=router;
