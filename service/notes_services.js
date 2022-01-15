@@ -9,39 +9,35 @@ const notesService = async(req,res)=>{
     const ns = await notes.find()
     return ns;
 }
-const noteCategoryservice = async(categoryid)=>{
-    // console.log(userid)
-     const ObjectId = mongoose.Types.ObjectId;
-     const ps = await notes.aggregate(
-         
-         [   
+const noteCategoryservice = async(categoryId)=>{
+    const ObjectId = mongoose.Types.ObjectId;
+    const ps = await notes.aggregate(
+        
+        [   
+           
             
-             
-             { 
-                 
-                  $match : { category_id : ObjectId(categoryid)  }, 
-             }, 
+            { 
+                // $match : { user : ObjectId(userid),  createdAt: { $lte: new Date(), $gte: new Date(new Date().setDate(new Date().getDate() - "$coursePeriod")) }  },
+                 $match : { category_id: ObjectId(categoryId)}
+                 },
+           {
+            $unwind: "$category_id"
+           },
             {
-             $unwind: "$category_id"
-            },
-             {
-                 $lookup :
-                 {
-                     from: "courses",
-                     localField : "category_id",
-                     foreignField : "category_id",
-                     as : "users_data"
-                 }
-                
-             }
-             
-         ]
-     )
-       if (ps == !notes) {
-        throw new AppError(httpStatus.BAD_REQUEST, " not found");  }
-     else{
-         return ps;
-     }
- }
+                $lookup :
+                {
+                    from: "courses",
+                    localField : "course_id",
+                    foreignField : "_id",
+                    as : "course"
+                }
+               
+            }
+            
+        ]
+    )
+        
+    return ps;
+}
 
 module.exports = {notesService,noteCategoryservice,}
