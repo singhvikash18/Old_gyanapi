@@ -54,24 +54,33 @@ const userSchema = new mongoose.Schema({
     },
     address:{
         type: String,
-        required: true
+        
     },
     city :{
         type: String,
-        required:true
+       
     },
     states:{
         type: String,
-        required: true
+        
     },
     photo :{
         type: String,
-        required: true
+        
     },
     country :{
         type : String,
-        required : true
+        
+    },
+    emailotp:{
+        type:String,
+        default:'1'
+    },
+    isVerified:{
+        type:String,
+        default:'0'
     }
+
 
 },
 {

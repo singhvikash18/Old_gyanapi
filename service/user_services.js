@@ -33,7 +33,13 @@ const signup = async (data) => {
     if (user) {
       throw new Error("Email already exist");
     }
+    
+    console.log(data)
+
     user = new User(data);
+
+    console.log(user)
+
     const token = JWT.sign({ id: user._id }, JWTSecret);
     await user.save();
     return (data = {
