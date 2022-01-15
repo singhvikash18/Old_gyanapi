@@ -25,7 +25,10 @@ router.post('/userupdate',authController.userContolupdate);
 
 router.post('/updateUserPassword',authController.userPassControlupdate);
 
+
+
 router.post('/uploadPhoto', upload.single('avatar'),authController.userAvatarControlupdate);
+router.post('/emailotp',authController.emailotpController);
 
 
 

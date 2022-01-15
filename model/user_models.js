@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 var validator = require('validator');
 const bcrypt = require('bcryptjs');
+const otpGenerator = require('otp-generator')
 
 const userSchema = new mongoose.Schema({
     roles:{
@@ -74,7 +75,7 @@ const userSchema = new mongoose.Schema({
     },
     emailotp:{
         type:String,
-        default:'1'
+        default:otpGenerator.generate(8, { upperCaseAlphabets: false, specialChars: false }),
     },
     isVerified:{
         type:String,

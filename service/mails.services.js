@@ -5,6 +5,7 @@ const handlebars = require('handlebars')
 const nodemailer = require("nodemailer")
 const fs = require('fs');
 const path = require('path');
+const usertable = require('../model/user_models');
 const { uniqueId } = require("lodash");
 const uniquID = require('uniqid');
 
@@ -122,4 +123,15 @@ const transporter = nodemailer.createTransport({
     await sendEmail(to, subject, text);
   };
 
-module.exports = {sendEmailToAdmin, sendResetPasswordEmail };
+
+  const sendOtpEmail = async (to, emailotp) => {
+    const subject = " otp for login of gyanias";
+   
+   
+    const text = `Dear user,
+     your otp : ${emailotp}
+    If you you already got the OTP then neglect this mail !`;
+    await sendEmail(to, subject, text);
+  };
+
+module.exports = {sendEmailToAdmin, sendResetPasswordEmail,sendOtpEmail, };

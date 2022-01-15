@@ -6,8 +6,9 @@ const AppError = require('../utils/app_error');
 const JWT = require('jsonwebtoken');
 const { ObjectId } = require('mongodb');
 const bcrypt = require('bcryptjs');
-
-const multer  = require('multer')
+const otpGenerator = require('otp-generator')
+const multer  = require('multer');
+const { sendOtpEmail } = require('./mails.services');
 const upload = multer({ dest: 'profile/' })
 
 
@@ -20,13 +21,28 @@ const checkDuplicateEmail = async(signupbodyemail, excludeUserId)=>{
     }
       
 };
-
+// for  user signup
 const getUser = async(signupbody)=>{
    // console.log(signupbody)
    const duplicateCheck = await checkDuplicateEmail(signupbody.email);
     const authuser= await userModel.create(signupbody);
-    return authuser;
+  const  emailsend = await sendOtpEmail(authuser.email, authuser.emailotp)
+    
+
+    //
+    return emailsend;
 }
+
+const getemailOtp =async(req)=>{
+  const otpuser = await userModel.findOneAndUpdate({_id:req.userid,emailotp:req.emailotpid},{ 
+    $set: {isVerified:'1'}
+},
+{
+    returnNewDocument: true
+});
+  return otpuser;
+}
+
 
 const signup = async (data) => {
     let user = await User.findOne({ email: data.email });
@@ -118,4 +134,4 @@ const userAvatar =  async(req,res)=>{
 
 
 
-module.exports ={getUser,signup,fetchId,userPIUpdate,userPassupdate,userAvatar}
+module.exports ={getUser,signup,fetchId,userPIUpdate,userPassupdate,userAvatar,getemailOtp,}

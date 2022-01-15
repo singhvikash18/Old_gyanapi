@@ -193,6 +193,21 @@ const userAvatarControlupdate = catchAsync(async(req,res)=>{
   res.status(httpStatus.OK).send(data)
 });
 
-const user_read={userauthcontrol,loginController,forgotPassword,fetchIdcontrol,updatepassword,userContolupdate,userPassControlupdate,userAvatarControlupdate}
+
+const emailotpController = catchAsync(async(req,res)=>{
+  //  console.log(req);
+    const getpass = await signupservices.getemailOtp(req.body)
+    const response = getpass;
+    const data = {
+        itemcount : 2,
+        status_code : httpStatus.OK,
+        message: "emailotp fetched !",
+        data: response,
+
+    };
+    res.status(httpStatus.OK).send(data)
+});
+
+const user_read={userauthcontrol,loginController,forgotPassword,fetchIdcontrol,updatepassword,userContolupdate,userPassControlupdate,userAvatarControlupdate,emailotpController,}
 
 module.exports= user_read;
