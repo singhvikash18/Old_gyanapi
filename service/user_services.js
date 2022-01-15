@@ -34,13 +34,17 @@ const getUser = async(signupbody)=>{
 }
 
 const getemailOtp =async(req)=>{
-  const otpuser = await userModel.findOneAndUpdate({_id:req.userid,emailotp:req.emailotpid},{ 
-    $set: {isVerified:'1'}
-},
-{
-    returnNewDocument: true
-});
+  // 
+  const user = await userModel.findById(req._id);
+console.log(user)
+if(req.emailotp === user.emailotp){
+  const query={_id:req._id}
+  const update = {isVerified:1}
+  const otpuser = await userModel.findOneAndUpdate(query,update);
   return otpuser;
+}else{
+  throw new AppError(httpStatus.BAD_REQUEST, "otp not matched ");
+}
 }
 
 

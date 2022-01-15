@@ -75,7 +75,7 @@ const userSchema = new mongoose.Schema({
     },
     emailotp:{
         type:String,
-        default:otpGenerator.generate(8, { upperCaseAlphabets: false, specialChars: false }),
+        default:otpGenerator.generate(6, { upperCaseAlphabets: false, specialChars: false }),
     },
     isVerified:{
         type:String,
