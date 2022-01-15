@@ -57,10 +57,10 @@ const loginController =  catchAsync( async (req, res) =>{
 //    });
 
    res.cookie("user","hello", {
-   secure: true ,//process.env.NODE_ENV !== "development",
-    sameSite: 'strict',
+  //  secure: true ,//process.env.NODE_ENV !== "development",
+  //   sameSite: 'strict',
     httpOnly: true,
-    expires: new Date(tokens.access.expires),
+   // expires: new Date(tokens.access.expires),
    });
 
 //    res.cookie("test", "test");
