@@ -4,7 +4,10 @@ const dotenv = require('dotenv');
 const handlebars = require('handlebars')
 const nodemailer = require("nodemailer")
 const fs = require('fs');
-const path = require('path')
+const path = require('path');
+const { uniqueId } = require("lodash");
+const uniquID = require('uniqid');
+
 //dotenv.config({path:'./config/config.env'})
 const transporter = nodemailer.createTransport({
                  // true for 465, false for other ports
@@ -58,6 +61,7 @@ const transporter = nodemailer.createTransport({
             email: queryBody.body.email,
             message: queryBody.body.message,
             referer: referer.headers.host,
+            // uniquID:uniquID(),
           };
         console.log(replacements);
           var htmlToSend = template(replacements);
