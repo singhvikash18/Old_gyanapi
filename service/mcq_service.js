@@ -27,7 +27,7 @@ const mcqCategoryservice = async(categoryId)=>{
                     from: "courses",
                     localField : "course_id",
                     foreignField : "_id",
-                    as : "mcq-course"
+                    as : "course"
                 }
                
             }
