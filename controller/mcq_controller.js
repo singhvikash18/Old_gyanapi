@@ -15,6 +15,20 @@ const mcqController = catchAsync(async(req,res)=>{
     };
     res.status(httpStatus.OK).send(data)
 });
-const mcqRead ={mcqController,}
+
+const mcqCategoryController = catchAsync(async(req,res)=>{
+    const dmo = await mcqServices.mcqCategoryservice(req.body.category_id);
+    const response = dmo;
+    const data ={
+        itemcount : 2,
+        status_code : httpStatus.OK,
+        message: "successfully sent",
+        data: response,
+
+    };
+    res.status(httpStatus.OK).send(data)
+});
+
+const mcqRead ={mcqController,mcqCategoryController}
 
 module.exports = mcqRead;

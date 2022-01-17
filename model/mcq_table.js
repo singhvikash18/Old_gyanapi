@@ -1,3 +1,4 @@
+const { ObjectId } = require('mongodb');
 const mongoose = require('mongoose')
 
 const mcqSchema = new mongoose.Schema({
@@ -25,8 +26,8 @@ const mcqSchema = new mongoose.Schema({
         type:String,
         required:true
     },
-    course_id:{
-        type:String,
+    course_id :{
+        type:mongoose.SchemaTypes.ObjectId, ref:"Courses",
         required:true
     },
     createdAt:{

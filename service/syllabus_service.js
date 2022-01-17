@@ -7,6 +7,10 @@ const syllabusService = async(req,res)=>{
     return ns;
 }
 
+const syllabusIdService = async(syllabusId)=>{
+    const ns = await syllabus.findOne({_id:syllabusId});
+    return ns;
+}
 
 const syllabusCategoryservice = async(categoryId)=>{
     const ObjectId = mongoose.Types.ObjectId;
@@ -39,4 +43,4 @@ const syllabusCategoryservice = async(categoryId)=>{
     return ps;
 }
 
-module.exports = {syllabusService,syllabusCategoryservice,}
+module.exports = {syllabusService,syllabusIdService,syllabusCategoryservice,}
