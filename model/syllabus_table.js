@@ -1,4 +1,5 @@
 const mongoose = require('mongoose')
+const { ObjectId } = require('mongodb');
 
 const syllabusSchema = new mongoose.Schema({
     syllabus_name :{
@@ -14,7 +15,7 @@ const syllabusSchema = new mongoose.Schema({
         required:true
     },
     course_id :{
-        type:String,
+        type:mongoose.SchemaTypes.ObjectId, ref:"Courses",
         required:true
     },
     createdAt :{
@@ -23,6 +24,10 @@ const syllabusSchema = new mongoose.Schema({
     },
     updatedAt :{
         type:Date,
+        required:true
+    },
+    category_id :{
+        type:ObjectId,
         required:true
     }
 

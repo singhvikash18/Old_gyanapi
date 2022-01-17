@@ -34,7 +34,7 @@ router.use('/mcq',mcqroute);
 router.use('/authlogin',loginroute);
 // router.post('/email_send',getmails.controlmail);
 
-router.use('/notes',noteroute);
+router.use('/student/notes',noteroute);
 router.use('/payment',paymentroute);
 router.use('/email',mailroute);
 router.use('/currentaffair', currentaffairsroute);

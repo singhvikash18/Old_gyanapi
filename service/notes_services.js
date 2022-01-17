@@ -17,9 +17,6 @@ const notesIdService = async(idDetails)=>{
 
 
 
-
-
-
 const noteCategoryservice = async(categoryId)=>{
     const ObjectId = mongoose.Types.ObjectId;
     const ps = await notes.aggregate(

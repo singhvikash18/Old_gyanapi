@@ -15,6 +15,20 @@ const syllabusController = catchAsync(async(req,res)=>{
     };
     res.status(httpStatus.OK).send(data)
 });
-const service_read ={syllabusController,}
+
+
+const syllabusCategoryController = catchAsync(async(req,res)=>{
+    const test=await syllabusservices.syllabusCategoryservice(req.body.category_id);
+    const response = test;
+    const data ={
+        itemcount : 1,
+        status_code : httpStatus.OK,
+        message: "successfully sent",
+        data: response,
+
+    };
+    res.status(httpStatus.OK).send(data)
+});
+const service_read ={syllabusController,syllabusCategoryController,}
 
 module.exports = service_read;
