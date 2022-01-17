@@ -1,5 +1,6 @@
-const mongoose = require('mongoose')
 const { ObjectId } = require('mongodb');
+const mongoose = require('mongoose')
+
 
 const syllabusSchema = new mongoose.Schema({
     syllabus_name :{

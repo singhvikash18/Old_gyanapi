@@ -19,9 +19,9 @@ const syllabusCategoryservice = async(categoryId)=>{
                 
                  $match : { category_id: ObjectId(categoryId)}
                  },
-           {
-            $unwind: "$category_id"
-           },
+        //    {
+        //     $unwind: "$category_id"
+        //    },
             {
                 $lookup :
                 {
