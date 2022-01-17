@@ -9,6 +9,17 @@ const notesService = async(req,res)=>{
     const ns = await notes.find()
     return ns;
 }
+
+const notesIdService = async(idDetails)=>{
+    const idn = await notes.findOne({_id:idDetails});
+    return idn;
+}
+
+
+
+
+
+
 const noteCategoryservice = async(categoryId)=>{
     const ObjectId = mongoose.Types.ObjectId;
     const ps = await notes.aggregate(
@@ -40,4 +51,4 @@ const noteCategoryservice = async(categoryId)=>{
     return ps;
 }
 
-module.exports = {notesService,noteCategoryservice,}
+module.exports = {notesService,notesIdService,noteCategoryservice,}

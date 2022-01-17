@@ -15,6 +15,20 @@ const notesController = catchAsync(async(req,res)=>{
     res.status(httpStatus.OK).send(data)
 });
 
+const notesIdController = catchAsync(async(req,res)=>{
+    const test=await notesService.notesIdService(req.params._id);
+    const response = test;
+    const data ={
+        itemcount : 1,
+        status_code : httpStatus.OK,
+        message: "successfully sent",
+        data: response,
+
+    };
+    res.status(httpStatus.OK).send(data)
+});
+
+
 const notesCategoryController = catchAsync(async(req,res)=>{
     const test=await notesService.noteCategoryservice(req.body.category_id);
     const response = test;
@@ -31,6 +45,7 @@ const notesCategoryController = catchAsync(async(req,res)=>{
 
 const read ={
     notesController,
+    notesIdController,
     notesCategoryController,
 }
 module.exports = read
