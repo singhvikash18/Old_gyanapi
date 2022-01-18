@@ -1,4 +1,5 @@
 const router =require('express').Router();
+const mongoose =require('mongoose')
 const AppError = require('../utils/app_error');
 const httpStatus = require('http-status');
 const videomodel = require('../model/coursevideo');
@@ -18,4 +19,39 @@ const videoserviceId = async(videoid)=>{
     }
 }
 
-module.exports={videoservice,videoserviceId,}
+
+const videoCategoryservice = async(categoryId)=>{
+    const ObjectId = mongoose.Types.ObjectId;
+    const ps = await videomodel.aggregate(
+        
+        [   
+           
+            
+            { 
+                
+                 $match : { category_id: ObjectId(categoryId)}
+                 },
+           {
+            $unwind: "$category_id"
+            },
+            {
+                $lookup :
+                {
+                    from: "courses",
+                    localField : "category_id",
+                    foreignField : "_id",
+                    as : "course"
+                }
+               
+         }
+            
+        ]
+    )
+        
+    return ps;
+}
+
+
+
+
+module.exports={videoservice,videoserviceId,videoCategoryservice,}

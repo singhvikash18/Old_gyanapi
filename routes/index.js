@@ -54,7 +54,7 @@ router.use('/demodetails',droute);
 router.use('/studentdetails',studroute);
 
 router.use('/coursetype',ctype);
-router.use('/coursevideo',vroute);
+router.use('/student/coursevideo',vroute);
 
 router.use('/reviewtype',rroute);
 

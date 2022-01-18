@@ -59,8 +59,8 @@ const videoSchema = new mongoose.Schema({
         type:Number,
         required:true
     },
-    categoryid:{
-        type:ObjectId,
+    category_id:{
+        type:mongoose.SchemaTypes.ObjectId, ref:"Courses",
         required:true
     }
     
