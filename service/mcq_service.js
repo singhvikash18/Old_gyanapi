@@ -8,7 +8,8 @@ const mcq = async(req,res)=>{
 }
 
 const mcqIdServices = async(mcqId)=>{
-    const m2id = await mcqTable.findOne(mcqId).populate("mcqid")
+    
+    const m2id = await mcqTable.findOne({_id:mcqId}).populate("mcqid")
     return m2id;
 }
 
