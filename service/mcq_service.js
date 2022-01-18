@@ -7,6 +7,11 @@ const mcq = async(req,res)=>{
     return mcqt;
 }
 
+const mcqIdServices = async(mcqId)=>{
+    const m2id = await mcqTable.find({mcqid:mcqId}).populate("mcqid")
+    return m2id;
+}
+
 const mcqCategoryservice = async(categoryId)=>{
     const ObjectId = mongoose.Types.ObjectId;
     const ps = await mcqTable.aggregate(
@@ -38,5 +43,5 @@ const mcqCategoryservice = async(categoryId)=>{
     return ps;
 }
 
-module.exports ={mcq,mcqCategoryservice,}
+module.exports ={mcq,mcqIdServices,mcqCategoryservice,}
 
