@@ -8,7 +8,7 @@ const mcq = async(req,res)=>{
 }
 
 const mcqIdServices = async(mcqId)=>{
-    const m2id = await mcqTable.find({mcqid:mcqId}).populate("mcqid")
+    const m2id = await mcqTable.find({_id:mcqId}).populate("mcqid")
     return m2id;
 }
 
