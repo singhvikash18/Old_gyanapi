@@ -1,10 +1,10 @@
-const mcq2Services = require('../service/mcq2_services');
+const mcqQuestionServices = require('../service/mcq_question_services');
 
-const catchAsync = require('./../utils/catch_async');
+const catchAsync = require('../utils/catch_async');
 const httpStatus = require('http-status');
 
 const mcq2Controller = catchAsync(async(req,res)=>{
-    const dmo = await mcq2Services.mcq2IdServices(req.body);
+    const dmo = await mcqQuestionServices.mcq2IdServices(req.params.mcqsid);
     const response = dmo;
     const data ={
         itemcount : 2,

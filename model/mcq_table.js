@@ -37,6 +37,10 @@ const mcqSchema = new mongoose.Schema({
     updatedAt:{
         type:String,
         required:true
+    },
+    bank_name:{
+        type:String,
+        required:true
     }
 },
 {

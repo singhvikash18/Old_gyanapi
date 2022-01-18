@@ -4,7 +4,7 @@ const mongoose = require('mongoose')
 
 const newmcqSchema = new mongoose.Schema({
     mcqsid:{
-        type:ObjectId,
+        type:mongoose.SchemaTypes.ObjectId, ref:"mcq",
         required:true
     },
     question:{
@@ -33,4 +33,4 @@ const newmcqSchema = new mongoose.Schema({
     }
 
 });
-module.exports =mongoose.model('mcq2',newmcqSchema);
+module.exports =mongoose.model('mcq_question',newmcqSchema);
