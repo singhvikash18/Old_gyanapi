@@ -18,7 +18,7 @@ const mcqController = catchAsync(async(req,res)=>{
 
 
 const mcqIdController = catchAsync(async(req,res)=>{
-    const dmo = await mcqServices.mcqIdServices(req.params.mcqid);
+    const dmo = await mcqServices.mcqIdServices(req.params._id);
     const response = dmo;
     const data ={
         itemcount : 2,
