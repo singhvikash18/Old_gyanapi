@@ -9,9 +9,36 @@ const mcq = async(req,res)=>{
 
 const mcqIdServices = async(mcqId)=>{
     
-    const m2id = await mcqTable.findOne({_id:mcqId}).populate("mcqid")
-    return m2id;
+    const ObjectId = mongoose.Types.ObjectId;
+    const ps = await mcqTable.aggregate(
+        
+        [   
+           
+            
+            { 
+                
+                 $match : { _id: ObjectId(mcqId)}
+                 },
+           {
+            $unwind: "$_id"
+           },
+            {
+                $lookup :
+                {
+                    from: "mcq_questions",
+                    localField : "_id",
+                    foreignField : "mcqsid",
+                    as : "mcq"
+                }
+               
+            }
+            
+        ]
+    )
+        
+    return ps;
 }
+
 
 const mcqCategoryservice = async(categoryId)=>{
     const ObjectId = mongoose.Types.ObjectId;

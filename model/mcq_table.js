@@ -18,10 +18,6 @@ const mcqSchema = new mongoose.Schema({
     bank_name:{
         type:String,
         required:true
-    },
-    mcqid:{
-        type:mongoose.SchemaTypes.ObjectId, ref:"mcq_question",
-        required:true
     }
 },
 {

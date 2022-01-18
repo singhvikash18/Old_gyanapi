@@ -32,5 +32,8 @@ const newmcqSchema = new mongoose.Schema({
         required:true
     }
 
+},
+{
+    timestamps:true
 });
 module.exports =mongoose.model('mcq_question',newmcqSchema);
