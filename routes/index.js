@@ -32,7 +32,7 @@ router.use('/auth',authroute);
 
 router.use('/answerUpdate',ansroute);
 router.use('/student/mcq',mcqroute);
-router.use('/mcq_question',newmcqroute);
+router.use('/student/mcq_question',newmcqroute);
 router.use('/authlogin',loginroute);
 // router.post('/email_send',getmails.controlmail);
 
