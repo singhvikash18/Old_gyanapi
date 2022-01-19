@@ -39,6 +39,38 @@ const videoCategoryservice = async(categoryId)=>{
                 {
                     from: "courses",
                     localField : "category_id",
+                    foreignField : "category_id",
+                    as : "course"
+                }
+               
+         }
+            
+        ]
+    )
+        
+    return ps;
+}
+
+
+const videoIdCourseservice = async(Id)=>{
+    const ObjectId = mongoose.Types.ObjectId;
+    const ps = await videomodel.aggregate(
+        
+        [   
+           
+            
+            { 
+                
+                 $match : { course_id: ObjectId(Id)}
+                 },
+           {
+            $unwind: "$_id"
+            },
+            {
+                $lookup :
+                {
+                    from: "courses",
+                    localField : "course_id",
                     foreignField : "_id",
                     as : "course"
                 }
@@ -54,4 +86,4 @@ const videoCategoryservice = async(categoryId)=>{
 
 
 
-module.exports={videoservice,videoserviceId,videoCategoryservice,}
+module.exports={videoservice,videoserviceId,videoCategoryservice,videoIdCourseservice,}

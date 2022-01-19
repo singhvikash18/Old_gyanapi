@@ -13,7 +13,7 @@ const videoSchema = new mongoose.Schema({
     },
     
     course_id :{
-        type:String,
+        type:mongoose.SchemaTypes.ObjectId, ref:"Courses",
         required:true
     },
     videoLesson :
