@@ -22,6 +22,7 @@ const razorroute = require('./razorPay_route');
 const mcqroute = require('./mcq_routes');
 const newmcqroute = require('./mcq_question_route');
 const ansroute = require('./answer_route');
+const notifyroute = require('./notification_route');
 
 
 
@@ -47,7 +48,7 @@ router.use('/course',croute);
 //router.use('/coursedetails',croute);
 
 router.use('/courseCategory',categoryroute);
-
+router.use('/notification',notifyroute);
 router.use('/teacherDetails',teacherroute);
 router.use('/demodetails',droute);
 
