@@ -4,7 +4,7 @@ const catchAsync = require('./../utils/catch_async');
 const httpStatus = require('http-status');
 
 const answerController = catchAsync(async(req,res)=>{
-    const dmo = await answerService.answer();
+    const dmo = await answerService.answer(req.body.userid,req.body.mcqsid);
     const response = dmo;
     const data ={
         itemcount : 2,
@@ -16,7 +16,7 @@ const answerController = catchAsync(async(req,res)=>{
     res.status(httpStatus.OK).send(data)
 });
 
-
+//route in mcq
 const answerUpdateController = catchAsync(async(req,res)=>{
     const dmo = await answerService.answerupdate(req.body);
     

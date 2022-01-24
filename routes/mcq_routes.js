@@ -9,6 +9,8 @@ router.get('/:mcqid',mcqRoutes.mcqIdController);
 
 router.post('/categoryid',mcqRoutes.mcqCategoryController);
 
+router.post('/bankstatus',answerupdate.answerController);
+
 router.post('/answerUpdate',answerupdate.answerUpdateController);
 
 module.exports = router;

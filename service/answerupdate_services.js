@@ -5,8 +5,9 @@ const answertable = require('../model/answerupdate_table');
 const mcqquestion = require('../model/mcq_question_table');
 const { isNull } = require('lodash');
 
-const answer = async()=>{
-    const ans = await answertable.find();
+const answer = async(userID,mcqsID)=>{
+    const ans = await answertable.find({userid:userID,mcqsid:mcqsID});
+    
     if(ans){
         return ans;
 
