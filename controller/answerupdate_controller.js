@@ -15,6 +15,20 @@ const answerController = catchAsync(async(req,res)=>{
     };
     res.status(httpStatus.OK).send(data)
 });
-const ansRead ={answerController,}
+
+
+const answerUpdateController = catchAsync(async(req,res)=>{
+    const dmo = await answerService.answerupdate(req.body);
+    const response = dmo;
+    const data ={
+        itemcount : 2,
+        status_code : httpStatus.OK,
+        message: "successfully answer updated",
+        data: response,
+
+    };
+    res.status(httpStatus.OK).send(data)
+});
+const ansRead ={answerController,answerUpdateController,}
 
 module.exports = ansRead;

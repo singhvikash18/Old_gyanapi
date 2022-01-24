@@ -1,8 +1,9 @@
+const { ObjectId } = require('mongodb');
 const mongoose =require('mongoose')
 
 const answerupdateSchema = new mongoose.Schema({
     userid:{
-        type:String,
+        type:ObjectId,
         required:true
     },
     question:{
@@ -14,7 +15,7 @@ const answerupdateSchema = new mongoose.Schema({
         required:true
     },
     isCorrect:{
-        type:String,
+        type:Boolean,
         required:true
     },
     updatedAt:{

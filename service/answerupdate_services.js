@@ -14,6 +14,12 @@ const answer = async(userID)=>{
      }
     
 }
+const answerupdate = async(req,res)=>{
+   const query ={userid : req.userid} ;
+   const updatequery = {answer : req.answer};
+   const au = await answertable.findOneAndUpdate(query,updatequery);
+   return au;
+}
 
-module.exports ={answer,}
+module.exports ={answer,answerupdate,}
 
