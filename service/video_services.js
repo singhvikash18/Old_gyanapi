@@ -10,7 +10,7 @@ const videoservice = async()=>{
 }
 
 const videoserviceId = async(videoid)=>{
-    const vsi = await videomodel.findOne({_id:videoid})
+    const vsi = await videomodel.findOne({_id:videoid}).populate("course_id");
     if(vsi){
     return vsi;}
     else{
@@ -64,7 +64,7 @@ const videoIdCourseservice = async(Id)=>{
                  $match : { course_id: ObjectId(Id)}
                  },
            {
-            $unwind: "$_id"
+            $unwind: "$category_id"
             },
             {
                 $lookup :

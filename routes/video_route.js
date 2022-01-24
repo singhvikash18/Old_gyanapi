@@ -8,7 +8,6 @@ router.get('/videoDetails/:_id',videorouter.course_videIDcontrol);
 router.get('/courseId/:course_id',videorouter.course_videoIdCoursecontrol);
 router.get('/:category_id',videorouter.course_videoCategorycontrol);
 
-//router.get('/courseId/:course_id',videorouter.course_videoIdCoursecontrol);
 
 
 module.exports=router;

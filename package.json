@@ -33,7 +33,9 @@
     "path": "^0.12.7",
     "razorpay": "^2.8.0",
     "uniqid": "^5.4.0",
-    "validator": "^13.7.0"
+    "validator": "^13.7.0",
+    "websocket": "^1.0.34",
+    "ws": "^8.4.2"
   },
   "devDependencies": {
     "nodemon": "^2.0.15"
