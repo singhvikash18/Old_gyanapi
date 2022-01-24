@@ -12,11 +12,15 @@ const answerupdateSchema = new mongoose.Schema({
     },
     answer:{
         type:String,
-        
+        required:true
     },
     isCorrect:{
         type:Boolean,
-        
+        required:true
+    },
+    mcqsid:{
+        type:ObjectId,
+        required:true
     }
 },
 {

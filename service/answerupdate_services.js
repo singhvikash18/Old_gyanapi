@@ -5,8 +5,8 @@ const answertable = require('../model/answerupdate_table');
 const mcqquestion = require('../model/mcq_question_table');
 const { isNull } = require('lodash');
 
-const answer = async(userID)=>{
-    const ans = await answertable.findOne({userid:userID});
+const answer = async()=>{
+    const ans = await answertable.find();
     if(ans){
         return ans;
 
@@ -23,7 +23,7 @@ const answerupdate = async(req)=>{
       req.allanswer.forEach(async(element) => {
       const correctanswer = await mcqquestion.findOne({'_id': element.question})
    
-      var au = await answertable.insertMany({question: element.question, answer: element.answer, userid: element.userid, isCorrect: (correctanswer.answer === element.answer)?true:false}
+      var au = await answertable.insertMany({question: element.question, answer: element.answer, userid: element.userid, mcqsid: element.mcqsid, isCorrect: (correctanswer.answer === element.answer)?true:false}
        )
 
        if(au){

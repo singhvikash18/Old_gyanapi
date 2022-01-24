@@ -4,7 +4,7 @@ const catchAsync = require('./../utils/catch_async');
 const httpStatus = require('http-status');
 
 const answerController = catchAsync(async(req,res)=>{
-    const dmo = await answerService.answer(req.params.userid);
+    const dmo = await answerService.answer();
     const response = dmo;
     const data ={
         itemcount : 2,
