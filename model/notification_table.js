@@ -2,7 +2,7 @@ const { ObjectId } = require('mongodb');
 const mongoose = require('mongoose');
 
 const notificationSchema = new mongoose.Schema({
-    sent:{
+    notification_status:{
         type:Number,
         required:true
     },
@@ -10,14 +10,15 @@ const notificationSchema = new mongoose.Schema({
         type:String,
         required:true
     },
-    creatdAt:{
-        type:Date,
-        required:true
-    },
-    category_id:{
+    user_id:{
         type:ObjectId,
         required:true
-    }
+    },
+    messagetype:{
+        type:String,
+        required:true
+    },
+
 },
 {
     timestamps:true

@@ -19,8 +19,8 @@ const answer = async(userID)=>{
 const answerupdate = async(req)=>{
    
    // (req == null)?  new AppError(httpStatus.BAD_REQUEST, " Not found"): "";
-   const  allanswer =  [
-      req.answer.forEach(async(element) => {
+   
+      req.allanswer.forEach(async(element) => {
       const correctanswer = await mcqquestion.findOne({'_id': element.question})
    
       var au = await answertable.insertMany({question: element.question, answer: element.answer, userid: element.userid, isCorrect: (correctanswer.answer === element.answer)?true:false}
@@ -37,8 +37,6 @@ const answerupdate = async(req)=>{
           }
       )
           
-     
-   ]
 }
    // const au = await answertable.insertMany(req.answer)
       
