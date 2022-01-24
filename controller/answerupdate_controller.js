@@ -19,6 +19,7 @@ const answerController = catchAsync(async(req,res)=>{
 
 const answerUpdateController = catchAsync(async(req,res)=>{
     const dmo = await answerService.answerupdate(req.body);
+    
     const response = dmo;
     const data ={
         itemcount : 2,

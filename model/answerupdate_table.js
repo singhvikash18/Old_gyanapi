@@ -12,19 +12,11 @@ const answerupdateSchema = new mongoose.Schema({
     },
     answer:{
         type:String,
-        required:true
+        
     },
     isCorrect:{
         type:Boolean,
-        required:true
-    },
-    updatedAt:{
-        type:String,
-        required:true
-    },
-    createdAt:{
-        type:String,
-        required:true
+        
     }
 },
 {
