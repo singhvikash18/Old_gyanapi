@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon app.js"
+    "start": "nodemon ./bin/www"
   },
   "author": "vikash singh",
   "license": "ISC",
@@ -17,6 +17,7 @@
     "cors": "^2.8.5",
     "crypto": "^1.0.1",
     "crypto-js": "^4.1.1",
+    "debug": "^4.3.3",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "handlebars": "^4.7.7",
@@ -32,8 +33,10 @@
     "otp-generator": "^4.0.0",
     "path": "^0.12.7",
     "razorpay": "^2.8.0",
+    "socket.io": "^4.4.1",
     "uniqid": "^5.4.0",
-    "validator": "^13.7.0"
+    "validator": "^13.7.0",
+    "winston": "^3.4.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.15"
