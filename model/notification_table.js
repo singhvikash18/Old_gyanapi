@@ -18,6 +18,18 @@ const notificationSchema = new mongoose.Schema({
         type:String,
         required:true
     },
+    videoid:{
+        type:mongoose.SchemaTypes.ObjectId, ref:"video",
+        required:true
+    },
+    courseid:{
+        type:ObjectId,
+        required:true
+    },
+    paymentid:{
+        type:ObjectId,
+        required:true
+    }
 
 },
 {

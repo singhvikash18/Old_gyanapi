@@ -1,6 +1,7 @@
 const winston = require('winston');
-const config = require('./config');
-
+const path = require('path');
+const dotenv = require('dotenv');
+dotenv.config({path:'./config.env'})
 const enumerateErrorFormat = winston.format(info => {
     if (info instanceof Error) {
       Object.assign(info, { message: info.stack });
@@ -9,10 +10,10 @@ const enumerateErrorFormat = winston.format(info => {
   });
   
   const logger = winston.createLogger({
-    level: config.env === 'development' ? 'debug' : 'info',
+    level: process.env.NODE_ENV === 'development' ? 'debug' : 'info',
     format: winston.format.combine(
       enumerateErrorFormat(),
-      config.env === 'development' ? winston.format.colorize() : winston.format.uncolorize(),
+      process.env.NODE_ENV === 'development' ? winston.format.colorize() : winston.format.uncolorize(),
       winston.format.splat(),
       winston.format.printf(({ level, message }) => `${level}: ${message}`)
     ),

@@ -1,6 +1,7 @@
 
 const http = require('http');
 var socket = require('../socket')
+const logger = require("../config/logger");
 const app = require('../app');
 
 const debug = require('debug')('gyan_api:server');
@@ -15,7 +16,7 @@ const server = http.createServer(app);
 server.listen(port)
 server.on('error',onerror)
 server.on('listining',onlisten)
-socket.init(server);
+// socket.init(server);
 
 function onerror(error){
     if(error.syscall !== 'listen'){
