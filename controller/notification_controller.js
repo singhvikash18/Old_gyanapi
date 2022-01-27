@@ -4,7 +4,7 @@ const httpStatus = require('http-status');
 
 
 const notificationController = catchAsync(async(req,res)=>{
-    const test=await notifyService.notifyserives(req.params.category_id);
+    const test=await notifyService.notifyserives(req.params.user_id);
     const response = test;
     const data ={
         itemcount : 1,
@@ -17,7 +17,7 @@ const notificationController = catchAsync(async(req,res)=>{
 });
 
 const notificationVideoController = catchAsync(async(req,res)=>{
-    const test=await notifyService.notificatiVideoService(req.params.videoid)
+    const test=await notifyService.notificatiVideoService(req.params.user_id)
     const response = test;
     const data ={
         itemcount : 1,

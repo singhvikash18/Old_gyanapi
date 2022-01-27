@@ -2,8 +2,8 @@ const router =require('express').Router();
 
 const notifytable = require('../model/notification_table');
 
-const notifyserives =async(categoryId)=>{
-    const ns = await notifytable.find({category_id:categoryId});
+const notifyserives =async(userId)=>{
+    const ns = await notifytable.find({user_id:userId});
     if(ns){
         return ns;}
         else{
@@ -13,7 +13,7 @@ const notifyserives =async(categoryId)=>{
 }
 
 const notificatiVideoService = async(notifyid)=>{
-    const nvs = await notifytable.findOne({_id:notifyid}).populate("videoid");
+    const nvs = await notifytable.findOne({user_id:notifyid}).populate("videoid");
     return nvs;
 
 }
