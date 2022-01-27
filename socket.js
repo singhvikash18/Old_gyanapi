@@ -6,12 +6,14 @@ const initSocketIo = {};
 const sesionRoom = [];
 
 initSocketIo.init = (server) =>{
-  io = socketio(server,{
+  io = socketio(server
+    ,{
     cors: {
       origin: "https://gyanais.vercel.app",
       credentials: true
     }
-  });
+  }
+  );
     io.on("connection",(socketio)=>{
         console.log('connection is done.');
         socketio.on("disconnect",(socketio)=>{
