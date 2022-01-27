@@ -16,7 +16,7 @@ const server = http.createServer(app);
 server.listen(port)
 server.on('error',onerror)
 server.on('listining',onlisten)
-// socket.init(server);
+socket.init(server);
 
 function onerror(error){
     if(error.syscall !== 'listen'){

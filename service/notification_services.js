@@ -18,4 +18,4 @@ const notificatiVideoService = async(notifyid)=>{
 
 }
 
-module.exports = {notifyserives,}
+module.exports = {notifyserives,notificatiVideoService,}

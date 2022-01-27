@@ -6,7 +6,7 @@ const initSocketIo = {};
 const sesionRoom = [];
 
 initSocketIo.init = (server) =>{
-  io = socketio.listen(server);
+  io = socketio(server);
     io.on("connection",(socketio)=>{
         console.log('connection is done.');
         socketio.on("disconnect",(socketio)=>{
