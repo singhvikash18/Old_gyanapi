@@ -62,6 +62,14 @@ const videoSchema = new mongoose.Schema({
     category_id:{
         type:mongoose.SchemaTypes.ObjectId, ref:"Courses",
         required:true
+    },
+    thumbnail:{
+        type:String,
+        required:true
+    },
+    videosummary:{
+        type:String,
+        required:true
     }
     
 },

@@ -6,13 +6,13 @@ const notifytable = require('../model/notification_table');
 
 const notificatiVideoService = async(notifyid)=>{
     const nvs = await notifytable.find({user_id:notifyid}).populate("videoid");
+   
+   if(nvs){
     return nvs;
-//    if(nvs){
-//     return nvs;
-//    }
-//    else{
-//     throw new AppError(httpStatus.BAD_REQUEST, "notificationDetials not found");  
-//    }
+   }
+   else{
+    throw new AppError(httpStatus.BAD_REQUEST, "notificationDetials not found");  
+   }
 }
 
 module.exports = {notificatiVideoService,}
