@@ -25,11 +25,12 @@ initSocketIo.init = (server) =>{
           
           console.log(userid);
          
-          let result = await notificationTable.find({user_id:userid})
+          let result = await notificationTable.find({user_id:userid}).populate("videoid");
             console.log(result)
            io.to(socketio.id).emit('notification', result);
           
         }
+        // socketio.close(true);
         
 
         })
@@ -47,7 +48,7 @@ initSocketIo.init = (server) =>{
 initSocketIo.getIO = () => {
     // return previously cached value
     if (!io) {
-      throw new Error("must call .init(server) before you can call .getio()");
+      throw new Error("must call .init(server) before you can call.getio()");
     }
     return io;
   };
