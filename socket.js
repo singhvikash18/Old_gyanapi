@@ -23,10 +23,11 @@ initSocketIo.init = (server) =>{
           if(userid !==null){
             
           
-          console.log(userid);
+        // console.log(userid);
          
-          let result = await notificationTable.find({user_id:userid}).populate("videoid");
-            console.log(result)
+          let result = await notificationTable.find({user_id:userid,notification_status :0}).populate("videoid");
+          
+           // console.log(result)
            io.to(socketio.id).emit('notification', result);
           
         }
@@ -34,6 +35,17 @@ initSocketIo.init = (server) =>{
         
 
         })
+
+
+        socketio.on('readnotification',async(notificationid)=>{
+          const query = {_id:notificationid}
+          const update ={notification_status:1}
+          const notify = await notificationTable.findOneAndUpdate(query,update);
+          
+        })
+
+
+
         socketio.on("disconnect",(socketio)=>{
           console.log('connection is closed');
       });
@@ -41,6 +53,7 @@ initSocketIo.init = (server) =>{
 
        
       })
+  
        
    
 }
