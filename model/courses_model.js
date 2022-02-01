@@ -76,7 +76,7 @@ const coursesSchema = new mongoose.Schema({
          required : true
      },
      teacher_id: {
-         type : String,
+         type : ObjectId,
          required : true
   
       },

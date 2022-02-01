@@ -70,6 +70,14 @@ const videoSchema = new mongoose.Schema({
     videosummary:{
         type:String,
         required:true
+    },
+    startTime:{
+        type:Date,
+        required:true
+    },
+    endTime:{
+        type:Date,
+        required:true
     }
     
 },

@@ -23,6 +23,7 @@ const mcqroute = require('./mcq_routes');
 const newmcqroute = require('./mcq_question_route');
 const ansroute = require('./answer_route');
 const notifyroute = require('./notification_route');
+const roomroute = require('./room_route');
 
 
 
@@ -31,6 +32,7 @@ router.use('/razorpay',razorroute);
 router.use('/play',playroute);
 router.use('/auth',authroute);
 
+router.use('/roomAvailable',roomroute);
 // router.use('student/mcq',ansroute);
 router.use('/student/mcq',mcqroute);
 router.use('/student/mcq_question',newmcqroute);
