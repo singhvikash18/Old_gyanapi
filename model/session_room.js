@@ -8,12 +8,18 @@ const sessionSchema = new mongoose.Schema({
         default:"active"
     },
     sessionroomid:{
-        type:ObjectId,
+        type:String,
         required:true
+        
     },
     userid:{
-        type:ObjectId,
+        type:mongoose.SchemaTypes.ObjectId, ref:"User",
         required:true
+    },
+    socketid:{
+        type:String,
+        required:true,
+        // unique:true
     }
 },
 {

@@ -2,13 +2,10 @@ const { ObjectId, Timestamp } = require('mongodb')
 const mongoose =require('mongoose')
 
 const chatSchema = new mongoose.Schema({
-    chat_table:{
-        type:String,
-        required:true
-    },
+    
     username:{
         type:String,
-        required:true
+        
     },
     room:{
         type:String,
@@ -20,7 +17,7 @@ const chatSchema = new mongoose.Schema({
     },
     userid:{
         type:ObjectId,
-        required:true
+        // required:true
     },
     message:{
         type:String,
@@ -28,6 +25,10 @@ const chatSchema = new mongoose.Schema({
     },
     serverUserType:{
         type:String,
+        required:true
+    },
+    roomid:{
+        type:ObjectId,
         required:true
     }
 

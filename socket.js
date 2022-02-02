@@ -1,4 +1,4 @@
-const { result } = require("lodash");
+
 var socketio = require("socket.io");
 var io ;
 const notificationTable = require('./model/notification_table');
@@ -16,7 +16,28 @@ initSocketIo.init = (server) =>{
       credentials: true
     }
   });
-  io.on("connection",(socketio)=>{
+
+const getuser = async(socketioid) =>{
+  const user = await sessionTable.findOne({socketid:socketioid}).populate("userid");
+        //const users = sessionTable.find({socketid:socketio.id});
+        //console.log(users)
+        return user
+}
+
+const getroom = async(socketioid)=>{
+  //console.log(socketioid)
+  const user = await sessionTable.findOne({socketid:socketioid}).populate("userid");
+  //console.log(user)
+  return user.sessionroomid
+}
+
+const getalluser = async(roomid)=>{
+  //console.log(roomid)
+  const users = await sessionTable.findOne({sessionroomid:roomid}).populate("userid");
+  return users
+}
+
+  io.on("connection", (socketio)=>{
         console.log('connection is done.');
 
 
@@ -50,11 +71,12 @@ initSocketIo.init = (server) =>{
        
         //chat room
         const session_room =[]
-        socketio.on("create-session-room",async({userid,roomid})=>{
+        socketio.on("create-session-room",async({userid,coursevideoid})=>{
+          console.log(coursevideoid);
 
-          session_room.push(roomid);
-          const room_body ={sessionroomid:userid,userid:roomid};
-          const room =await session_room.create(room_body);
+          session_room.push(coursevideoid);
+          const room_body ={userid:userid,sessionroomid:coursevideoid,socketid:socketio.id};
+          const room =await sessionTable.create(room_body);
           socketio.emit('get-session-room',room);
         });
 
@@ -63,34 +85,68 @@ initSocketIo.init = (server) =>{
 
         //join room 
 
-        socketio.on("join-session-room ",async({userdetail,roomid,data})=>{
+        socketio.on("join-session-room", async({userdetail,coursevideoid,data})=>{
          // const user =userJoin(socketio.id,username,room);
+         //console.log(`sdfsdfds${userdetail,coursevideoid,data}`)
+         //console.log(userdetail);
          socketio.username = userdetail.firstname;
-         socketio.roomid = roomid;
+         socketio.roomid = coursevideoid;
 
-          socketio.join(roomid);
+          socketio.join(coursevideoid);
           const chat_body = {message:userdetail.firstname +"has connected to room",
-          room:data.data._id,
-          roomid:roomid,
+          sessionid:data._id,
+          room:data.sessionroomid,
+          username:userdetail.username,
+          userid:userdetail._id,
+          roomid:coursevideoid, 
           serverUserType:"server"
         }
+      //  console.log(chat_body);
         const sessionChat = await chatTable.create(chat_body);
+        // Welcome current user
+        socketio.emit('message',userdetail.firstname +'Welcome to ChatCord!');
+
+
+        // Broadcast when a user connects
+        socketio.broadcast
+      .to(coursevideoid)
+      .emit('message',`${userdetail.username} has joined the chat`);
           
-          socketio.emit('update-message',sessionChat);
+          //socketio.emit('update-message',sessionChat);
          // io.to(user.room).emit('room users',{room:user.room,users:getRoomUsers(user.room)});
 
         });
-        socketio.on('chatMessage',msg =>{
-          const user = getCurrentUser(socketio.id);
-          io.to(user.room).emit('message',formatMessage(user.username,msg));
+
+
+       
+        //Listen for chatMessage
+
+
+        socketio.on('sendMessage',async (msg) =>{
+          const user = await sessionTable.findOne({socketid:socketio.id}).populate("userid");
+         // console.log(user) 
+          io.to(user.sessionroomid).emit('message',user.username,msg);
+        });
+
+
+        //white-board
+
+        socketio.on("draw-coordinates", function (roomid, data) {
+           console.log(data);
+          io.emit("draw", roomid, data);
         });
      
         
 
 
 
-        socketio.on("disconnect",(socketio)=>{
-          console.log('connection is closed');
+        socketio.on("disconnect",()=>{
+        //  io.socketio.in(socketio.id).emit({
+        //    type:'status',
+        //    text:'disconnected',
+        //    username:socketio.userdetail.username
+        //  })
+         console.log('connection is closed');
       });
       
 
