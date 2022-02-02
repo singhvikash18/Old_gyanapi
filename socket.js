@@ -1,9 +1,20 @@
-
+const moment = require('moment');
 var socketio = require("socket.io");
 var io ;
 const notificationTable = require('./model/notification_table');
 const sessionTable = require('./model/session_room');
 const chatTable = require('./model/chat_table');
+
+
+
+
+const formatmessage = (username,text)=>{
+    return {
+      username,
+      text,
+      time: moment().format('h:mm a')
+    };
+  }
 
 
 const initSocketIo = {};
@@ -72,7 +83,7 @@ const getalluser = async(roomid)=>{
         //chat room
         const session_room =[]
         socketio.on("create-session-room",async({userid,coursevideoid})=>{
-          console.log(coursevideoid);
+          //console.log(coursevideoid);
 
           session_room.push(coursevideoid);
           const room_body ={userid:userid,sessionroomid:coursevideoid,socketid:socketio.id};
@@ -95,7 +106,7 @@ const getalluser = async(roomid)=>{
           socketio.join(coursevideoid);
           const chat_body = {message:userdetail.firstname +"has connected to room",
           sessionid:data._id,
-          room:data.sessionroomid,
+         // room:data.sessionroomid,
           username:userdetail.username,
           userid:userdetail._id,
           roomid:coursevideoid, 
@@ -104,13 +115,15 @@ const getalluser = async(roomid)=>{
       //  console.log(chat_body);
         const sessionChat = await chatTable.create(chat_body);
         // Welcome current user
-        socketio.emit('message',userdetail.firstname +'Welcome to ChatCord!');
+        const firstname = userdetail.firstname
+        const msg = ` ${userdetail.firstname} Welcome to ChatCord`;
+        //socketio.emit('message',formatmessage(firstname, msg));
 
-
+        const msg2 = ` ${userdetail.firstname} has joined the chat`;
         // Broadcast when a user connects
         socketio.broadcast
       .to(coursevideoid)
-      .emit('message',`${userdetail.username} has joined the chat`);
+      .emit('message', formatmessage(firstname, msg2));
           
           //socketio.emit('update-message',sessionChat);
          // io.to(user.room).emit('room users',{room:user.room,users:getRoomUsers(user.room)});
@@ -123,9 +136,28 @@ const getalluser = async(roomid)=>{
 
 
         socketio.on('sendMessage',async (msg) =>{
+
           const user = await sessionTable.findOne({socketid:socketio.id}).populate("userid");
+          const chat_body = {message:msg,
+          sessionid:user._id,
+          //room:user.sessionroomid,
+          username:user.userid.username,
+          userid:user.userid._id,
+          roomid:user.sessionroomid, 
+          serverUserType:"real"
+        }
+      //  console.log(chat_body);
+        const sessionChat = await chatTable.create(chat_body);
+
+        });
+
+
+
+        socketio.on('getmessage',async (roomid) =>{
+        const alluser = await chatTable.find({roomid:roomid}).populate("userid");
          // console.log(user) 
-          io.to(user.sessionroomid).emit('message',user.username,msg);
+        
+          io.to(roomid).emit('message', alluser);
         });
 
 

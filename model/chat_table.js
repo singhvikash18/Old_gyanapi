@@ -7,16 +7,16 @@ const chatSchema = new mongoose.Schema({
         type:String,
         
     },
-    room:{
-        type:String,
-        required:true
-    },
+    // room:{
+    //     type:String,
+    //     required:true
+    // },
     sessionid:{
         type:ObjectId,
         required:true
     },
     userid:{
-        type:ObjectId,
+        type:mongoose.SchemaTypes.ObjectId, ref:"User",
         // required:true
     },
     message:{
@@ -28,7 +28,7 @@ const chatSchema = new mongoose.Schema({
         required:true
     },
     roomid:{
-        type:ObjectId,
+        type:String,
         required:true
     }
 
