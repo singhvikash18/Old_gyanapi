@@ -7,10 +7,10 @@ const chatSchema = new mongoose.Schema({
         type:String,
         
     },
-    // room:{
-    //     type:String,
-    //     required:true
-    // },
+    firstname:{
+        type:String,
+        
+    },
     sessionid:{
         type:ObjectId,
         required:true
