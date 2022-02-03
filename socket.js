@@ -114,7 +114,7 @@ const getalluser = async(roomid)=>{
          // room:data.sessionroomid,
          firstname:userdetail.firstname,
           username:userdetail.username,
-          suserid:JSON.stringify(userdetail._id),
+          suserid:userdetail._id,
           userid:userdetail._id,
           roomid:coursevideoid, 
           serverUserType:"server"
@@ -152,12 +152,12 @@ const getalluser = async(roomid)=>{
           firstname:user.userid.firstname,
           
           username:user.userid.username,
-          suserid:JSON.stringify(user.userid._id),
+          suserid:user.userid._id,
           userid:user.userid._id,
           roomid:user.sessionroomid, 
           serverUserType:"real"
         }
-          //  console.log(chat_body);
+            //console.log(chat_body);
         const sessionChat = await chatTable.create(chat_body);
         
             io.to(user.sessionroomid).emit('message', sessionChat);
