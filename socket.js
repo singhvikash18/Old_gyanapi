@@ -23,7 +23,7 @@ const sesionRoom = [];
 initSocketIo.init = (server) =>{
   io = socketio(server,{
     cors: {
-      origin: "https://gyanais.vercel.app",
+      origin: "http://localhost:3000",
       credentials: true
     }
   });
@@ -85,18 +85,23 @@ const getalluser = async(roomid)=>{
         socketio.on("create-session-room",async({userid,coursevideoid})=>{
           //console.log(coursevideoid);
 
+         const checkit = await sessionTable.findOne({sessionroomid:coursevideoid, userid:userid});
+
+         if(checkit){
+          socketio.emit("get-session-room",checkit);
+         }else{
+
           session_room.push(coursevideoid);
           const room_body ={userid:userid,sessionroomid:coursevideoid,socketid:socketio.id};
           const room =await sessionTable.create(room_body);
+          
           socketio.emit('get-session-room',room);
+         }
         });
-
-
-        
 
         //join room 
 
-        socketio.on("join-session-room", async({userdetail,coursevideoid,data})=>{
+        socketio.on("join-session-room", async({ userdetail, coursevideoid, data })=>{
          // const user =userJoin(socketio.id,username,room);
          //console.log(`sdfsdfds${userdetail,coursevideoid,data}`)
          //console.log(userdetail);
@@ -112,7 +117,7 @@ const getalluser = async(roomid)=>{
           roomid:coursevideoid, 
           serverUserType:"server"
         }
-      //  console.log(chat_body);
+       // console.log(chat_body);
         const sessionChat = await chatTable.create(chat_body);
         // Welcome current user
         const firstname = userdetail.firstname
@@ -135,9 +140,10 @@ const getalluser = async(roomid)=>{
         //Listen for chatMessage
 
 
-        socketio.on('sendMessage',async (msg) =>{
-
-          const user = await sessionTable.findOne({socketid:socketio.id}).populate("userid");
+        socketio.on('sendMessage',async ({msg, userid}) =>{
+          //console.log(userid)
+          const user = await sessionTable.findOne({userid:userid}).populate("userid");
+         // console.log(user)
           const chat_body = {message:msg,
           sessionid:user._id,
           //room:user.sessionroomid,
@@ -146,18 +152,20 @@ const getalluser = async(roomid)=>{
           roomid:user.sessionroomid, 
           serverUserType:"real"
         }
-      //  console.log(chat_body);
+          //  console.log(chat_body);
         const sessionChat = await chatTable.create(chat_body);
-
+        const allnewchat = await chatTable.find({roomid:user.sessionroomid}).populate("userid");
+            io.to(user.sessionroomid).emit('message', allnewchat);
         });
 
 
 
-        socketio.on('getmessage',async (roomid) =>{
-        const alluser = await chatTable.find({roomid:roomid}).populate("userid");
-         // console.log(user) 
+        socketio.on('getmessage', async(roomid) =>{
+          //console.log('hello')
+        const allchat = await chatTable.find({roomid:roomid}).populate("userid");
+         // console.log(allchat) 
         
-          io.to(roomid).emit('message', alluser);
+          io.to(roomid).emit('message', allchat);
         });
 
 
