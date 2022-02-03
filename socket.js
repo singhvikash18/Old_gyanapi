@@ -114,6 +114,7 @@ const getalluser = async(roomid)=>{
          // room:data.sessionroomid,
          firstname:userdetail.firstname,
           username:userdetail.username,
+          suserid:JSON.stringify(userdetail._id),
           userid:userdetail._id,
           roomid:coursevideoid, 
           serverUserType:"server"
@@ -148,8 +149,10 @@ const getalluser = async(roomid)=>{
           const chat_body = {message:msg,
           sessionid:user._id,
           //room:user.sessionroomid,
-          firstname:userdetail.firstname,
+          firstname:user.userid.firstname,
+          
           username:user.userid.username,
+          suserid:JSON.stringify(user.userid._id),
           userid:user.userid._id,
           roomid:user.sessionroomid, 
           serverUserType:"real"

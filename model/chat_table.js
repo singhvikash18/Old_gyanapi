@@ -11,6 +11,10 @@ const chatSchema = new mongoose.Schema({
         type:String,
         
     },
+    suserid:{
+        type:String,
+        
+    },
     sessionid:{
         type:ObjectId,
         required:true
