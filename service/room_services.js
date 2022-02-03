@@ -17,7 +17,7 @@ const roomServices = async(videoId)=>{
 }
 
 const chatServices = async(roomID)=>{
-    const cs = await chatTable.find({roomid:roomID})
+    const cs = await chatTable.find({roomid:roomID}).populate("userid")
     if(cs){
         return cs;
     }
