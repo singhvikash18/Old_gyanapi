@@ -17,7 +17,7 @@ const chatSchema = new mongoose.Schema({
     },
     userid:{
         type:mongoose.SchemaTypes.ObjectId, ref:"User",
-        // required:true
+        required:true
     },
     message:{
         type:String,

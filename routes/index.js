@@ -32,7 +32,7 @@ router.use('/razorpay',razorroute);
 router.use('/play',playroute);
 router.use('/auth',authroute);
 
-router.use('/roomAvailable',roomroute);
+router.use('/messages',roomroute);
 // router.use('student/mcq',ansroute);
 router.use('/student/mcq',mcqroute);
 router.use('/student/mcq_question',newmcqroute);

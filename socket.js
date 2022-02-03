@@ -23,7 +23,7 @@ const sesionRoom = [];
 initSocketIo.init = (server) =>{
   io = socketio(server,{
     cors: {
-      origin: "http://localhost:3000",
+      origin: "https://gyanais.vercel.app",
       credentials: true
     }
   });
@@ -154,19 +154,19 @@ const getalluser = async(roomid)=>{
         }
           //  console.log(chat_body);
         const sessionChat = await chatTable.create(chat_body);
-        const allnewchat = await chatTable.find({roomid:user.sessionroomid}).populate("userid");
-            io.to(user.sessionroomid).emit('message', allnewchat);
-        });
-
-
-
-        socketio.on('getmessage', async(roomid) =>{
-          //console.log('hello')
-        const allchat = await chatTable.find({roomid:roomid}).populate("userid");
-         // console.log(allchat) 
         
-          io.to(roomid).emit('message', allchat);
+            io.to(user.sessionroomid).emit('message', sessionChat);
         });
+
+
+
+        // socketio.on('getmessage', async(roomid) =>{
+        //   //console.log('hello')
+        // const allchat = await chatTable.find({roomid:roomid}).populate("userid");
+        //  // console.log(allchat) 
+        
+        //   io.to(roomid).emit('message', allchat);
+        // });
 
 
         //white-board
