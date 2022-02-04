@@ -24,6 +24,7 @@ const newmcqroute = require('./mcq_question_route');
 const ansroute = require('./answer_route');
 const notifyroute = require('./notification_route');
 const roomroute = require('./room_route');
+const teacherVideo = require('./teacher_video_route');
 
 
 
@@ -58,6 +59,7 @@ router.use('/studentdetails',studroute);
 
 router.use('/coursetype',ctype);
 router.use('/student/coursevideo',vroute);
+router.use('/teacher',teacherVideo);
 
 router.use('/reviewtype',rroute);
 

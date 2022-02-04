@@ -54,10 +54,25 @@ const course_videoIdCoursecontrol = catchAsync(async(req,res)=>{
     };
     res.status(httpStatus.OK).send(data)
 });
+
+const videoSchedulingController = catchAsync(async(req,res)=>{
+    const cvd = await videocontroller.videoSchedulingServices();
+    const response = cvd;
+    const data ={
+        itemcount : 2,
+        status_code : httpStatus.OK,
+        message: "successfully sent",
+        data: response,
+
+    };
+    res.status(httpStatus.OK).send(data)
+});
+
 const video_read ={
     course_videcontrol,
     course_videIDcontrol,
     course_videoCategorycontrol,
     course_videoIdCoursecontrol,
+    videoSchedulingController,
 }
 module.exports=video_read;
