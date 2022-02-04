@@ -2,8 +2,8 @@ const router = require('express').Router();
 const mongoose =require('mongoose')
 const mcqTable = require('../model/mcq_table');
 
-const mcq = async(req,res)=>{
-    const mcqt = await mcqTable.find();
+const mcq = async(courseId)=>{
+    const mcqt = await mcqTable.find({course_id:courseId});
     return mcqt;
 }
 

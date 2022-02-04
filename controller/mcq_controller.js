@@ -4,7 +4,7 @@ const catchAsync = require('./../utils/catch_async');
 const httpStatus = require('http-status');
 
 const mcqController = catchAsync(async(req,res)=>{
-    const dmo = await mcqServices.mcq();
+    const dmo = await mcqServices.mcq(req.body.course_id);
     const response = dmo;
     const data ={
         itemcount : 2,

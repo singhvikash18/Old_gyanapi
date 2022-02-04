@@ -4,8 +4,8 @@ const AppError = require('../utils/app_error');
 const httpStatus = require('http-status');
 const videomodel = require('../model/coursevideo');
 
-const videoservice = async()=>{
-    const vs = await videomodel.find()
+const videoservice = async(courseId)=>{
+    const vs = await videomodel.find({course_id:courseId})
     return vs;
 }
 

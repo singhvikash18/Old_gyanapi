@@ -3,7 +3,7 @@ const catchAsync = require('./../utils/catch_async');
 const httpStatus = require('http-status');
 
 const course_videcontrol = catchAsync(async(req,res)=>{
-    const cvd = await videocontroller.videoservice();
+    const cvd = await videocontroller.videoservice(req.body.course_id);
     const response = cvd;
     const data ={
         itemcount : 2,
