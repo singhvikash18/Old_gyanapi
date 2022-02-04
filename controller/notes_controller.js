@@ -3,7 +3,7 @@ const catchAsync = require('./../utils/catch_async');
 const httpStatus = require('http-status');
 
 const notesController = catchAsync(async(req,res)=>{
-    const test=await notesService.notesService();
+    const test=await notesService.notesService(req.body.course_id);
     const response = test;
     const data ={
         itemcount : 1,

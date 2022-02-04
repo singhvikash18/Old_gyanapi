@@ -2,7 +2,7 @@ const router = require('express').Router();
 
 const notesroute = require('../controller/notes_controller');
 
-router.get('/all',notesroute.notesController);
+router.post('/getbycourse',notesroute.notesController);
 
 router.get('/noteDetails/:_id',notesroute.notesIdController);
 

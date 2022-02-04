@@ -5,8 +5,8 @@ const AppError = require('../utils/app_error');
 const httpStatus = require('http-status');
 
 
-const notesService = async(req,res)=>{
-    const ns = await notes.find()
+const notesService = async(courseId)=>{
+    const ns = await notes.find({course_id:courseId})
     return ns;
 }
 

@@ -2,8 +2,8 @@ const router = require('express').Router();
 const mongoose =require('mongoose')
 const syllabus = require('../model/syllabus_table');
 
-const syllabusService = async(req,res)=>{
-    const ns = await syllabus.find();
+const syllabusService = async(courseId)=>{
+    const ns = await syllabus.find({course_id:courseId});
     return ns;
 }
 
