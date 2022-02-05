@@ -84,7 +84,7 @@ const videoIdCourseservice = async(Id)=>{
 }
 
 const videoSchedulingServices = async()=>{
-    const vss = await videomodel.find().sort({'startTime':-1})
+    const vss = await (await videomodel.find().sort({'startTime':-1}))
     return vss
 }
 
