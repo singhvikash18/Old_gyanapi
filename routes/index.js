@@ -45,7 +45,7 @@ router.use('/payment',paymentroute);
 router.use('/email',mailroute);
 router.use('/currentaffair', currentaffairsroute);
 
-router.use('/student/syllabusDetails',syllAbusroute);
+router.use('/student/syllabus',syllAbusroute);
 router.use('/subscription',subscriptionroute);
 router.use('/course',croute);
 //router.use('/coursedetails',croute);
