@@ -99,7 +99,8 @@ const coursesSchema = new mongoose.Schema({
     course_slug:
     {
         type:String,
-        required:true
+        required:true,
+        unique:true
     },
     enroll:
     {

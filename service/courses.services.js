@@ -19,7 +19,7 @@ const categoryIdService = async (categoryId)=>{
 
 const coursedetailsService = async (courseslug) =>{
     
-    const cds = await Courses.findOne({_id : courseslug});
+    const cds = await Courses.findOne({course_slug : courseslug});
     //console.log(cds)
     return cds;
 } 
