@@ -52,7 +52,7 @@ router.use('/course',croute);
 
 router.use('/courseCategory',categoryroute);
 router.use('/notification',notifyroute);
-router.use('/teacherDetails',teacherroute);
+router.use('/teacher',teacherroute);
 router.use('/demodetails',droute);
 
 router.use('/studentdetails',studroute);
