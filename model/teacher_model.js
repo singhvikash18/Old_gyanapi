@@ -1,3 +1,4 @@
+const { ObjectId } = require('mongodb');
 const mongoose = require('mongoose')
 
 const teacherSchema = new mongoose.Schema ({
@@ -56,6 +57,10 @@ const teacherSchema = new mongoose.Schema ({
     {
         type:String,
         required:true
+    },
+    notes_id:{
+        type:mongoose.SchemaTypes.ObjectId, ref:"notes",
+        require:true
     }	  
 })
 module.exports = mongoose.model('teacher',teacherSchema);

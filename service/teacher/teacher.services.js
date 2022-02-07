@@ -17,8 +17,13 @@ const teacherupdate = async(req,res)=>{
     const tu = await teachermodel.findOneAndUpdate(query,updateteacher);
 }
 
+const teachernoteServices = async(courseId)=>{
+    const tns = await teachermodel.find({notes_id:courseId}).populate('notes_id')
+    return tns;
+}
 
 
 
 
-module.exports = {teacherServices,teacherId,teacherupdate,}
+
+module.exports = {teacherServices,teacherId,teacherupdate,teachernoteServices}

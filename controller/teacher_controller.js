@@ -41,6 +41,19 @@ const teacherControlUpdate = catchAsync(async(req,res)=>{
     res.status(httpStatus.OK).send(data)
 });
 
-const teacher_read ={teachercontroller,teachercontrolId,teacherControlUpdate}
+const teacherNoteController = catchAsync(async(req,res)=>{
+    const tcu = await teachercontrol.teachernoteServices(req.body.notes_id);
+    const response = tcu;
+    const data ={
+        itemcount : 1,
+        status_code : httpStatus.OK,
+        message : "teacher data updated",
+        data : response,
+
+    };
+    res.status(httpStatus.OK).send(data)
+});
+
+const teacher_read ={teachercontroller,teachercontrolId,teacherControlUpdate,teacherNoteController,}
 
 module.exports=teacher_read;
