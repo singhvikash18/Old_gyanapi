@@ -84,11 +84,12 @@ const videoIdCourseservice = async(Id)=>{
 }
 
 const videoSchedulingServices = async()=>{
-    const vss = await (await videomodel.find().sort({'startTime':-1}))
+    const vss = (await videomodel.find().sort({'startTime':-1}))
     return vss
 }
 
 
 
 
-module.exports={videoservice,videoserviceId,videoCategoryservice,videoIdCourseservice,videoSchedulingServices,}
+module.exports={videoservice,videoserviceId,videoCategoryservice,
+                videoIdCourseservice,videoSchedulingServices,}

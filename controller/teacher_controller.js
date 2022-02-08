@@ -41,19 +41,97 @@ const teacherControlUpdate = catchAsync(async(req,res)=>{
     res.status(httpStatus.OK).send(data)
 });
 
-const teacherNoteController = catchAsync(async(req,res)=>{
+// post notes_id
+
+const teacherpostNoteController = catchAsync(async(req,res)=>{
     const tcu = await teachercontrol.teachernoteServices(req.body.notes_id);
     const response = tcu;
     const data ={
         itemcount : 1,
         status_code : httpStatus.OK,
-        message : "teacher data updated",
+        message : "teacher notes data ",
         data : response,
 
     };
     res.status(httpStatus.OK).send(data)
 });
 
-const teacher_read ={teachercontroller,teachercontrolId,teacherControlUpdate,teacherNoteController,}
+// get notes_id
+const teachergetNoteController = catchAsync(async(req,res)=>{
+    const tcu = await teachercontrol.teachernoteServices(req.params.notes_id);
+    const response = tcu;
+    const data ={
+        itemcount : 1,
+        status_code : httpStatus.OK,
+        message : "teacher notes data ",
+        data : response,
+
+    };
+    res.status(httpStatus.OK).send(data)
+});
+
+// post mcq_id
+const teacherpostMcqController = catchAsync(async(req,res)=>{
+    const tcu = await teachercontrol.teachermcqServices(req.body.mcq_id);
+    const response = tcu;
+    const data ={
+        itemcount : 1,
+        status_code : httpStatus.OK,
+        message : "teacher mcq data ",
+        data : response,
+
+    };
+    res.status(httpStatus.OK).send(data)
+});
+
+//get mcq_id
+const teachergetMcqController = catchAsync(async(req,res)=>{
+    const tcu = await teachercontrol.teachermcqServices(req.params.mcq_id);
+    const response = tcu;
+    const data ={
+        itemcount : 1,
+        status_code : httpStatus.OK,
+        message : "teacher mcq data ",
+        data : response,
+
+    };
+    res.status(httpStatus.OK).send(data)
+});
+
+// posr syllabus_id
+const teacherpostSyllabusController = catchAsync(async(req,res)=>{
+    const tcu = await teachercontrol.teachersyllabusServices(req.body.syllabus_id);
+    const response = tcu;
+    const data ={
+        itemcount : 1,
+        status_code : httpStatus.OK,
+        message : "teacher syllabus data ",
+        data : response,
+
+    };
+    res.status(httpStatus.OK).send(data)
+});
+
+//get syllabus_id
+const teachergetSyllabusController = catchAsync(async(req,res)=>{
+    const tcu = await teachercontrol.teachersyllabusServices(req.params.syllabus_id);
+    const response = tcu;
+    const data ={
+        itemcount : 1,
+        status_code : httpStatus.OK,
+        message : "teacher syllabus data ",
+        data : response,
+
+    };
+    res.status(httpStatus.OK).send(data)
+});
+
+
+const teacher_read ={teachercontroller,
+    teachercontrolId,
+    teacherControlUpdate,
+    teacherpostNoteController,teachergetNoteController,
+    teacherpostMcqController,teachergetMcqController,
+    teacherpostSyllabusController,teachergetSyllabusController,}
 
 module.exports=teacher_read;

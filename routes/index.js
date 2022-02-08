@@ -59,7 +59,7 @@ router.use('/studentdetails',studroute);
 
 router.use('/coursetype',ctype);
 router.use('/student/coursevideo',vroute);
-router.use('/teacher',teacherVideo);
+router.use('/teacher/video',teacherVideo);
 
 router.use('/reviewtype',rroute);
 

@@ -60,7 +60,15 @@ const teacherSchema = new mongoose.Schema ({
     },
     notes_id:{
         type:mongoose.SchemaTypes.ObjectId, ref:"notes",
-        require:true
-    }	  
+        required:true
+    },
+    mcq_id:{
+        type:mongoose.SchemaTypes.ObjectId, ref:"mcq",
+        required:true
+    },
+    syllabus_id:{
+        type:mongoose.SchemaTypes.ObjectId, ref:"syllabus",
+        required:true
+    }  
 })
 module.exports = mongoose.model('teacher',teacherSchema);
