@@ -182,6 +182,10 @@ const getalluser = async(roomid)=>{
           io.emit("draw", roomid, data);
         });
      
+        socketio.on("web-cam", function ({roomid, userid}) {
+          console.log({roomid, userid});
+          io.to(roomid).emit("get-cam", userid);
+       });
         
 
 
