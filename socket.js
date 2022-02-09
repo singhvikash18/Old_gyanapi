@@ -24,7 +24,8 @@ const sesionRoom = [];
 initSocketIo.init = (server) =>{
   io = socketio(server,{
     cors: {
-      origin: "https://gyanais.vercel.app",
+     // origin: "https://gyanais.vercel.app",
+      origin:"http://localhost:3000",
       credentials: true
     }
   });
