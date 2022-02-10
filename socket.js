@@ -188,17 +188,41 @@ const getalluser = async(roomid)=>{
           io.to(roomid).emit("get-cam", userid);
        });
         
-
-
-
-        socketio.on("disconnect",()=>{
-        //  io.socketio.in(socketio.id).emit({
-        //    type:'status',
-        //    text:'disconnected',
-        //    username:socketio.userdetail.username
-        //  })
-         console.log('connection is closed');
+      // webcam start
+       socketio.on("broadcaster", () => {
+        broadcaster = socketio.id;
+        socketio.broadcast.emit("broadcaster");
       });
+        
+      socketio.on("watcher", () => {
+        socketio.to(broadcaster).emit("watcher", socketio.id);
+      });
+
+      socketio.on("offer", (id, message) => {
+        socketio.to(id).emit("offer", socketio.id, message);
+      });
+      socketio.on("answer", (id, message) => {
+        socketio.to(id).emit("answer", socketio.id, message);
+      });
+      socketio.on("candidate", (id, message) => {
+        socketio.to(id).emit("candidate", socketio.id, message);
+      });
+
+      //webcam end
+
+
+
+      
+          socketio.on("disconnect",()=>{
+            socketio.to(broadcaster).emit("disconnectPeer", socketio.id);
+          //  io.socketio.in(socketio.id).emit({
+          //    type:'status',
+          //    text:'disconnected',
+          //    username:socketio.userdetail.username
+          //  })
+           console.log('connection is closed');
+        });
+       
       
 
        
