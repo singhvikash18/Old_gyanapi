@@ -7,7 +7,7 @@ const sessionTable = require('./model/session_room');
 const chatTable = require('./model/chat_table');
 
 
-
+let broadcaster = {};
 
 const formatmessage = (username,text)=>{
     return {
@@ -24,8 +24,8 @@ const sesionRoom = [];
 initSocketIo.init = (server) =>{
   io = socketio(server,{
     cors: {
-     // origin: "https://gyanais.vercel.app",
-      origin:"http://localhost:3000",
+     origin: "https://gyanais.vercel.app",
+      // origin:"http://localhost:3000",
       credentials: true
     }
   });
