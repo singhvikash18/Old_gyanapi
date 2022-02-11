@@ -144,9 +144,9 @@ const getalluser = async(roomid)=>{
         //Listen for chatMessage
 
 
-        socketio.on('sendMessage',async ({msg, userid}) =>{
+        socketio.on('sendMessage',async ({msg, userid, roomid}) =>{
           //console.log(userid)
-          const user = await sessionTable.findOne({userid:userid}).populate("userid");
+          const user = await sessionTable.findOne({userid:userid,sessionroomid:roomid}).populate("userid");
          // console.log(user)
           const chat_body = {message:msg,
           sessionid:user._id,
