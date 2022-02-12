@@ -9,6 +9,8 @@ const chatTable = require('./model/chat_table');
 
 let broadcaster = {};
 
+
+
 const formatmessage = (username,text)=>{
     return {
       username,
@@ -111,7 +113,7 @@ const getalluser = async(roomid)=>{
          socketio.roomid = coursevideoid;
 
           socketio.join(coursevideoid);
-          const chat_body = {message:userdetail.firstname +"has connected to room",
+          const chat_body = {message:userdetail.firstname +" has connected to room",
           sessionid:data._id,
          // room:data.sessionroomid,
          firstname:userdetail.firstname,
