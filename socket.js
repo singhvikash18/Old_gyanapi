@@ -169,13 +169,7 @@ const getalluser = async(roomid)=>{
 
 
 
-        // socketio.on('getmessage', async(roomid) =>{
-        //   //console.log('hello')
-        // const allchat = await chatTable.find({roomid:roomid}).populate("userid");
-        //  // console.log(allchat) 
         
-        //   io.to(roomid).emit('message', allchat);
-        // });
 
 
         //white-board
@@ -191,6 +185,7 @@ const getalluser = async(roomid)=>{
        });
         
       // webcam start
+
        socketio.on("broadcaster", () => {
         broadcaster = socketio.id;
         socketio.broadcast.emit("broadcaster");
@@ -202,19 +197,21 @@ const getalluser = async(roomid)=>{
 
       socketio.on("offer", (id, message) => {
         socketio.to(id).emit("offer", socketio.id, message);
+        console.log(message)
       });
       socketio.on("answer", (id, message) => {
         socketio.to(id).emit("answer", socketio.id, message);
+        console.log(message)
       });
       socketio.on("candidate", (id, message) => {
         socketio.to(id).emit("candidate", socketio.id, message);
+        console.log(message)
       });
+
 
       //webcam end
 
 
-
-      
           socketio.on("disconnect",()=>{
             socketio.to(broadcaster).emit("disconnectPeer", socketio.id);
           //  io.socketio.in(socketio.id).emit({
