@@ -5,6 +5,7 @@ var io ;
 const notificationTable = require('./model/notification_table');
 const sessionTable = require('./model/session_room');
 const chatTable = require('./model/chat_table');
+const videoTable = require('./model/coursevideo');
 
 
 let broadcaster = {};
@@ -201,12 +202,18 @@ const getalluser = async(roomid)=>{
       });
       socketio.on("answer", (id, message) => {
         socketio.to(id).emit("answer", socketio.id, message);
-        console.log(message)
+        //console.log(message)
       });
       socketio.on("candidate", (id, message) => {
         socketio.to(id).emit("candidate", socketio.id, message);
-        console.log(message)
+        //console.log(message)
       });
+
+      socketio.on("handleclassbutton",async({handleclass, roomid})=>{
+        let result = await videoTable.findOneAndUpdate({_id:roomid,handleClass:handleclass})
+        socketio.to(roomid).emit("receivedclassbutton",handleclass)
+        
+      })
 
 
       //webcam end
