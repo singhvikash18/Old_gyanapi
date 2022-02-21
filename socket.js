@@ -210,7 +210,7 @@ const getalluser = async(roomid)=>{
       });
 
       socketio.on("handleclassbutton",async({handleclass, roomid})=>{
-        let result = await videoTable.findOneAndUpdate({_id:roomid,handleClass:handleclass})
+        let result = await videoTable.findOneAndUpdate({_id:roomid,handleclass:handleclass})
         socketio.to(roomid).emit("receivedclassbutton",handleclass)
         
       })
