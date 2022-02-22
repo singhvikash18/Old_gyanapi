@@ -91,5 +91,7 @@ const videoSchedulingServices = async()=>{
 
 
 
-module.exports={videoservice,videoserviceId,videoCategoryservice,
-                videoIdCourseservice,videoSchedulingServices,}
+module.exports={videoservice,videoserviceId,
+    videoCategoryservice,
+    videoIdCourseservice,
+    videoSchedulingServices,}

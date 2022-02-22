@@ -221,11 +221,7 @@ const getalluser = async(roomid)=>{
 
           socketio.on("disconnect",()=>{
             socketio.to(broadcaster).emit("disconnectPeer", socketio.id);
-          //  io.socketio.in(socketio.id).emit({
-          //    type:'status',
-          //    text:'disconnected',
-          //    username:socketio.userdetail.username
-          //  })
+          
            console.log('connection is closed');
         });
        
