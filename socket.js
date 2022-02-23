@@ -198,7 +198,7 @@ const getalluser = async(roomid)=>{
 
       socketio.on("offer", (id, message) => {
         socketio.to(id).emit("offer", socketio.id, message);
-        console.log(message)
+        console.log(JSON.stringify(message))
       });
       socketio.on("answer", (id, message) => {
         socketio.to(id).emit("answer", socketio.id, message);
@@ -209,11 +209,11 @@ const getalluser = async(roomid)=>{
         //console.log(message)
       });
 
-      socketio.on("handleclassbutton",async({handleclass, roomid})=>{
-        let result = await videoTable.findOneAndUpdate({_id:roomid,handleclass:handleclass})
-        socketio.to(roomid).emit("receivedclassbutton",handleclass)
+      // socketio.on("handleclassbutton",async({handleclass, roomid})=>{
+      //   let result = await videoTable.findOneAndUpdate({_id:roomid,handleclass:handleclass})
+      //   socketio.to(roomid).emit("receivedclassbutton",handleclass)
         
-      })
+      // })
 
 
       //webcam end
