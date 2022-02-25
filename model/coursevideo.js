@@ -79,8 +79,8 @@ const videoSchema = new mongoose.Schema({
         type:Date,
         required:true
     },
-    handleclass:{
-        type:Number,
+    handleclassbutton:{
+        type:String,
         required:true
     }
     
