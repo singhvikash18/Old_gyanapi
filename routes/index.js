@@ -24,6 +24,8 @@ const newmcqroute = require('./mcq_question_route');
 const ansroute = require('./answer_route');
 const notifyroute = require('./notification_route');
 const roomroute = require('./room_route');
+const coursePdfroute = require('./course_pdf_route');
+
 const teacherVideo = require('./teacher_video_route');
 
 
@@ -32,6 +34,7 @@ const teacherVideo = require('./teacher_video_route');
 router.use('/razorpay',razorroute);
 router.use('/play',playroute);
 router.use('/auth',authroute);
+router.use('/teacher/videoPdfUpload',coursePdfroute);
 
 router.use('/messages',roomroute);
 // router.use('student/mcq',ansroute);
