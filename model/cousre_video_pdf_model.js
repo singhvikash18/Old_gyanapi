@@ -1,30 +1,21 @@
 const { ObjectId } = require('mongodb');
 const mongoose = require('mongoose')
 
-const course_video_pdfSchema = new mongoose.Schema({
+const room_images = new mongoose.Schema({
 
-    courseid: {
-        type: ObjectId,
-        required: true
-    },
-    videoid: {
-        type: ObjectId,
-        required: true
-
-    },
-    coursevideopdf_pathUrl: {
+    pdfImage: {
         type: String,
+        required: true
+    },
+    roodid: {
+        type: ObjectId,
         required: true
     },
     pdfName: {
         type: String,
         required: true
     },
-    roomid: {
-        type: ObjectId,
-        required: true
-    },
-    pdf_increment: {
+    imagePath: {
         type: String,
         required: true
     }
@@ -32,4 +23,4 @@ const course_video_pdfSchema = new mongoose.Schema({
     timestamps: true
 });
 
-module.exports = mongoose.model('coursevideoPdf', course_video_pdfSchema);
+module.exports = mongoose.model('room_images', room_images);

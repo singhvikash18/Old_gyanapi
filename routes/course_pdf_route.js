@@ -18,7 +18,7 @@ var storage = multer.diskStorage({
 
         cb(null, file.originalname);
 
-        // });
+        
     }
 
 });
