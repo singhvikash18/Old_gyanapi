@@ -1,4 +1,4 @@
-const course_pdf_Table = require('../model/cousre_video_pdf_model');
+const course_pdf_Table = require('../model/course_video_pdf_model');
 const room_pdf_images = require('../model/room_images_model');
 const AppError = require('../utils/app_error');
 const httpStatus = require('http-status');
@@ -10,7 +10,7 @@ const course_pdf_Service = async(req) => {
     const files = req.file.path;
     const folderpath = './profile/fileuploads/saveimage/'+req.file.filename;
     const matchtable = await course_pdf_Table.find({ pdfName: req.file.filename });
-        const isPdfPresent = matchtable[0]?matchtable[0].pdf_increment:null;
+        const isPdfPresent = matchtable[0]?matchtable[0].pdf_increment+1:null;
     try {
         //file is insert rename folder
         if ( isPdfPresent !== null) {
@@ -40,7 +40,7 @@ const course_pdf_Service = async(req) => {
                         if (err) {
                             return console.log('Unable to scan directory: ' + err);
                         } 
-                        //listing all files using forEach
+                        //listing all files using forEach(rename folder)
                          files.forEach(async function(file) {
                             // Do whatever you want to do with the file
                             // console.log(file); 
@@ -55,6 +55,21 @@ const course_pdf_Service = async(req) => {
                     console.log('an error has occurred in the pdf converter ' + err)
                 })        
             // fs.mkdirSync(folderpath)
+            const upload = await course_pdf_Table.create({ 
+                pdfName: req.file.filename+isPdfPresent,
+                 pdf_increment: isPdfPresent, 
+                 courseid:req.body.courseid,
+                 videoid:req.body.roomid,
+                 coursevideopdf_pathUrl: req.file.path,
+                 roomid:req.body.roomid
+                });
+            if (upload == null) {
+                throw new AppError(httpStatus.BAD_REQUEST, " Not updated");
+            } 
+        
+            const all_images = await room_pdf_images.find({ pdfName: req.file.filename });
+            return all_images;
+
         } else {
             //file is insert first time
             fs.mkdir(folderpath, { recursive: true }, function(err) {
@@ -79,7 +94,7 @@ const course_pdf_Service = async(req) => {
                         if (err) {
                             return console.log('Unable to scan directory: ' + err);
                         } 
-                        //listing all files using forEach
+                        //listing all files using forEach(new folder)
                         files.forEach(async function (file) {
                             // Do whatever you want to do with the file
                             console.log(file); 
@@ -91,26 +106,31 @@ const course_pdf_Service = async(req) => {
                 .catch(err => {
                     console.log('an error has occurred in the pdf converter ' + err)
                 })
+
+                const upload = await course_pdf_Table.create({ 
+                    pdfName: req.file.filename,
+                     pdf_increment: 1, 
+                     courseid:req.body.courseid,
+                     videoid:req.body.roomid,
+                     coursevideopdf_pathUrl: req.file.path,
+                     roomid:req.body.roomid
+                    });
+                if (upload == null) {
+                    throw new AppError(httpStatus.BAD_REQUEST, " Not updated");
+                } 
+            
+                const all_images = await room_pdf_images.find({ pdfName: req.file.filename });
+                return all_images;
+
+
+
         }
     } catch (err) {
         console.log('an error has occurred')
         console.error(err)
     }
 
-    const upload = await course_pdf_Table.create({ 
-        pdfName: req.file.filename,
-         pdf_increment: 1, 
-         courseid:req.body.courseid,
-         videoid:req.body.roomid,
-         coursevideopdf_pathUrl: req.file.path,
-         roomid:req.body.roomid
-        });
-    if (upload == null) {
-        throw new AppError(httpStatus.BAD_REQUEST, " Not updated");
-    } 
-
-    const all_images = await room_pdf_images.find({ pdfName: req.file.filename });
-    return all_images;
+    
 
 }
 
