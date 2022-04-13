@@ -9,9 +9,10 @@ const fs = require('fs');
 const course_pdf_Service = async(req) => {
     const files = req.file.path;
     const folderpath = './profile/fileuploads/saveimage/'+req.file.filename;
-    const matchtable = await course_pdf_Table.find({ pdfName: req.file.filename });
-        const isPdfPresent = matchtable[0]?matchtable[0].pdf_increment+1:null;
+    const matchtable = await course_pdf_Table.find({roomid:req.body.roomid });
+        const isPdfPresent = matchtable[0]?parseInt(matchtable[0].pdf_increment)+1:null;
     try {
+
         //file is insert rename folder
         if ( isPdfPresent !== null) {
             // console.log(matchtable[0].pdf_increment)
@@ -22,6 +23,8 @@ const course_pdf_Service = async(req) => {
             fs.mkdirSync(newFolderPath, {
                 recursive: true
             });
+
+
 
             let option = {
                     format: 'jpeg',
@@ -55,14 +58,17 @@ const course_pdf_Service = async(req) => {
                     console.log('an error has occurred in the pdf converter ' + err)
                 })        
             // fs.mkdirSync(folderpath)
-            const upload = await course_pdf_Table.create({ 
-                pdfName: req.file.filename+isPdfPresent,
-                 pdf_increment: isPdfPresent, 
-                 courseid:req.body.courseid,
-                 videoid:req.body.roomid,
-                 coursevideopdf_pathUrl: req.file.path,
-                 roomid:req.body.roomid
-                });
+            // const upload = await course_pdf_Table.create({ 
+            //     pdfName: req.file.filename+isPdfPresent,
+            //      pdf_increment: isPdfPresent, 
+            //      courseid:req.body.courseid,
+            //      videoid:req.body.roomid,
+            //      coursevideopdf_pathUrl: req.file.path,
+            //      roomid:req.body.roomid
+            //     });
+
+                const upload = await course_pdf_Table.findOneAndUpdate({roomid:req.body.roomid}, {pdf_increment:isPdfPresent})
+
             if (upload == null) {
                 throw new AppError(httpStatus.BAD_REQUEST, " Not updated");
             } 
