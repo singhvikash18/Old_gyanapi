@@ -25,7 +25,6 @@ const course_pdf_Service = async(req) => {
             });
 
 
-
             let option = {
                     format: 'jpeg',
                     // out_dir : path.dirname(files),
