@@ -27,6 +27,7 @@ const roomroute = require('./room_route');
 const coursePdfroute = require('./course_pdf_route');
 
 const teacherVideo = require('./teacher_video_route');
+const courseImage = require('./course_image_route');
 
 
 
@@ -36,6 +37,7 @@ router.use('/play',playroute);
 router.use('/auth',authroute);
 router.use('/teacher/videoPdfUpload',coursePdfroute);
 
+router.use('/teacher',courseImage);
 router.use('/messages',roomroute);
 // router.use('student/mcq',ansroute);
 router.use('/student/mcq',mcqroute);
