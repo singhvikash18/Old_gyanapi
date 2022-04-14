@@ -2,7 +2,6 @@
 const moment = require('moment');
 var socketio = require("socket.io");
 var io ;
-const mongoose =require('mongoose')
 const notificationTable = require('./model/notification_table');
 const sessionTable = require('./model/session_room');
 const chatTable = require('./model/chat_table');
@@ -29,7 +28,7 @@ initSocketIo.init = (server) =>{
   io = socketio(server,{
     cors: {
      origin: "https://gyanais.vercel.app",
-     //  origin:"http://localhost:3000",
+      // origin:"http://localhost:3000",
       credentials: true
     }
   });
@@ -143,6 +142,8 @@ const getalluser = async(roomid)=>{
 
         });
 
+
+       
         //Listen for chatMessage
 
 
@@ -167,11 +168,16 @@ const getalluser = async(roomid)=>{
             io.to(user.sessionroomid).emit('message', sessionChat);
         });
 
+
+
+        
+
+
         //white-board
 
-        socketio.on("draw-coordinates", function ({roomid, whitedata}) {
-           console.log(whitedata);
-          io.to(roomid).emit("draw", whitedata);
+        socketio.on("draw-coordinates", function (roomid, data) {
+           console.log(data);
+          io.emit("draw", roomid, data);
         });
      
         socketio.on("web-cam", function ({roomid, userid}) {
@@ -192,7 +198,7 @@ const getalluser = async(roomid)=>{
 
       socketio.on("offer", (id, message) => {
         socketio.to(id).emit("offer", socketio.id, message);
-        console.log(message)
+        console.log(JSON.stringify(message))
       });
       socketio.on("answer", (id, message) => {
         socketio.to(id).emit("answer", socketio.id, message);
@@ -203,15 +209,11 @@ const getalluser = async(roomid)=>{
         //console.log(message)
       });
 
-      socketio.on("handleclassbutton",async({handleclass, roomid})=>{
-        //console.log(handleclass)
-        const ObjectId = mongoose.Types.ObjectId;
-        const query = {_id:ObjectId(roomid)}
-        const updatenumber ={handleclassbutton:handleclass};
-
-        const result = await videoTable.findOneAndUpdate(query, updatenumber)
-        socketio.to(roomid).emit("receivedclassbutton",handleclass)  
-      })
+      // socketio.on("handleclassbutton",async({handleclass, roomid})=>{
+      //   let result = await videoTable.findOneAndUpdate({_id:roomid,handleclass:handleclass})
+      //   socketio.to(roomid).emit("receivedclassbutton",handleclass)
+        
+      // })
 
 
       //webcam end
@@ -223,7 +225,9 @@ const getalluser = async(roomid)=>{
            console.log('connection is closed');
         });
        
+      
 
+       
       })
   
        
