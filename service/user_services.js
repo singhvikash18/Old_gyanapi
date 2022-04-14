@@ -130,7 +130,6 @@ const userAvatar =  async(req,res)=>{
  /// console.log(req)
   const query ={_id:req.body.userid}
   const updateimage = {photo : req.headers.host+'/profile/'+req.file.filename}
-  
 
   const uploadpic = await User.findOneAndUpdate(query,updateimage)
  
