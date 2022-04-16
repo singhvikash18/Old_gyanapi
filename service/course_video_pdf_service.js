@@ -18,7 +18,6 @@ const course_pdf_Service = async(req) => {
             const newFolderPath = "./profile/fileuploads/saveimage/" + req.file.filename + isPdfPresent;
             // folder create with rename 
    
-
             fs.mkdirSync(newFolderPath, {
                 recursive: true
             });
