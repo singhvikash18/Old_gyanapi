@@ -12,7 +12,6 @@ const course_pdf_Service = async(req) => {
     const matchtable = await course_pdf_Table.find({roomid:req.body.roomid });
         const isPdfPresent = matchtable[0]?parseInt(matchtable[0].pdf_increment)+1:null;
     try {
-
         //file is insert rename folder
         if ( isPdfPresent !== null) {
             // console.log(matchtable[0].pdf_increment)
@@ -23,7 +22,6 @@ const course_pdf_Service = async(req) => {
             fs.mkdirSync(newFolderPath, {
                 recursive: true
             });
-
 
             let option = {
                     format: 'jpeg',
@@ -47,26 +45,17 @@ const course_pdf_Service = async(req) => {
                             // Do whatever you want to do with the file
                             // console.log(file); 
                             const imagepath = 'profile/fileuploads/saveimage/' + req.file.filename+ isPdfPresent+"/"+file;
-                            await room_pdf_images.create({pdfImage:file, roodid:req.body.roomid, pdfName:req.file.filename, imagePath:imagepath})
+                            await room_pdf_images.create({pdfImage:file, roodid:req.body.roomid, pdfName:req.file.filename+isPdfPresent, imagePath:imagepath})
                         });
-                    });
+                    }); 
                 
 
                 })
                 .catch(err => {
                     console.log('an error has occurred in the pdf converter ' + err)
                 })        
-            // fs.mkdirSync(folderpath)
-            // const upload = await course_pdf_Table.create({ 
-            //     pdfName: req.file.filename+isPdfPresent,
-            //      pdf_increment: isPdfPresent, 
-            //      courseid:req.body.courseid,
-            //      videoid:req.body.roomid,
-            //      coursevideopdf_pathUrl: req.file.path,
-            //      roomid:req.body.roomid
-            //     });
 
-                const upload = await course_pdf_Table.findOneAndUpdate({roomid:req.body.roomid}, {pdf_increment:isPdfPresent})
+                const upload = await course_pdf_Table.findOneAndUpdate({roomid:req.body.roomid}, {pdf_increment:isPdfPresent, pdfName:req.file.filename+ isPdfPresent})
 
             if (upload == null) {
                 throw new AppError(httpStatus.BAD_REQUEST, " Not updated");
