@@ -1,13 +1,15 @@
 const router = require('express').Router()
 const room_image_table = require("../model/room_images_model");
-
+const course_pdf_Table = require('../model/course_video_pdf_model');
 
 const course_image_services = async(req)=>{
-    const cis = await room_image_table.find({roodid:req.body.roomid, pdfName:req.body.pdfName});
+    const getpdfname = await course_pdf_Table.findOne({roomid:req.body.roomid});
+
+    const cis = await room_image_table.find({roomid:req.body.roomid, pdfName:getpdfname.pdfName});
     console.log(cis)
     if(cis){
         return cis;
-
+ 
      }
      else{
         throw ( " Not found");

@@ -7,7 +7,7 @@ const room_images = new mongoose.Schema({
         type: String,
         required: true
     },
-    roodid: {
+    roomid: {
         type: ObjectId,
         required: true
     },

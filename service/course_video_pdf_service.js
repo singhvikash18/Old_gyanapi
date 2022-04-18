@@ -44,7 +44,7 @@ const course_pdf_Service = async(req) => {
                             // Do whatever you want to do with the file
                             // console.log(file); 
                             const imagepath = 'profile/fileuploads/saveimage/' + req.file.filename+ isPdfPresent+"/"+file;
-                            await room_pdf_images.create({pdfImage:file, roodid:req.body.roomid, pdfName:req.file.filename+isPdfPresent, imagePath:imagepath})
+                            await room_pdf_images.create({pdfImage:file, roomid:req.body.roomid, pdfName:req.file.filename+isPdfPresent, imagePath:imagepath})
                         });
                     }); 
                 
@@ -92,7 +92,7 @@ const course_pdf_Service = async(req) => {
                             // Do whatever you want to do with the file
                             console.log(file); 
                             const imagepathnew = "profile/fileuploads/saveimage/" + req.file.filename+"/"+file;
-                            await room_pdf_images.create({pdfImage:file, roodid:req.body.roomid, pdfName:req.file.filename, imagePath:imagepathnew})
+                            await room_pdf_images.create({pdfImage:file, roomid:req.body.roomid, pdfName:req.file.filename, imagePath:imagepathnew})
                         });
                     });
                 })
