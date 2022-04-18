@@ -1,4 +1,7 @@
 const router = require('express').Router();
+const imageController = require('../controller/course_image_controller');
+
+
 
 const getteacher = require('../controller/teacher_controller');
 
@@ -17,5 +20,5 @@ router.get('/getmcq/:mcq_id',getteacher.teachergetMcqController);
 
 router.post('/postsyllabus',getteacher.teacherpostSyllabusController);
 router.get('/getsyllabus/:syllabus_id',getteacher.teachergetSyllabusController);
-
+router.post('/getallimages',imageController.course_image_Controller);
 module.exports=router;

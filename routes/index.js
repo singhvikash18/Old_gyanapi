@@ -27,7 +27,7 @@ const roomroute = require('./room_route');
 const coursePdfroute = require('./course_pdf_route');
 const teacherImage = require('./teacher_image_route');
 const teacherVideo = require('./teacher_video_route');
-const teacher = require('./course_image_route');
+const teacher = require('./teacher_route');
 
 
 
