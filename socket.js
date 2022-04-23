@@ -178,6 +178,12 @@ const getalluser = async(roomid)=>{
           console.log({roomid, userid});
           io.to(roomid).emit("get-cam", userid);
        });
+
+        //background images
+      socketio.on("backgroundimage", ({roomid, slidetime})=>{
+        console.log(slidetime)
+          socketio.to(roomid).emit("handlebackgroundimage", slidetime)
+      })
         
       // webcam start
 
