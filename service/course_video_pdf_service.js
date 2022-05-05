@@ -3,7 +3,7 @@ const room_pdf_images = require('../model/room_images_model');
 const AppError = require('../utils/app_error');
 const httpStatus = require('http-status');
 const path = require('path');
-const pdfConverter = require('pdf-poppler');
+// const pdfConverter = require('pdf-poppler');
 const fs = require('fs');
 
 const course_pdf_Service = async(req) => {
